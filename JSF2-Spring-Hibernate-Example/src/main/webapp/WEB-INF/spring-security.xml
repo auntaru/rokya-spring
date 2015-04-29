@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<http auto-config="true">
+		<intercept-url pattern="/welcome.jsf" access="ROLE_USER" />
+		<form-login login-page="/login.jsf" default-target-url="/welcome.jsf"
+			authentication-failure-url="/login.jsf?status=error" />
+		<logout logout-success-url="/login.jsf?status=logout" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<jdbc-user-service data-source-ref="ds"
+				users-by-username-query="select login, pwd, enabled from user where login = ?"
+				authorities-by-username-query="select u.login, r.code from user u, role r where u.user_id = r.user_id and u.login = ? " />
+		</authentication-provider>
+	</authentication-manager>
+
+	<beans:bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<beans:property name="url" value="jdbc:mysql://localhost:3306/dbusiness" />
+		<beans:property name="username" value="root" />
+		<beans:property name="password" value="toor" />
+	</beans:bean>
+
+</beans:beans>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.keylesson.persistence.User" table="user">
+        <id name="userId" type="int">
+            <column name="USER_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="login" type="string">
+            <column name="LOGIN" length="50" not-null="true">
+                <comment>login utilisateur</comment>
+            </column>
+        </property>
+        <property name="pwd" type="string">
+            <column name="PWD" length="100" not-null="true">
+                <comment>mot de passe utilisateur</comment>
+            </column>
+        </property>
+        <property name="enabled" type="java.lang.Integer">
+            <column name="ENABLED">
+                <comment>statut utilisateur</comment>
+            </column>
+        </property>
+        <set name="roles">
+			<key>
+				<column name="USER_ID" not-null="true">
+					<comment></comment>
+				</column>
+			</key>
+			<one-to-many class="com.keylesson.persistence.Role" />
+		</set>
+    </class>
+</hibernate-mapping>
