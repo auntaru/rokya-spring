@@ -1,3 +1,11 @@
+2015-04.29 : DELL-MSW7
+<<
+Preluat jtelmon din google-code in bitbucket
+Am preluat jtelmon din bitbucket (SUSE-KLONA);
+Am scos "JSF2-Spring-Hibernate-Example" din jtelmon 
+si l-am inclus in rokya-spring .
+>>
+
 2015-04.19 : StieTot-Ubuntu ; StieTot-Debian !
 2015-04.17 : Klona-SuSe + bitbucket + DeLL-Ubuntu 
 
