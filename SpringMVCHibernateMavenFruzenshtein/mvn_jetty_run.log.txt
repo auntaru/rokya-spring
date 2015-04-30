@@ -1,0 +1,108 @@
+mvn jetty:run
+
+root@depit-Studio-1558:/home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein# ./mvn_jetty_run.bat.txt
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building spring 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> jetty-maven-plugin:8.1.7.v20120910:run (default-cli) @ spring >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ spring ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ spring ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:testResources (default-testResources) @ spring ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ spring ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< jetty-maven-plugin:8.1.7.v20120910:run (default-cli) @ spring <<<
+[INFO] 
+[INFO] --- jetty-maven-plugin:8.1.7.v20120910:run (default-cli) @ spring ---
+[INFO] Configuring Jetty for project: spring
+[INFO] webAppSourceDirectory /home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp does not exist. Defaulting to /home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp
+[INFO] Reload Mechanic: automatic
+[INFO] Classes = /home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/target/classes
+[INFO] Context path = /
+[INFO] Tmp directory = /home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/target/tmp
+[INFO] Web defaults = org/eclipse/jetty/webapp/webdefault.xml
+[INFO] Web overrides =  none
+[INFO] web.xml file = file:/home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp/WEB-INF/web.xml
+[INFO] Webapp directory = /home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp
+2015-03-06 20:39:24.623:INFO:oejs.Server:jetty-8.1.7.v20120910
+2015-03-06 20:39:25.401:INFO:oejpw.PlusConfiguration:No Transaction manager found - if your webapp requires one, please configure one.
+2015-03-06 20:39:28.596:INFO:/:Spring WebApplicationInitializers detected on classpath: [com.sprhib.init.Initializer@67292fc7]
+2015-03-06 20:39:29.073:INFO:oejsh.ContextHandler:started o.m.j.p.JettyWebAppContext{/,file:/home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp/},file:/home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp/
+2015-03-06 20:39:29.073:INFO:oejsh.ContextHandler:started o.m.j.p.JettyWebAppContext{/,file:/home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp/},file:/home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp/
+2015-03-06 20:39:29.073:INFO:oejsh.ContextHandler:started o.m.j.p.JettyWebAppContext{/,file:/home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp/},file:/home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp/
+2015-03-06 20:39:29.074:INFO:/:Initializing Spring root WebApplicationContext
+Mar 06, 2015 8:39:29 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+Mar 06, 2015 8:39:29 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing Root WebApplicationContext: startup date [Fri Mar 06 20:39:29 EET 2015]; root of context hierarchy
+Mar 06, 2015 8:39:29 PM org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider registerDefaultFilters
+INFO: JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+Mar 06, 2015 8:39:29 PM org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider registerDefaultFilters
+INFO: JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+Mar 06, 2015 8:39:29 PM org.springframework.web.context.support.AnnotationConfigWebApplicationContext loadBeanDefinitions
+INFO: Registering annotated classes: [class com.sprhib.init.WebAppConfig]
+Mar 06, 2015 8:39:29 PM org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider registerDefaultFilters
+INFO: JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+Mar 06, 2015 8:39:29 PM org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider registerDefaultFilters
+INFO: JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+Mar 06, 2015 8:39:29 PM org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor <init>
+INFO: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Mar 06, 2015 8:39:29 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b5d7233: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,webAppConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,teamServiceImpl,linkController,teamController,teamDAOImpl,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration,requestMappingHandlerMapping,mvcContentNegotiationManager,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,defaultServletHandlerMapping,requestMappingHandlerAdapter,mvcConversionService,mvcValidator,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,dataSource,sessionFactory,transactionManager,setupViewResolver]; root of factory hierarchy
+Mar 06, 2015 8:39:29 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: com.mysql.jdbc.Driver
+Mar 06, 2015 8:39:29 PM org.hibernate.annotations.common.Version <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+Mar 06, 2015 8:39:29 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.2.0.Final}
+Mar 06, 2015 8:39:30 PM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Mar 06, 2015 8:39:30 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Mar 06, 2015 8:39:30 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+Mar 06, 2015 8:39:30 PM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Mar 06, 2015 8:39:30 PM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Mar 06, 2015 8:39:31 PM org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.sprhib.controller.LinkController.mainPage()
+Mar 06, 2015 8:39:31 PM org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.sprhib.controller.LinkController.indexPage()
+Mar 06, 2015 8:39:31 PM org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/team/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.sprhib.controller.TeamController.addingTeam(com.sprhib.model.Team)
+Mar 06, 2015 8:39:31 PM org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/team/delete/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.sprhib.controller.TeamController.deleteTeam(java.lang.Integer)
+Mar 06, 2015 8:39:31 PM org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/team/add],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.sprhib.controller.TeamController.addTeamPage()
+Mar 06, 2015 8:39:31 PM org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/team/edit/{id}],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.sprhib.controller.TeamController.edditingTeam(com.sprhib.model.Team,java.lang.Integer)
+Mar 06, 2015 8:39:31 PM org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/team/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.sprhib.controller.TeamController.listOfTeams()
+Mar 06, 2015 8:39:31 PM org.springframework.web.servlet.handler.AbstractHandlerMethodMapping registerHandlerMethod
+INFO: Mapped "{[/team/edit/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.sprhib.controller.TeamController.editTeamPage(java.lang.Integer)
+Mar 06, 2015 8:39:31 PM org.springframework.orm.hibernate4.HibernateTransactionManager afterPropertiesSet
+INFO: Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@6491006] of Hibernate SessionFactory for HibernateTransactionManager
+Mar 06, 2015 8:39:31 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 2767 ms
+2015-03-06 20:39:31.848:INFO:oejsh.ContextHandler:started o.m.j.p.JettyWebAppContext{/,file:/home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp/},file:/home/depit/workspaceLuna/SpringMVCHibernateMavenFruzenshtein/src/main/webapp/
+2015-03-06 20:39:31.898:INFO:/:Initializing Spring FrameworkServlet 'dispatcher'
+Mar 06, 2015 8:39:31 PM org.springframework.web.servlet.FrameworkServlet initServletBean
+INFO: FrameworkServlet 'dispatcher': initialization started
+Mar 06, 2015 8:39:31 PM org.springframework.web.servlet.FrameworkServlet initServletBean
+INFO: FrameworkServlet 'dispatcher': initialization completed in 43 ms
+2015-03-06 20:39:31.974:INFO:oejs.AbstractConnector:Started SelectChannelConnector@0.0.0.0:8080
+[INFO] Started Jetty Server
+[INFO] Starting scanner at interval of 1 seconds.
