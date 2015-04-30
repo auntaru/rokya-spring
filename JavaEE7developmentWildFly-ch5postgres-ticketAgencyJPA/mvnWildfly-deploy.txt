@@ -1,0 +1,218 @@
+"mvn wildfly:deploy"
+
+"Java EE 7 Development with WildFly.pdf" : 
+<< 
+Deploying the EJB application
+As it is, you should be able to package your EJB project by issuing the following Maven
+goal and starting a command-line prompt from your project root:
+mvn package
+The preceding command will compile and package the application that needs to be copied
+into the deployments folder of your application server. This is fine; however, we can
+expect lots more from Maven by installing just a couple of plugins. In our case, we will
+configure our project to use Maven’s WildFly plugin by adding the following section:
+<build>
+<finalName>${project.artifactId}</finalName>
+<plugins>
+<!— WildFly plugin to deploy the application —>
+<plugin>
+<groupId>org.wildfly.plugins</groupId>
+<artifactId>wildfly-maven-plugin</artifactId>
+<version>1.0.2.Final</version>
+<configuration>
+<filename>${project.build.finalName}.jar</filename>
+</configuration>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>3.1</version>
+<configuration>
+<!— enforce Java 8 —>
+<source>1.8</source>
+<target>1.8</target>
+</configuration>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-ejb-plugin</artifactId>
+<version>2.3</version>
+<configuration>
+<ejbVersion>3.2</ejbVersion>
+<!— Generate ejb-client for client project —>
+<generateClient>true</generateClient>
+</configuration>
+</plugin>
+</plugins>
+</build>
+In the first part of the XML fragment, we specified the project’s finalName attribute,
+which will dictate the name of the packaged artifact (in our example, the project’s name
+corresponds to our project’s artifact ID, so it will be named ticket-agency-ejb.jar).
+The artifact ID named wildfly-maven-plugin will actually trigger the WildFly Maven
+plugin that will be used to deploy our project.
+
+So, once you have configured the WildFly plugin, your application can be deployed
+automatically by entering from your project root. This can be done by typing the following
+command in the console:
+mvn wildfly:deploy 
+>>
+
+
+
+=> 
+
+
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/jboss-dmr/1.2.0.Final/jboss-dmr-1.2.0.Final.jar                                                                          21:23
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/marshalling/jboss-marshalling-river/1.4.2.Final/jboss-marshalling-river-1.4.2.Final.jar (80 KB at 42.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/threads/jboss-threads/2.1.1.Final/jboss-threads-2.1.1.Final.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/wildfly/wildfly-build-config/8.1.0.Final/wildfly-build-config-8.1.0.Final.jar (4 KB at 2.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/wildfly/wildfly-protocol/8.1.0.Final/wildfly-protocol-8.1.0.Final.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/wildfly/wildfly-controller-client/8.1.0.Final/wildfly-controller-client-8.1.0.Final.jar (180 KB at 88.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-api/3.2.2.Final/xnio-api-3.2.2.Final.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/threads/jboss-threads/2.1.1.Final/jboss-threads-2.1.1.Final.jar (118 KB at 54.3 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-nio/3.2.2.Final/xnio-nio-3.2.2.Final.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/jboss-dmr/1.2.0.Final/jboss-dmr-1.2.0.Final.jar (95 KB at 42.9 KB/sec)
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/jboss-vfs/3.2.5.Final/jboss-vfs-3.2.5.Final.jar (131 KB at 58.2 KB/sec)
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-nio/3.2.2.Final/xnio-nio-3.2.2.Final.jar (95 KB at 39.9 KB/sec)
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-api/3.2.2.Final/xnio-api-3.2.2.Final.jar (481 KB at 201.2 KB/sec)
+Downloaded: https://repo.maven.apache.org/maven2/org/wildfly/wildfly-protocol/8.1.0.Final/wildfly-protocol-8.1.0.Final.jar (99 KB at 35.8 KB/sec)
+Mar 08, 2015 9:11:21 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.2.Final
+Mar 08, 2015 9:11:22 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.2.Final
+Mar 08, 2015 9:11:22 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 4.0.3.Final
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 33.913 s
+[INFO] Finished at: 2015-03-08T21:11:27+02:00
+[INFO] Final Memory: 22M/75M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.wildfly.plugins:wildfly-maven-plugin:1.0.2.Final:deploy (default-cli) on project ticket-agency-jpa: Could not execute goal deploy on C:\Users\Java\work
+spaceLuna\JavaEE7developmentWildFly-ch5postgres-ticketAgencyJPA\target\ticket-agency-jpa.war. Reason: I/O Error could not execute operation '{
+[ERROR] "operation" => "read-attribute",
+[ERROR] "address" => [],
+[ERROR] "name" => "launch-type"
+[ERROR] }': java.net.ConnectException: JBAS012144: Could not connect to http-remoting://127.0.0.1:9990. The connection timed out
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+C:\Users\Java\workspaceLuna\JavaEE7developmentWildFly-ch5postgres-ticketAgencyJPA>echo "mvn wildfly:deploy"
+"mvn wildfly:deploy"
+
+C:\Users\Java\workspaceLuna\JavaEE7developmentWildFly-ch5postgres-ticketAgencyJPA>echo "mvn wildfly:deploy" >> ./mvnWildfly-deploy.txt
+
+
+C:\Users\Java\workspaceLuna\JavaEE7developmentWildFly-ch5postgres-ticketAgencyJPA>      
+
+
+
+
+
+[INFO] ------------------------------------------------------------------------                                                                                                      21:40
+[INFO]
+[INFO] >>> wildfly-maven-plugin:1.0.2.Final:deploy (default-cli) > package @ ticket-agency-jpa >>>
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ticket-agency-jpa ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ticket-agency-jpa ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ticket-agency-jpa ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Java\workspaceLuna\JavaEE7developmentWildFly-ch5postgres-ticketAgencyJPA\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ ticket-agency-jpa ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ ticket-agency-jpa ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ ticket-agency-jpa ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [ticket-agency-jpa] in [C:\Users\Java\workspaceLuna\JavaEE7developmentWildFly-ch5postgres-ticketAgencyJPA\target\ticket-agency-jpa]
+[INFO] Processing war project
+[INFO] Copying webapp resources [C:\Users\Java\workspaceLuna\JavaEE7developmentWildFly-ch5postgres-ticketAgencyJPA\src\main\webapp]
+[INFO] Webapp assembled in [72 msecs]
+[INFO] Building war: C:\Users\Java\workspaceLuna\JavaEE7developmentWildFly-ch5postgres-ticketAgencyJPA\target\ticket-agency-jpa.war
+[INFO] WEB-INF\web.xml already added, skipping
+[INFO]
+[INFO] <<< wildfly-maven-plugin:1.0.2.Final:deploy (default-cli) < package @ ticket-agency-jpa <<<
+[INFO]
+[INFO] --- wildfly-maven-plugin:1.0.2.Final:deploy (default-cli) @ ticket-agency-jpa ---
+Mar 08, 2015 9:34:41 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.2.2.Final
+Mar 08, 2015 9:34:41 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.2.2.Final
+Mar 08, 2015 9:34:41 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 4.0.3.Final
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.712 s
+[INFO] Finished at: 2015-03-08T21:34:44+02:00
+[INFO] Final Memory: 15M/86M
+[INFO] ------------------------------------------------------------------------
+
+C:\Users\Java\workspaceLuna\JavaEE7developmentWildFly-ch5postgres-ticketAgencyJPA>mvn wildfly:deploy      
+
+
+
+
+21:34:42,295 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015876: Starting deployment of "ticket-agency-jpa.war" (runtime-name: "ticket-agency-jpa.war")
+21:34:42,466 INFO  [org.jboss.as.jpa] (MSC service thread 1-6) JBAS011401: Read persistence.xml for primary
+21:34:42,483 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 58) JBAS011409: Starting Persistence Unit (phase 1 of 2) Service 'ticket-agency-jpa.war#primary'
+21:34:42,484 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 58) HHH000204: Processing PersistenceUnitInfo [
+        name: primary
+        ...]
+21:34:42,510 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016002: Processing weld deployment ticket-agency-jpa.war
+21:34:42,515 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-1) JNDI bindings for session bean named SeatDao in deployment un
+it deployment "ticket-agency-jpa.war" are as follows:
+
+        java:global/ticket-agency-jpa/SeatDao!com.packtpub.wflydevelopment.chapter5.control.SeatDao
+        java:app/ticket-agency-jpa/SeatDao!com.packtpub.wflydevelopment.chapter5.control.SeatDao
+        java:module/SeatDao!com.packtpub.wflydevelopment.chapter5.control.SeatDao
+        java:global/ticket-agency-jpa/SeatDao
+        java:app/ticket-agency-jpa/SeatDao
+        java:module/SeatDao
+
+21:34:42,519 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-1) JNDI bindings for session bean named SeatTypeDao in deploymen
+t unit deployment "ticket-agency-jpa.war" are as follows:
+
+        java:global/ticket-agency-jpa/SeatTypeDao!com.packtpub.wflydevelopment.chapter5.control.SeatTypeDao
+        java:app/ticket-agency-jpa/SeatTypeDao!com.packtpub.wflydevelopment.chapter5.control.SeatTypeDao
+        java:module/SeatTypeDao!com.packtpub.wflydevelopment.chapter5.control.SeatTypeDao
+        java:global/ticket-agency-jpa/SeatTypeDao
+        java:app/ticket-agency-jpa/SeatTypeDao
+        java:module/SeatTypeDao
+
+21:34:42,559 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-1) JNDI bindings for session bean named TicketService in deploym
+ent unit deployment "ticket-agency-jpa.war" are as follows:
+
+        java:global/ticket-agency-jpa/TicketService!com.packtpub.wflydevelopment.chapter5.control.TicketService
+        java:app/ticket-agency-jpa/TicketService!com.packtpub.wflydevelopment.chapter5.control.TicketService
+        java:module/TicketService!com.packtpub.wflydevelopment.chapter5.control.TicketService
+        java:global/ticket-agency-jpa/TicketService
+        java:app/ticket-agency-jpa/TicketService
+        java:module/TicketService
+
+21:34:42,651 INFO  [org.jboss.weld.deployer] (MSC service thread 1-7) JBAS016005: Starting Services for CDI deployment: ticket-agency-jpa.war
+21:34:42,656 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016008: Starting weld service for deployment ticket-agency-jpa.war
+21:34:42,660 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 58) JBAS011409: Starting Persistence Unit (phase 2 of 2) Service 'ticket-agency-jpa.war#primary'
+21:34:42,668 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 58) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+21:34:42,669 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 58) HHH000431: Unable to determine H2 database version, certain features may not work
+21:34:42,675 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 58) HHH000397: Using ASTQueryTranslatorFactory
+21:34:42,696 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 58) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+21:34:42,697 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 58) HHH000431: Unable to determine H2 database version, certain features may not work
+21:34:42,894 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (MSC service thread 1-5) Initializing Mojarra 2.2.6-jbossorg-4 20140501-1134 for context '/ticket-agency-jpa'
+21:34:43,033 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) JBAS017534: Registered web context: /ticket-agency-jpa
+21:34:44,092 INFO  [org.jboss.as.server] (management-handler-thread - 1) JBAS018559: Deployed "ticket-agency-jpa.war" (runtime-name : "ticket-agency-jpa.war")
+                                                                               ↑
+                                                                                                 
