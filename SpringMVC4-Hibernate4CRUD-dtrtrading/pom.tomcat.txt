@@ -1,0 +1,28 @@
+
+	<build>
+		<finalName>dpr-data</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+      			<plugin>
+	                        <groupId>org.apache.tomcat.maven</groupId>
+                                <artifactId>tomcat7-maven-plugin</artifactId>
+                                <version>2.1</version>
+			        <configuration>
+			            <!-- <server>tomcat7</server> -->
+			            <path>/</path>
+			            <aliases>
+			                <alias>myweb.com</alias>
+			                <alias>myweb.mydomain.com</alias>
+			            </aliases>
+			        </configuration>
+                        </plugin>
+		</plugins>
+	</build>
