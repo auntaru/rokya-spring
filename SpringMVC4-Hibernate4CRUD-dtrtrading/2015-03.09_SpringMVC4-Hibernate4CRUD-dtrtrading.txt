@@ -1,6 +1,11 @@
+2015-05.01?recap!_spring-ex02-MVC4-Hibernate4CRUD-dtrtrading
 
 2015-03.09?recap!_SpringMVC4-Hibernate4CRUD-dtrtrading
 https://jtelmon.googlecode.com/svn/trunk/SpringMVC4-Hibernate4CRUD-dtrtrading
+https://github.com/auntaru/rokya-spring/tree/master/SpringMVC4-Hibernate4CRUD-dtrtrading
+https://github.com/auntaru/rokya-spring
+
+
 
 Spring MVC 4 - Hibernate 4 CRUD
   http://dtr-trading.blogspot.ro/2014/02/spring-mvc-4-and-hibernate-4.html
