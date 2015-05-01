@@ -8,6 +8,9 @@ http://www.mastertheboss.com/jboss-frameworks/spring/spring-jdbc-application-on-
 2.a mvn wildfly:deploy (sau) 
 2.b mvn wildfly:run
 
+3. 
+    http://localhost:8080/springexample/index.xhtml
+
 2015-03.09?recap!_SpringMVC4-Hibernate4CRUD-dtrtrading
 https://jtelmon.googlecode.com/svn/trunk/SpringMVC4-Hibernate4CRUD-dtrtrading
 
