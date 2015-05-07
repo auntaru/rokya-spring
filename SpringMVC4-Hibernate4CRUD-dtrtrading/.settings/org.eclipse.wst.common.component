@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-  <wb-module deploy-name="spring-ex02">
-    <property name="context-root" value="spring-ex02"/>
+  <wb-module deploy-name="spring-ex02-MVC4-Hibernate4CRUD-dtrtrading">
     <wb-resource deploy-path="/" source-path="src/main/webapp"/>
     <property name="java-output-path" value="/target/classes"/>
+        <property name="context-root" value="spring-ex02-MVC4-Hibernate4CRUD-dtrtrading"/>
     <dependent-module archiveName="spring-context-4.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/spring-context/4.0.0.RELEASE/spring-context-4.0.0.RELEASE.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
