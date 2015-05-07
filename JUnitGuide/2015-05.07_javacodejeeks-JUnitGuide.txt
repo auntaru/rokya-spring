@@ -1,0 +1,392 @@
+
+2015-05.07 javacodejeeks.com JUnitGuide 
+   JUnit Tutorial for Unit Testing – The ULTIMATE Guide
+http://www.javacodegeeks.com/2014/11/junit-tutorial-unit-testing.html
+   FirstDayAtSchoolTest
+   
+
+~ ~ ~
+2015-03.11 => 2015-04.29 (from Subversion to git+github+bitbucket) 
+~ ~ ~
+
+2015-04.29 : DELL-MSW7
+<<
+Preluat jtelmon din google-code in bitbucket
+Am preluat jtelmon din bitbucket (SUSE-KLONA);
+Am scos "JSF2-Spring-Hibernate-Example" din jtelmon 
+si l-am inclus in rokya-spring .
+>>
+
+2015-04.19 : StieTot-Ubuntu ; StieTot-Debian !
+2015-04.17 : Klona-SuSe + bitbucket + DeLL-Ubuntu 
+
+
+
+2015-03.11 : JSF 2 Spring Hibernate Example
+http://keylesson.com/index.php/2015/03/05/jsf-2-spring-hibernate-example-1717/
+   
+   http://localhost:8080/JSF2-Spring-Hibernate-Example/register.jsf 
+
+create database dbusiness;
+
+create table user (
+  user_id int(10) not null auto_increment,
+  login varchar(50) not null,
+  pwd varchar(100) not null,
+  enabled tinyint(1) default null,
+  primary key (user_id)
+) engine=innodb  default charset=utf8;
+ 
+create table role (
+  role_id int(10) not null auto_increment,
+  user_id int(10) default null,
+  code varchar(60) not null,
+  label varchar(100) not null,
+  primary key (role_id),
+  constraint fk_usrole foreign key (user_id) references user (user_id)
+) engine=innodb  default charset=utf8;
+
+   
+   In this example, we will see how to integrate JSF 2, Spring IoC, Spring Security and Hibernate in a simple web application.
+   The application will provide : registration page to add new users, login page to perform authentication and welcome page.
+
+   toDoLater: 
+      http://keylesson.com/index.php/2014/09/23/spring-security-custom-login-form-659/
+      http://keylesson.com/index.php/2015/03/10/hibernate-one-to-many-annotation-example-1745/
+
+
+2015-03.10 : Spring JDBC application on WildFly
+http://www.mastertheboss.com/jboss-frameworks/spring/spring-jdbc-application-on-wildfly
+
+1. lansare WildFly in mod standalone : 
+   "/home/depit/localwildfly8/wildfly-8.1.0.Final/bin/standalone.sh" 
+2.a mvn wildfly:deploy (sau) 
+2.b mvn wildfly:run
+
+2015-03.09?recap!_SpringMVC4-Hibernate4CRUD-dtrtrading
+https://jtelmon.googlecode.com/svn/trunk/SpringMVC4-Hibernate4CRUD-dtrtrading
+
+Spring MVC 4 - Hibernate 4 CRUD
+  http://dtr-trading.blogspot.ro/2014/02/spring-mvc-4-and-hibernate-4.html
+  http://dtr-trading.blogspot.ro/2014/02/spring-mvc-4-java-config.html
+  https://github.com/dtr-trading/spring-ex02
+  http://fruzenshtein.com/spring-jpa-data-hibernate-mysql/
+  http://dtr-trading.blogspot.ro/search/label/Spring%20MVC
+ 
+  http://it-ebooks.info/tag/spring/
+  
+  
+ 2015-03.06?recap!_-_SpringMVCHibernateMavenFruzenshtein
+ Spring MVC + Hibernate + Maven: CRUD operations example
+ http://fruzenshtein.com/spring-mvc-hibernate-maven-crud/
+ https://jtelmon.googlecode.com/svn/trunk/SpringMVCHibernateMavenFruzenshtein
+ http://localhost:8080/team/list.html
+ http://localhost:8080/index.html
+ mvn jetty:run
+ 
+ << 
+    Could not open Hibernate Session for transaction; 
+ nested exception is org.hibernate.exception.SQLGrammarException: 
+ Could not open connection
+ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: 
+ Unknown database 'hibernatedb'
+ >>
+ 
+ create database hibernatedb;
+ 
+ CREATE TABLE `teams` (
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `name` varchar(40) NOT NULL,
+  `rating` int(6) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+
+ 
+ 
+2015-02.15 :
+http://localhost:8080/JavaEE7developmentWildFly-ch5postgres-ticketAgencyJPA/
+https://jtelmon.googlecode.com/svn/trunk/JavaEE7developmentWildFly-ch5postgres-ticketAgencyJPA
+
+BOOK : Java EE 7 Development with WildFly
+       2014 Packt Publishing
+
+pag.156: 
+   Chapter 5. Combining Persistence with CDI
+pag.158:
+   Working with JPA
+       
+http://it-ebooks.info/book/4755/
+http://isbn.directory/book/978-1-78217-198-0
+
+# generate Eclipse WEB project from POM : ( wtp - Web Tools Project ) 
+# mvn eclipse:eclipse -Dwtpversion=2.0
+
+<persistence-unit name="primary">
+<persistence-unit name="wflydevelopment">
+
+WildFly8.1, 
+/localwildfly/standalone/configuration/standalone.xml :
+            <datasources>
+                <datasource jta="false" jndi-name="java:jboss/datasources/wflydevelopment" pool-name="wflydevelopment" enabled="true">
+                    <connection-url>jdbc:postgresql://localhost:5432/ticketsystem</connection-url>
+                    <driver-class>org.postgresql.Driver</driver-class>
+                    <driver>postgresql</driver>
+                    <security>
+                        <user-name>postgres</user-name>
+                        <password>telinit</password>
+                    </security>
+                </datasource>
+                <drivers>                
+                    <driver name="postgresql" module="org.postgresql"/>
+                </drivers>
+            </datasources>
+
+
+\localwildfly\modules\system\layers\base\org\postgersql\main\
+   - aici se pune "postgresql-9.3-1103.jdbc41.jar" ( https://jdbc.postgresql.org/download/postgresql-9.3-1103.jdbc41.jar ) 
+   - se creeaza "module.xml" cu urmatorul continut : 
+		<module	name="org.postgresql">	
+			<resources>
+					<resource-root	path="postgresql-9.3-1103.jdbc41.jar"/>
+			</resources>
+			<dependencies>
+				<module	name="javax.api"/>
+				<module	name="javax.transaction.api"/>
+			</dependencies>
+		</module>   
+
+Spring JDBC application on WildFly
+http://www.mastertheboss.com/jboss-frameworks/spring/spring-jdbc-application-on-wildfly
+http://www.mastertheboss.com/code/springexample.zip            
+            
+2015-02.08 : 
+https://jtelmon.googlecode.com/svn/trunk/SpringSecurity32-dtrtrading
+
+https://jtelmon.googlecode.com/svn/ajax-json : CaptainDebug !  
+
+https://jtelmon.googlecode.com/svn/trunk/ProJava4WebApps-CH21-SpringJPA
+https://jtelmon.googlecode.com/svn/trunk/ProJava4WebApps-Ch26AuthenticationApp
+https://jtelmon.googlecode.com/svn/trunk/ProJava4WebApps-CustomerSupport16
+https://jtelmon.googlecode.com/svn/trunk/ProJava4WebApps-CustomerSupport21
+
+https://jtelmon.googlecode.com/svn/marakana-training
+https://jtelmon.googlecode.com/svn/trunk/SpringMVC4-Hibernate4CRUD-dtrtrading
+https://jtelmon.googlecode.com/svn/trunk/ajax-jQuery-SpringMVC3-JSON
+
+
+Getting Started with Spring Security 3.2
+https://www.youtube.com/watch?v=1zu8COg80q4
+https://github.com/rwinch/gs-spring-security-3.2
+http://spring.io/blog/2014/01/21/webinar-replay-spring-security-3-2
+https://github.com/rwinch
+https://www.packtpub.com/application-development/spring-security-31
+
+
+
+
+Java Code Geeks on Steroids
+newsletter@javacodegeeks.com
+
+Spring Framework tutorials Extravaganza
+
+JSF 2, PrimeFaces 3, Spring 3 & Hibernate 4 Integration Project
+http://www.javacodegeeks.com/2012/04/jsf-2-primefaces-3-spring-3-hibernate-4.html
+This article shows how to integrate JSF2, PrimeFaces3, Spring3 and Hibernate4 Technologies. It provides a general project template for Java developers. Also if Spring is not used for Business and Data Access layer, JSF � PrimeFaces & Hibernate Integration Project can be offered.
+
+
+JAX-WS with Spring and Maven Tutorial
+http://www.javacodegeeks.com/2010/11/jaxws-with-spring-and-maven-tutorial.html
+Spring framework provides remoting support for web services via JAX-WS, in fact, as stated in Spring reference documentation, there are three ways of exposing Spring POJO services as a JAX�WS web services : Exposing Servlet � based web services (suitable for Java EE 5 environments), Exporting standalone web services (suitable when utilizing Sun�s JDK 1.6 build�in JAX�WS provider), Exporting web services using the JAX�WS RI�s Spring support.
+
+Ajax with Spring MVC 3 using Annotations and JQuery
+http://www.javacodegeeks.com/2012/02/ajax-with-spring-mvc-3-using.html
+Its always been fun for me to work with Ajax! Is not it ? I will make it easy for you to use Ajax with Spring MVC 3 and JQuery. This post will illustrate you how to use Ajax in real life practices of industrial coding. As usual, we will take an practical example of Ajax in Spring MVC 3 framework and will implement it and I will make the implementation easy by make you understand the topic.
+
+Spring JPA Data + Hibernate + MySQL + Maven
+http://www.javacodegeeks.com/2013/05/spring-jpa-data-hibernate-mysql-maven.html
+Development of web-applications with the help of Spring MVC implies creation of several logical layers of architecture. One of the layers is a DAO (Repository) layer. It is responsible for communication with a database. If you developed the DAO layer at least once, you should know that it involves a lot of boilerplate code. A Spring Data take a part of the routine job related to the DAO on itself.
+
+"Introduction to Spring" Tutorial Series
+http://www.javacodegeeks.com/2012/09/introduction-to-spring-tutorial-series.html
+I am glad to present you this Introduction to Spring tutorial series! It is a series of articles originally written by our JCG partner Michal Vrtiak at the vrtoonjava blog. A timesheet management application is gradually created in this series and each tutorial builds on top of the previous one. All main aspects of a web application are taken care of, including both server side and client side functionality.
+
+Spring and Quartz: Multi-Job Scheduling Service
+http://www.javacodegeeks.com/2012/02/spring-and-quartz-multi-job-scheduling.html
+Job Scheduling is so important requirement for the applications. Especially in large-scale projects, working with a lot of jobs can be a problem. Spring and Quartz have brought significant benefits for the solution of this problem. This article shows how to schedule multi jobs easily by using Spring and Quartz.
+
+Set up a Spring 3 development environment
+http://www.javacodegeeks.com/2012/02/set-up-spring-3-development-environment.html
+This tutorial explains in short how to set-up a typical environment to develop Spring based applications. There is no prerequesite to this tutorial other then a working Windows XP client with sufficient CPU power and memory. During the tutorial we will need to install the following components: Java 6 JDK Update 26, Eclipse IDE for Java EE Developers 3.6.2 (Helios), Maven 3.0.3, Tomcat 7.0.14.
+
+Spring Data JPA Tutorial Part One: Configuration
+http://www.javacodegeeks.com/2013/07/spring-data-jpa-tutorial-part-one-configuration.html
+http://www.petrikainulainen.net/spring-data-jpa-tutorial/
+Spring Data JPA is a project which aims both to simplify the creation of JPA based repositories and to reduce the amount of code needed to communicate with a database. I have been using it for a while at my work and in my personal hobby projects and it has indeed make things a lot more simpler and cleaner. Now it is time to share my knowledge with you.
+
+Concurrency - Executors and Spring Integration
+http://www.javacodegeeks.com/2012/06/concurrency-executors-and-spring.html
+Thread Pool/Executors Based Implementation: A better approach than the raw thread version, is a Thread pool based one, where an appropriate thread pool size is defined based on the system where the task is running � Number of CPU�s/(1-Blocking Coefficient of Task).
+
+Spring Integration - Application from scratch
+http://www.javacodegeeks.com/2013/03/spring-integration-application-from-scratch-part-1.html
+In this tutorial you will learn what is Spring Integration, how to use it and what kind of problems does it help to solve. We will build a sample application from the scratch and demonstrate some of the core components of Spring Integration. If you�re new to Spring check out another tutorial on Spring written by me � Shall we do some Spring together?
+
+
+
+
+# generate Eclipse WEB project from POM : ( wtp - Web Tools Project ) 
+# mvn eclipse:eclipse -Dwtpversion=2.0
+
+# http://www.mkyong.com/maven/how-do-use-maven-to-create-a-dynamic-web-project-in-eclipse/
+#  How To Convert Maven Based Web Application To Support Eclipse IDE :
+#   mvn eclipse:eclipse -Dwtpversion=2.0
+
+
+# [Marakana TV] - Marakana TV - Spring and Hibernate [ENG] - (torrent)
+# marakana Spring Hibernate 2012-09.25 0941 
+# https://www.youtube.com/watch?v=tw5KG9_oiT0
+# https://www.youtube.com/my_videos?o=U
+# http://jtelmon.googlecode.com/svn/marakana-training/
+
+# git clone https://github.com/thenewcircle/spring-hibernate-20120924.git
+# mvn compile
+# mvn package
+# mvn clean install
+# mvn jetty:run
+# http://localhost:8080/contacts
+# curl http://localhost:8080/contacts
+# lynx http://localhost:8080/contacts
+
+# mvn tomcat:run
+# http://localhost:8080/store/
+
+# Spring MVC, Ajax and JSON
+# http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-1-setting-the-scene.html
+# http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-2-the-server-side-code.html
+# http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-3-the-client-side-code.html
+# https://github.com/roghughe/captaindebug/tree/master/ajax-json
+# https://github.com/roghughe/captaindebug.git
+
+
+# Spring MVC Tutorials 22 - Form Validations 06 (More on custom Form Validation annotation...)
+# https://www.youtube.com/watch?v=Hd8Gejqshaw
+# http://www.gontu.org/
+# Ankush Gorav : author of Gontu Series
+
+~ ~ ~ 
+
+# http://www.wowebook.com/search/?q=hibernate
+# http://blog.teamtreehouse.com/using-github-pages-to-host-your-website
+# http://www.petrikainulainen.net/spring-data-jpa-tutorial/
+# http://www.petrikainulainen.net/books/spring-data/
+#
+# http://springjavatutorial.blogspot.ro/2013/04/springmvc3-hibernate-crud.html
+# http://springjavatutorial.blogspot.ro/2013/03/spring-3-mvc-form-validation.html
+# https://haritkumarblog.opendrive.com/files?N18xMTA1NjcwNF8xSGRhNA
+#
+# http://www.dzone.com/tutorials/java/spring/spring-mvc-tutorial-1.html
+# http://www.dzone.com/sites/all/files/SpringExample5.zip
+# 
+
+# http://www.mkyong.com/spring-mvc/spring-mvc-form-handling-annotation-example/
+# http://www.mkyong.com/tutorials/spring-mvc-tutorials/
+# http://www.mkyong.com/hibernate/how-to-generate-code-with-hibernate-tools/
+# http://www.genericarticles.com/mediawiki/index.php?title=How_to_create_maven_based_Hibernate_Project
+# http://www.mastertheboss.com/jboss-frameworks/hibernate-jpa/maven-hibernate-jpa/maven-and-hibernate-4-tutorial
+# http://viralpatel.net/blogs/hibernate-maven-mysql-hello-world-example-xml-mapping/
+# https://programmaticponderings.wordpress.com/2013/10/21/spring-integration-with-eclipse-using-maven/
+
+
+
+# http://java4developers.com/2011/spring-mvc-basic-example-with-maven/
+# https://github.com/IvanFernandez/hop2croftRepository
+# https://github.com/IvanFernandez/hop2croftRepository.git
+# mvn clean install -DskipTests
+# mvn jetty:run
+
+# Fruzenshtein's notes
+# Spring MVC + Hibernate + Maven: CRUD operations example
+# http://fruzenshtein.com/spring-mvc-hibernate-maven-crud/
+# http://fruzenshtein.com/spring-jpa-data-hibernate-mysql/
+# http://www.javacodegeeks.com/2013/04/spring-mvc-hibernate-maven-crud-operations-example.html
+# https://github.com/Fruzenshtein/spr-mvc-hib
+# https://github.com/Fruzenshtein/spr-mvc-hib.git
+# https://github.com/Fruzenshtein/spr-mvc-hib/blob/master/pom.xml
+# <hibernate.version>4.2.0.Final</hibernate.version>
+# <spring.version>3.2.2.RELEASE</spring.version>
+
+
+# Spring MVC 4 - Hibernate 4 CRUD
+# http://dtr-trading.blogspot.ro/2014/02/spring-mvc-4-and-hibernate-4.html
+# https://github.com/dtr-trading/spring-ex02
+# https://github.com/dtr-trading/spring-ex02/blob/master/pom.xml
+### Spring-4.0.0 + Hibernate-4.2.0
+
+
+# Spring MVC3 Hibernate CRUD Sample Application
+### Spring-3.0 + Hibernate-3.4
+# by Siva Reddy on April 11th, 2011 
+# Filed in: Enterprise Java 
+# Tags: JBoss Hibernate, Spring, Spring MVC
+# http://www.javacodegeeks.com/2011/04/spring-mvc3-hibernate-crud-sample.html
+# 	http://www.sivalabs.in/2011/04/springmvc3-hibernate-crud-sample.html
+# http://localhost:8080/SpringMVCHibernate
+# https://sites.google.com/site/sivalabworks/sampleappdownloads/SpringMVCHibernate.zip
+
+
+# Spring 3.2.5.RELEASE and Hibernate 4 Integration Example Tutorial
+# http://howtodoinjava.com/2013/12/08/spring-3-2-5-release-and-hibernate-4-integration-example-tutorial/
+# https://drive.google.com/file/d/0B7yo2HclmjI4Y3owV0FDaXBvU2c/edit?usp=sharing
+# http://localhost:8080/Spring3.2.5Hibernate4.0.1Integration/
+### Spring-3.2.5 + Hibernate-4.0.1
+# 
+# Spring 3 and hibernate integration tutorial with example
+# http://howtodoinjava.com/2013/03/21/spring-3-and-hibernate-integration-tutorial-with-example/
+# https://docs.google.com/file/d/0B7yo2HclmjI4clZVT0VxeGNERFk/edit?usp=sharing
+### Spring-3.0.5 + Hibernate-3.6.3
+# 
+# How To Do In Java - Spring Tutorials 
+# http://howtodoinjava.com/spring-3/
+#
+# How To Do In Java - Hibernate Tutorials
+# http://howtodoinjava.com/hibernate-tutorials/
+
+
+
+# 2015-02.07
+# http://jtelmon.googlecode.com/svn/trunk/ProJava4WebApps-CustomerSupport21/
+
+# http://it-ebooks.info/tag/spring/
+
+# http://dtr-trading.blogspot.ro/2014/02/spring-mvc-4-security-part-1.html
+# http://dtr-trading.blogspot.ro/2014/04/spring-security-32-authorization-part-1.html
+# https://github.com/dtr-trading?tab=repositories
+
+# http://www.sivalabs.in/2014/03/springmvc4-spring-data-jpa.html
+# http://fruzenshtein.com/spring-jpa-data-hibernate-mysql/
+# http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-1-setting-the-scene.html
+# http://www.mkyong.com/tutorials/hibernate-tutorials/
+# http://viralpatel.net/blogs/hibernate-one-to-many-annotation-tutorial/
+# 
+
+# http://www.petrikainulainen.net/spring-data-jpa-tutorial/
+# http://www.javacodegeeks.com/2012/02/set-up-spring-3-development-environment.html
+# http://www.javacodegeeks.com/2012/09/introduction-to-spring-tutorial-series.html
+# ttp://www.javacodegeeks.com/2013/03/spring-integration-application-from-scratch-part-1.html
+# http://www.javacodegeeks.com/2013/05/spring-jpa-data-hibernate-mysql-maven.html
+# http://www.raistudies.com/spring/spring-mvc/ajax-form-validation-using-spring-mvc-and-jquery/
+
+# Ajax with Spring MVC 3 using Annotations and JQuery
+# http://www.raistudies.com/spring/spring-mvc/ajax-spring-mvc-3-annonations-jquery/
+
+# Spring Data JPA Tutorial Part One: Configuration
+# http://www.javacodegeeks.com/2013/07/spring-data-jpa-tutorial-part-one-configuration.html
+
+# User authentication and authorization in Spring Security using MySQL Database
+# http://www.raistudies.com/spring-security-tutorial/authentication-authorization-spring-security-mysql-database/
+
+# http://www.raistudies.com/spring-security-tutorial-acegi/
+# http://www.raistudies.com/spring/spring-mvc/ajax-form-validation-using-spring-mvc-and-jquery/
+
+
