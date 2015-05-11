@@ -1,3 +1,17 @@
+
+2015-05.11 : dupa ce am trecut pe git din subversion , am reinstalat proiectul pe SuSe Klona , 
+                 si nu am reusit sa-l rulez din Eclipse ; A trebuit mvn package in linia de comanda 
+                 si apoi rulat din Eclipse cu Tomcat8 . 
+                 
+                 Am avut o eroare de genul : 
+                     << Java compiler level does not match the version of the installed Java project facet.>> 
+                 Am mers in "Project properties" -> "Project facets" -> Java -> Version si am 
+                 facut sa fie ca in linia de comanda "java -version" ;       
+
+Aplicatia porneste doar daca se introduce link-ul complet : 
+    http://localhost:8080/JSF2-Spring-Hibernate-Example/register.jsf
+
+
 2015-03.11 : JSF 2 Spring Hibernate Example
 http://keylesson.com/index.php/2015/03/05/jsf-2-spring-hibernate-example-1717/
    
