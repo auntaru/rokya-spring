@@ -1,18 +1,25 @@
  
+ 2015-0512 : @Named @Component @Inject @autowired
+ 
+ 			JSF 2 Spring Hibernate Example
+ 
+      While Spring performs the auto-scan, it will load all classes annotated with @Named 
+         and consider them as Spring beans (equivalent to @Component).
+      @Inject is used to perform dependency injection (equivalent to @autowired)
+ 
+ 
 2015-05.11 :  Ruleaza cu Tomcat 7.0.34 ; Tomcat 8 = KO ! ( SuSe.Klona ) 
             
             JSF 2 Spring Hibernate Example
             
                  Dupa ce am trecut pe git din subversion , am reinstalat proiectul pe SuSe Klona , 
-                 si nu am reusit sa-l rulez din Eclipse ; A trebuit mvn package in linia de comanda 
-                 si apoi rulat din Eclipse cu Tomcat8 . 
+                 si nu am reusit sa-l rulez din Eclipse cu Tomcat 8 ; 
                  
-                 Am avut o eroare de genul : 
+                 Am avut si o eroare de genul : 
                      << Java compiler level does not match the version of the installed Java project facet.>> 
                  Am mers in "Project properties" -> "Project facets" -> Java -> Version si am 
                  facut sa fie 1.7 ; ( in linia de comanda "java -version" = 1.8.0_25 )  ;
                    
-
                  Aplicatia porneste doar daca se introduce link-ul complet : 
                  http://localhost:8080/JSF2-Spring-Hibernate-Example/register.jsf
 
