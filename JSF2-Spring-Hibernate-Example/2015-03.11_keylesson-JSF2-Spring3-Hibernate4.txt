@@ -1,5 +1,5 @@
  
- 2015-0512 : @Named @Component @Inject @autowired
+ 2015-05.12 : @Named @Component @Inject @autowired
  
  			JSF 2 Spring Hibernate Example
  
