@@ -1,5 +1,16 @@
 
-2015-05.13 JAX-RS-JSON_secondCommit - new.pom.xml + new.web.xml 
+2015-05.13 JAX-RS-JSON_thirdCommit - Deploy Server + Client Requests 
+
+Right click on the project and select Run As-> Run on Server
+Once Tomcat is up and running successfully one should see the index.jsp page of the project running at location 
+                                                        http://localhost:8080/JAXRS-JSON/index.jsp.
+                                                        
+Once the Jersey server is up and running we can fire the requests from our Jersey Client.
+Just go to the RestClient.java class, Right Click -> Run As -> Java Application
+
+                                                        
+
+      JAX-RS-JSON_secondCommit - new.pom.xml + new.web.xml 
 
    We'll create a Jersey server that will present a POJO class Student.java as a 
 JSON object when a ‘get’ request is made to it and also allow a JSON object to be posted to it. 

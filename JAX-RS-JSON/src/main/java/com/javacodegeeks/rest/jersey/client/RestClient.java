@@ -7,8 +7,8 @@ import com.sun.jersey.api.client.WebResource;
 public class RestClient {
 
 	Client client = Client.create();
-	String getUrl = "http://localhost:8080/JAXRS-JSON/rest/student/data/get";
-	String postUrl = "http://localhost:8080/JAXRS-JSON/rest/student/data/post";
+	String getUrl = "http://localhost:8080/JAX-RS-JSON/rest/student/data/get";
+	String postUrl = "http://localhost:8080/JAX-RS-JSON/rest/student/data/post";
 	
 	public void getRequest(){
 		WebResource webResource = client.resource(getUrl);
