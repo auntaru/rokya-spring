@@ -1,5 +1,21 @@
 
-2015-05.13 JAX-RS-JSON_thirdCommit - Deploy Server + Client Requests 
+2015-05.13 JAX-RS-JSON | maven dependency : javax.servlet 
+
+Error : 
+<< The superclass "javax.servlet.http.HttpServlet" was not found on the Java Build Path >> 
+http://howtodoinjava.com/2015/02/04/solved-the-superclass-javax-servlet-http-httpservlet-was-not-found-on-the-java-build-path-in-eclipse/
+
+Solution : 
+Add maven dependency
+Another option is include the servlet dependency through maven itself. This will also fix the error.
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>servlet-api</artifactId>
+    <version>2.5</version>
+</dependency>
+
+
+      JAX-RS-JSON_thirdCommit - Deploy Server + Client Requests 
 
 Right click on the project and select Run As-> Run on Server
 Once Tomcat is up and running successfully one should see the index.jsp page of the project running at location 
