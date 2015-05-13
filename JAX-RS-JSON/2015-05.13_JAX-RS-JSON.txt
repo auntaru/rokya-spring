@@ -1,0 +1,20 @@
+
+2015-05.13 JAX-RS-JSON_firstCommit - pom.xml.ini   
+     in primul commit pom.xml este cel creeat de Wizard-ul "New MAVEN Project" , "maven-archetype-webapp" !    
+
+   ~ a Maven project created via Eclipse : 
+         File-> New -> Project -> Maven Project ; 
+         Choose archetype : maven-archetype-webapp ! 
+
+
+   http://examples.javacodegeeks.com/core-java/json-jax-rs-example/
+
+JAX-RS is a Java API designed to be used as a standard to simplify the development of RESTful Web Services and their clients.
+Jersey RESTful Web Services framework is an open-source Reference Implementation of this API that is JSR-311 compliant. 
+We are going to use Jersey. JSON should be a heard of term. 
+It is an acronym that stands for JavaScript Object Notation and is based on a subset of the JavaScript Programming Language. 
+It is a lightweight data-interchange format that is widely used since it is easy and simple to be understood and 
+parsed for both humans and machines. 
+Think of it as a simple set of key:value pairs represented as myJson = {“name”:”Lily”, “age”:9}.
+Jackson is the tool to convert objects to/from JSON.
+   
