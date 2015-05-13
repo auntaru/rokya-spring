@@ -2,12 +2,30 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.java.codegeeks.example</groupId>
-  <artifactId>JAX-RS-JSON</artifactId>
+  <artifactId>JAXRS-JSON</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>JAX-RS-JSON Maven Webapp</name>
+  <name>JAXRS-JSON Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <properties>
+  	<jersey.version>1.19</jersey.version>
+  </properties>
   <dependencies>
+    <dependency>
+     <groupId>com.sun.jersey</groupId>
+     <artifactId>jersey-servlet</artifactId>
+     <version>${jersey.version}</version>
+    </dependency>
+    <dependency>
+     <groupId>com.sun.jersey</groupId>
+     <artifactId>jersey-json</artifactId>
+     <version>${jersey.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.sun.jersey</groupId>
+    	<artifactId>jersey-client</artifactId>
+    	<version>${jersey.version}</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -16,6 +34,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>JAX-RS-JSON</finalName>
+    <finalName>JAXRS-JSON</finalName>
   </build>
 </project>

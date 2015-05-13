@@ -1,5 +1,33 @@
 
-2015-05.13 JAX-RS-JSON_firstCommit - pom.xml.ini   
+2015-05.13 JAX-RS-JSON_secondCommit - new.pom.xml + new.web.xml 
+
+   We'll create a Jersey server that will present a POJO class Student.java as a 
+JSON object when a ‘get’ request is made to it and also allow a JSON object to be posted to it. 
+We will deploy the server on a Tomcat instance from Eclipse. 
+And then we will create a Jersey Client from which we will trigger the ‘get’ and ‘post’ requests to the server.
+
+1. Add dependencies ; Set-up pom.xml file
+We will use the latest version 1.19 of Jersey and add the following three Maven dependencies to our project.
+Jersey-Servlet to set-up the server
+Jersey-Client to cook-up a client instance
+Jersey-JSON to allow the handling of JSON objects
+So our pom file would be as shown below.
+
+   Set-up web.xml file
+Now, we want our Rest Server to be deployable. 
+And we want it to be able to process JSON-POJO mapping. 
+Hence, the web.xml file needs to be configured as shown below.
+Notice how the location of the Server has been configured in the init-param tags
+The POJO mapping feature of Jersey has been enabled by including com.sun.jersey.api.json.POJOMappingFeature in the second init-param tags
+Also, it is worth observing that in the servlet-mapping tags we mentioned the URL pattern as rest/*. 
+This implies all URLs on our server would be appended with rest/. 
+So the URLs for get and post would be host:port(of the server)/JAXRS-JSON(name of the project)/rest/student/data/get or post; 
+that is, http://localhost:8080/JAXRS-JSON/rest/student/data/get and 
+http://localhost:8080/JAXRS-JSON/rest/student/data/post respectively.
+
+
+
+_firstCommit - pom.xml.ini + web.xml.ini   
      in primul commit pom.xml este cel creeat de Wizard-ul "New MAVEN Project" , "maven-archetype-webapp" !    
 
    ~ a Maven project created via Eclipse : 
