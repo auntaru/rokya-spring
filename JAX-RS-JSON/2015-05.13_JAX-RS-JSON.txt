@@ -1,11 +1,12 @@
 
-2015-05.13 JAX-RS-JSON | maven dependency : javax.servlet 
+2015-05.13 JAX-RS-JSON | maven dependency : javax.servlet | Target Runtimes->Apache Tomcat 
 
 Error : 
 << The superclass "javax.servlet.http.HttpServlet" was not found on the Java Build Path >> 
 http://howtodoinjava.com/2015/02/04/solved-the-superclass-javax-servlet-http-httpservlet-was-not-found-on-the-java-build-path-in-eclipse/
+http://stackoverflow.com/questions/22756153/the-superclass-javax-servlet-http-httpservlet-was-not-found-on-the-java-build
 
-Solution : 
+Solution1 : 
 Add maven dependency
 Another option is include the servlet dependency through maven itself. This will also fix the error.
 <dependency>
@@ -13,6 +14,18 @@ Another option is include the servlet dependency through maven itself. This will
     <artifactId>servlet-api</artifactId>
     <version>2.5</version>
 </dependency>
+
+Solution2 :
+Include servlet-api-3.1.jar in your dependencies 
+<dependency>
+  <groupId>javax.servlet</groupId>
+  <artifactId>javax.servlet-api</artifactId>
+  <version>3.1.0</version>
+  <scope>provided</scope>
+</dependency>
+
+Solution3 :
+Project->Properties->Target Runtimes->Apache Tomcat
 
 
       JAX-RS-JSON_thirdCommit - Deploy Server + Client Requests 
