@@ -3,7 +3,7 @@
 
 Right click on the project and select Run As-> Run on Server
 Once Tomcat is up and running successfully one should see the index.jsp page of the project running at location 
-                                                        http://localhost:8080/JAXRS-JSON/index.jsp.
+                                                        http://localhost:8080/JAX-RS-JSON/index.jsp.
                                                         
 Once the Jersey server is up and running we can fire the requests from our Jersey Client.
 Just go to the RestClient.java class, Right Click -> Run As -> Java Application
