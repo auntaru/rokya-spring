@@ -1,0 +1,28 @@
+
+2015-05.14 spring-security-custom-login-form-xml.mkyong
+
+http://www.mkyong.com/spring-security/spring-security-form-login-example/
+Spring Security Custom Login Form Example
+By mkyong | August 17, 2011 | Last Updated : April 21, 2014
+
+By default, if no login form is specified, Spring Security will create a default login form automatically. 
+Please refer to this – Spring Security hello world example.
+http://www.mkyong.com/spring-security/spring-security-hello-world-example/
+
+In this tutorial, we will show you how to create a custom login form for Spring Security (XML example).
+
+Technologies used :
+
+Spring 3.2.8.RELEASE
+Spring Security 3.2.3.RELEASE
+Eclipse 4.2
+JDK 1.6
+Maven 3
+
+
+http://docs.spring.io/spring-security/site/docs/current/reference/html/ns-config.html
+http://www.raistudies.com/spring-security-tutorial/authentication-authorization-spring-security-mysql-database/
+http://www.raistudies.com/spring-security-tutorial/authentication-authorization-spring-security-mysql-database/
+http://www.javacodegeeks.com/2012/02/set-up-spring-3-development-environment.html
+
+
