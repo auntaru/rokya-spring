@@ -1,6 +1,9 @@
 
-2015-05.14 spring-security-custom-login-form
-
+2015-05.14 : spring-security-custom-login-form ~ Tomcat 8.0.22 ~ Goals = eclipse:clean eclipse:eclipse
+             pom.xml : right click -> run as -> run configurations -> maven build : 
+                       Base directory = ${workspace_loc:/spring-security-loginform-xml}
+                       Goals = eclipse:clean eclipse:eclipse
+                
 http://www.mkyong.com/spring-security/spring-security-form-login-example/
 Spring Security Custom Login Form Example
 By mkyong | August 17, 2011 | Last Updated : April 21, 2014
