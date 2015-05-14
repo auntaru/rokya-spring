@@ -1,5 +1,5 @@
 
-2015-05.14 spring-security-custom-login-form-xml.mkyong
+2015-05.14 spring-security-custom-login-form
 
 http://www.mkyong.com/spring-security/spring-security-form-login-example/
 Spring Security Custom Login Form Example
