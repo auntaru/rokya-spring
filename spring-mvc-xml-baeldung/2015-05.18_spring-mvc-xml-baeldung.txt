@@ -1,0 +1,22 @@
+
+2015-05.18_spring-mvc-xml-baeldung 
+
+Spring Security Course
+https://www.packtpub.com/application-development/spring-security-video
+https://github.com/eugenp/course
+http://www.baeldung.com/tag/security/
+
+
+http://www.baeldung.com/spring-mvc-tutorial
+http://www.baeldung.com/spring-with-maven#mvc
+http://www.baeldung.com/servlet-session-timeout
+http://www.baeldung.com/hibernate-4-spring
+http://www.baeldung.com/2011/12/02/the-persistence-layer-with-spring-3-1-and-hibernate/
+
+https://github.com/eugenp/tutorials
+https://github.com/eugenp/tutorials/tree/master/spring-hibernate4
+https://github.com/eugenp/tutorials/tree/master/spring-mvc-xml#readme
+
+
+http://www.mkyong.com/spring-security/spring-security-form-login-example/
+
