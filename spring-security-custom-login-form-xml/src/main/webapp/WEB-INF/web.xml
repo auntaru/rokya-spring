@@ -6,6 +6,8 @@
 	<display-name>Spring MVC Application</display-name>
 
 	<!-- Spring MVC -->
+	<!-- http://www.mkyong.com/spring-security/spring-security-form-login-example -->
+	
 	<servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
