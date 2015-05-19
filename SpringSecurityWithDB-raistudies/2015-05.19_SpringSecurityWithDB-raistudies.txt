@@ -1,8 +1,24 @@
 
-2015-05.19_SpringSecurityWithDB-raistudies : raistudies.com spring-security mysql
+2015-05.19_SpringSecurityWithDB-raistudies : raistudies.com spring-security (3.2.7) mysql
 
 http://www.raistudies.com/spring-security-tutorial/authentication-authorization-spring-security-mysql-database/
 http://www.raistudies.com/spring-security-tutorial/mysql-ddl-tables-spring-security/
+http://www.raistudies.com/spring-security-tutorial/spring-security-configuration-spring-mvc/
+
+http://www.beingjavaguys.com/2014/08/spring-security-with-hibernate.html
+http://www.beingjavaguys.com/2013/08/spring-maven-web-application-in-eclipse.html
+http://www.beingjavaguys.com/p/spring-framework.html
+http://www.mkyong.com/spring-security/spring-security-hello-world-annotation-example/
+
+
+http://docs.spring.io/spring-security/site/docs/3.1.x/reference/springsecurity-single.html
+http://docs.spring.io/spring-security/site/docs/3.2.x/reference/htmlsingle/
+http://docs.spring.io/spring-security/site/docs/
+http://docs.spring.io/spring-security/site/docs/3.2.7.RELEASE/
+http://docs.spring.io/spring-security/site/docs/3.2.7.RELEASE/reference/htmlsingle/
+
+http://docs.spring.io/spring-security/site/docs/4.0.x/reference/htmlsingle/
+
 
  - "admin" as username and password
 
@@ -22,4 +38,59 @@ create table authorities (
 
 INSERT INTO users(`username`,`password`,`enabled`) VALUES( 'admin','21232f297a57a5a743894a0e4a801fc3',1);
 INSERT INTO authorities(`username`,`authority`) VALUES('admin','ROLE_ADMIN');
+
+======================================================================================================================
+http://docs.spring.io/spring-security/site/docs/3.2.x/reference/htmlsingle/
+======================================================================================================================
+Using Spring 4 and Maven
+======================================================================================================================
+Spring Security (3.2.x) builds against Spring Framework 3.2.13.RELEASE, 
+but is also tested against Spring Framework 4.1.6.RELEASE. 
+======================================================================================================================
+   *** ### This means you can use Spring Security 3.2.7.RELEASE with Spring Framework 4.1.6.RELEASE. ### *** 
+======================================================================================================================
+The problem that many users will have is that Spring Security’s transitive dependencies resolve Spring Framework 3.2.13.RELEASE 
+causing all sorts of strange classpath problems.
+
+One (tedious) way to circumvent this issue would be to include all the Spring Framework modules in a <dependencyManagement> section of your pom. 
+An alternative approach is to include the spring-framework-bom within your <dependencyManagement> section of your pom.xml as shown below:
+pom.xml
+<dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-framework-bom</artifactId>
+        <version>4.1.6.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+</dependencyManagement>
+This will ensure that all the transitive dependencies of Spring Security use the Spring 4.1.6.RELEASE modules.
+
+======================================================================================================================
+http://docs.spring.io/spring-security/site/docs/4.0.x/reference/htmlsingle/
+======================================================================================================================
+1.4.1 Usage with Maven
+A minimal Spring Security Maven set of dependencies typically looks like the following:
+pom.xml. 
+<dependencies>
+<!-- ... other dependency elements ... -->
+<dependency>
+	<groupId>org.springframework.security</groupId>
+	<artifactId>spring-security-web</artifactId>
+	<version>4.0.1.RELEASE</version>
+</dependency>
+<dependency>
+	<groupId>org.springframework.security</groupId>
+	<artifactId>spring-security-config</artifactId>
+	<version>4.0.1.RELEASE</version>
+</dependency>
+</dependencies>
+======================================================================================================================
+Spring Framework Bom
+Spring Security (4.0.x) builds against Spring Framework 4.1.6.RELEASE, but should work with 4.0.x. 
+The problem that many users will have is that Spring Security’s transitive dependencies resolve Spring Framework 4.1.6.RELEASE 
+which can cause strange classpath problems.
+
 
