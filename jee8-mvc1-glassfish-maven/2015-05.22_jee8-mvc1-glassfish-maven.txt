@@ -1,0 +1,14 @@
+
+2015-05.22_jee8-mvc1-glassfish-maven
+
+http://www.giorgosdimtsas.net/model-view-controller-mvc-1-0-in-javaee-8/
+git clone https://github.com/gedim21/jee-mvc-app.git
+mvn package embedded-glassfish:run
+localhost:8888
+
+
+A sample application with source code can be found at https://github.com/gedim21/jee-mvc-app. 
+Use mvn package embedded-glassfish:run  
+and point your browser at localhost:8888  to see the application running.
+
+http://stackoverflow.com/questions/25200410/how-to-configure-glassfish-server-in-eclipse-luna-manually

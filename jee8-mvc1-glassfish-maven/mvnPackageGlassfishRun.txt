@@ -1,0 +1,1 @@
+mvn package embedded-glassfish:run
