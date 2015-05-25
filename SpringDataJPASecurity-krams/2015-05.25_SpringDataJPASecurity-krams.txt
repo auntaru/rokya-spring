@@ -1,0 +1,42 @@
+2015-05.25_SpringDataJPASecurity-krams : Implement UserDetailsService
+======================================================================================================================
+http://krams915.blogspot.ro/2012/01/spring-security-31-implement_5023.html
+https://github.com/krams915/spring-security-tutorial
+Spring Security 3.1 - Implement UserDetailsService with Spring Data JPA (Part 1)
+   2012-January.13
+   
+   - Create a new database: spring_security_tutorial
+   - Import the following file which is included in the source code under the src/main/resources folder:
+                            spring_security_tutorial.sql
+   - Run the following command :
+                            mvn tomcat:run          
+                                              
+     http://localhost:8080/spring-security-tutorial/
+
+username   password   role
+john       admin      administrator
+jane       user       regular user     
+
+Import the project in Eclipse
+mvn eclipse:eclipse -Dwtpversion=2.0
+   
+   
+ ~ ~ ~ 
+Introduction to spring and hibernate : 
+https://www.youtube.com/watch?v=C6VVZiGEypU
+ ~ ~ ~ 
+http://krams915.blogspot.in/2012/01/spring-mvc-31-jqgrid-and-spring-data_1887.html
+https://github.com/SatishAb/invsys/tree/master/src/main/webapp/WEB-INF/jsp/saleorder
+http://satishab.blogspot.ro/2013/03/part-1-sample-q-application-using-mongo.html
+ ~ ~ ~
+(Part 1) Configuring Sample Invoice Spring Application - 
+Maven & Application Configuration: Learning Spring Framework Series
+http://satishab.blogspot.ro/2012/10/part-1-configuring-sample-invoice.html
+ ~ ~ ~
+Complete Web Application: 
+Angular Twitter Bootstrap Spring MVC, Data and Security, 
+PostgreSQL
+http://uaihebert.com/complete-web-application-angular-twitter-bootstrap-spring-mvc-data-and-security/
+
+======================================================================================================================
+
