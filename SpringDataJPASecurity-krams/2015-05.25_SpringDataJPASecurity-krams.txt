@@ -1,4 +1,4 @@
-2015-05.25_SpringDataJPASecurity-krams : Implement UserDetailsService
+2015-05.26_SpringDataJPASecurity-krams : Implement UserDetailsService
 ======================================================================================================================
 http://krams915.blogspot.ro/2012/01/spring-security-31-implement_5023.html
 https://github.com/krams915/spring-security-tutorial
