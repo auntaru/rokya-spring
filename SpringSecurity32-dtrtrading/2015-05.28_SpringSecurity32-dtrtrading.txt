@@ -1,0 +1,76 @@
+
+2015-05.28 : DTR-Trading : Spring Security 3.2 + Spring MVC 4.0.2
+  
+Spring MVC (4.0.2) / Spring Security (3.2) - Authorization: User/Role/Permission
+https://github.com/dtr-trading/spring-ex14-auth
+Spring Security 3.2 - Users, Roles, Permissions - Part 5
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-users-roles_7378.html
+Spring Security 3.2 - Users, Roles, Permissions - Part 4
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-users-roles_7532.html
+Spring Security 3.2 - Users, Roles, Permissions - Part 3
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-users-roles_7633.html
+Spring Security 3.2 - Users, Roles, Permissions - Part 2
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-users-roles_18.html
+Spring Security 3.2 - Users, Roles, Permissions - Part 1
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-users-roles.html
+
+mvn package -Dmaven.test.skip=true
+Run on Server = Tomcat 7 (8) 
+http://localhost:8080/dtr-trading-security-auth/login
+admin, trader , user = password 
+
+
+spring-ex14-auth
+This example builds on spring-ex13-auth, where we added method level role based security to our strategy controller. 
+We only add one line to our security config and one line to our controller in order to enable this security. 
+In this example, we will add unique permissions to all of our controller and service layer methods, 
+and store these permissions in a permissions table in the database. 
+This permissions table will use a link table to associate permissions with roles. 
+This example uses Spring 4.0.2 and Spring Security 3.2.3, and uses java configuration files rather than XML.
+This example has been validated with the following environment on MS Windows 7:
+Eclipse Kepler 1.1 Spring Tool Suite (STS) 3.4.0.RELEASE - for Kepler
+Java SDK 1.7.0_51 (separate install)
+Tomcat 7.0.50 (separate install)
+Maven 3.0.5 (separate install)
+MySQL 5.5.29
+
+https://github.com/dtr-trading?tab=repositories
+
+Spring Security 3.2 Authorization - Part 1
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-authorization-part-1.html
+https://github.com/dtr-trading/spring-ex11-auth
+
+Spring Security 3.2 Authorization - Part 2
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-authorization-part-2.html
+https://github.com/dtr-trading/spring-ex12-auth
+
+Spring Security 3.2 Authorization - Part 3
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-authorization-part-3.html
+https://github.com/dtr-trading/spring-ex13-auth
+
+
+Spring in Practice : http://springinpractice.com/book/
+http://dtr-trading.blogspot.ro/2014/02/another-data-model-update.html
+
+
+2015-02.08 : 
+https://jtelmon.googlecode.com/svn/trunk/SpringSecurity32-dtrtrading
+
+https://jtelmon.googlecode.com/svn/ajax-json : CaptainDebug !  
+
+https://jtelmon.googlecode.com/svn/trunk/ProJava4WebApps-CH21-SpringJPA
+https://jtelmon.googlecode.com/svn/trunk/ProJava4WebApps-Ch26AuthenticationApp
+https://jtelmon.googlecode.com/svn/trunk/ProJava4WebApps-CustomerSupport16
+https://jtelmon.googlecode.com/svn/trunk/ProJava4WebApps-CustomerSupport21
+
+https://jtelmon.googlecode.com/svn/marakana-training
+https://jtelmon.googlecode.com/svn/trunk/SpringMVC4-Hibernate4CRUD-dtrtrading
+https://jtelmon.googlecode.com/svn/trunk/ajax-jQuery-SpringMVC3-JSON
+
+
+Getting Started with Spring Security 3.2
+https://www.youtube.com/watch?v=1zu8COg80q4
+https://github.com/rwinch/gs-spring-security-3.2
+http://spring.io/blog/2014/01/21/webinar-replay-spring-security-3-2
+https://github.com/rwinch
+https://www.packtpub.com/application-development/spring-security-31
