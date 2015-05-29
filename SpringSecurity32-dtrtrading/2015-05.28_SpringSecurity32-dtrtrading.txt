@@ -34,7 +34,17 @@ Tomcat 7.0.50 (separate install)
 Maven 3.0.5 (separate install)
 MySQL 5.5.29
 
+
 https://github.com/dtr-trading?tab=repositories
+
+
+
+spring-ex11-auth
+In this example, we restrict access to the "strategy" pages to users with the role "ROLE_ADMIN". 
+We also update the LinkController to direct users to one of the three role specific home pages. 
+This example uses Spring 4.0.2 and Spring Security 3.2.3, and uses java configuration files rather than XML.
+
+https://github.com/dtr-trading/spring-ex11-auth
 
 Spring Security 3.2 Authorization - Part 1
 http://dtr-trading.blogspot.ro/2014/04/spring-security-32-authorization-part-1.html
