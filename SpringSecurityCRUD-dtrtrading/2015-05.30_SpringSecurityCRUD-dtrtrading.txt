@@ -1,0 +1,110 @@
+2015-05.30 : DTR-Trading : Spring : Security + MVC + CRUD
+https://github.com/dtr-trading/spring-ex17-crud-perm
+http://dtr-trading.blogspot.ro/2014/05/spring-thymeleaf-permissions-crud-part-1.html
+
+
+Spring in Practice : http://springinpractice.com/book/
+http://dtr-trading.blogspot.ro/2014/02/another-data-model-update.html
+
+
+2015-05.28 : DTR-Trading : Spring Security 3.2 + Spring MVC 4.0.2
+  
+Spring MVC (4.0.2) / Spring Security (3.2) - Authorization: User/Role/Permission
+https://github.com/dtr-trading/spring-ex14-auth
+Spring Security 3.2 - Users, Roles, Permissions - Part 5
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-users-roles_7378.html
+Spring Security 3.2 - Users, Roles, Permissions - Part 4
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-users-roles_7532.html
+Spring Security 3.2 - Users, Roles, Permissions - Part 3
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-users-roles_7633.html
+Spring Security 3.2 - Users, Roles, Permissions - Part 2
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-users-roles_18.html
+Spring Security 3.2 - Users, Roles, Permissions - Part 1
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-users-roles.html
+
+mvn package -Dmaven.test.skip=true
+Run on Server = Tomcat 7 (8) 
+http://localhost:8080/dtr-trading-security-auth/login
+admin, trader , user = password 
+
+
+spring-ex14-auth
+This example builds on spring-ex13-auth, where we added method level role based security to our strategy controller. 
+We only add one line to our security config and one line to our controller in order to enable this security. 
+In this example, we will add unique permissions to all of our controller and service layer methods, 
+and store these permissions in a permissions table in the database. 
+This permissions table will use a link table to associate permissions with roles. 
+This example uses Spring 4.0.2 and Spring Security 3.2.3, and uses java configuration files rather than XML.
+This example has been validated with the following environment on MS Windows 7:
+Eclipse Kepler 1.1 Spring Tool Suite (STS) 3.4.0.RELEASE - for Kepler
+Java SDK 1.7.0_51 (separate install)
+Tomcat 7.0.50 (separate install)
+Maven 3.0.5 (separate install)
+MySQL 5.5.29
+
+
+https://github.com/dtr-trading?tab=repositories
+
+
+
+spring-ex11-auth
+In this example, we restrict access to the "strategy" pages to users with the role "ROLE_ADMIN". 
+We also update the LinkController to direct users to one of the three role specific home pages. 
+This example uses Spring 4.0.2 and Spring Security 3.2.3, and uses java configuration files rather than XML.
+
+https://github.com/dtr-trading/spring-ex11-auth
+
+Spring Security 3.2 Authorization - Part 1
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-authorization-part-1.html
+https://github.com/dtr-trading/spring-ex11-auth
+
+Spring Security 3.2 Authorization - Part 2
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-authorization-part-2.html
+https://github.com/dtr-trading/spring-ex12-auth
+
+Spring Security 3.2 Authorization - Part 3
+http://dtr-trading.blogspot.ro/2014/04/spring-security-32-authorization-part-3.html
+https://github.com/dtr-trading/spring-ex13-auth
+
+
+2015-05.26_SpringDataJPASecurity-krams : Implement UserDetailsService
+======================================================================================================================
+http://krams915.blogspot.ro/2012/01/spring-security-31-implement_5023.html
+https://github.com/krams915/spring-security-tutorial
+Spring Security 3.1 - Implement UserDetailsService with Spring Data JPA (Part 1)
+   2012-January.13
+   
+   - Create a new database: spring_security_tutorial
+   - Import the following file which is included in the source code under the src/main/resources folder:
+                            spring_security_tutorial.sql
+   - Run the following command :
+                            mvn tomcat:run          
+                                              
+     http://localhost:8080/spring-security-tutorial/
+
+username   password   role
+john       admin      administrator
+jane       user       regular user     
+
+Import the project in Eclipse
+mvn eclipse:eclipse -Dwtpversion=2.0
+   
+   
+ ~ ~ ~ 
+Introduction to spring and hibernate : 
+https://www.youtube.com/watch?v=C6VVZiGEypU
+ ~ ~ ~ 
+http://krams915.blogspot.in/2012/01/spring-mvc-31-jqgrid-and-spring-data_1887.html
+https://github.com/SatishAb/invsys/tree/master/src/main/webapp/WEB-INF/jsp/saleorder
+http://satishab.blogspot.ro/2013/03/part-1-sample-q-application-using-mongo.html
+ ~ ~ ~
+(Part 1) Configuring Sample Invoice Spring Application - 
+Maven & Application Configuration: Learning Spring Framework Series
+http://satishab.blogspot.ro/2012/10/part-1-configuring-sample-invoice.html
+ ~ ~ ~
+Complete Web Application: 
+Angular Twitter Bootstrap Spring MVC, Data and Security, 
+PostgreSQL
+http://uaihebert.com/complete-web-application-angular-twitter-bootstrap-spring-mvc-data-and-security/
+
+======================================================================================================================
