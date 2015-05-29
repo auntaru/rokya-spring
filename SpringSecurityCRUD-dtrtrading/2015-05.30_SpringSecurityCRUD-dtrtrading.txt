@@ -2,9 +2,14 @@
 https://github.com/dtr-trading/spring-ex17-crud-perm
 http://dtr-trading.blogspot.ro/2014/05/spring-thymeleaf-permissions-crud-part-1.html
 
-
 Spring in Practice : http://springinpractice.com/book/
 http://dtr-trading.blogspot.ro/2014/02/another-data-model-update.html
+
+ ~ ~ ~
+Complete Web Application: 
+Angular Twitter Bootstrap Spring MVC, Data and Security, 
+PostgreSQL
+http://uaihebert.com/complete-web-application-angular-twitter-bootstrap-spring-mvc-data-and-security/
 
 
 2015-05.28 : DTR-Trading : Spring Security 3.2 + Spring MVC 4.0.2
@@ -101,10 +106,5 @@ http://satishab.blogspot.ro/2013/03/part-1-sample-q-application-using-mongo.html
 (Part 1) Configuring Sample Invoice Spring Application - 
 Maven & Application Configuration: Learning Spring Framework Series
 http://satishab.blogspot.ro/2012/10/part-1-configuring-sample-invoice.html
- ~ ~ ~
-Complete Web Application: 
-Angular Twitter Bootstrap Spring MVC, Data and Security, 
-PostgreSQL
-http://uaihebert.com/complete-web-application-angular-twitter-bootstrap-spring-mvc-data-and-security/
 
 ======================================================================================================================
