@@ -13,6 +13,18 @@ we use twitter bootstrap library with a material design theme.
 https://samerabdelkafi.wordpress.com/2015/01/25/angularjs/
 SpringMVC + MATERIAL DESIGN !!! in loc de thymeleaf ...
 ====================================================
+Let's get down to business : 
+"Learning Spring Application Development 2015 Packt.pdf"
+Chapter 6 , pag 265 , http://www.it-ebooks.info/
+   In this section, we will develop an application using Spring MVC, Hibernate, and
+Spring Security. Here, we have a custom login page, logout page, employee page (to
+list employees), and add employee page (to add employees), which is secured by the
+Spring Framework. A user can log into the application using the custom login page
+and view the secured page based on the authentication and authorization. A user
+will be redirected to the custom login page on any authentication failure along with
+the error message, which describes the reason for failure. User will be logged out
+from the application on clicking on the logout link and redirected to the logout page.
+====================================================
 Baza de date (SCHEMA.DDL) se creeaza prin JUnit test :
 org.timesheet.integration.HibernateConfigurationTest.java !!! 
 
