@@ -4,8 +4,9 @@ Michal Vrtiak
 https://bitbucket.org/vrto/spring-tutorial
 https://bitbucket.org/vrto/spring-tutorial/get/a66534cc7033.zip
 https://github.com/vrto
+====================================================
 https://github.com/vrto/spring-integration-invoices
-
+====================================================
 Baza de date (SCHEMA.DDL) se creeaza prin JUnit test :
 org.timesheet.integration.HibernateConfigurationTest.java !!! 
 
