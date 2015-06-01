@@ -8,8 +8,10 @@ https://github.com/vrto
 https://github.com/vrto/spring-integration-invoices
 ====================================================
 Develop a web application with AngularJS and Spring MVC
+To enhance the application design, 
+we use twitter bootstrap library with a material design theme.
 https://samerabdelkafi.wordpress.com/2015/01/25/angularjs/
-SpringMVC + MATERIAL DESIGN !!! in loc de thymeleaf ... 
+SpringMVC + MATERIAL DESIGN !!! in loc de thymeleaf ...
 ====================================================
 Baza de date (SCHEMA.DDL) se creeaza prin JUnit test :
 org.timesheet.integration.HibernateConfigurationTest.java !!! 
