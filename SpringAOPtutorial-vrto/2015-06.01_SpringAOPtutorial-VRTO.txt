@@ -1,0 +1,61 @@
+2015-06.01 : SpringAOPtutorial-VRTO Michal Vrtiak
+
+Michal Vrtiak
+https://bitbucket.org/vrto/spring-tutorial
+https://bitbucket.org/vrto/spring-tutorial/get/a66534cc7033.zip
+https://github.com/vrto
+https://github.com/vrto/spring-integration-invoices
+
+Baza de date (SCHEMA.DDL) se creeaza prin JUnit test :
+org.timesheet.integration.HibernateConfigurationTest.java !!! 
+
+Atentie si la : 
+   org.timesheet.web.helpers.EntityGenerator
+
+Run on Server Tomcat 7 (8)
+http://localhost:8080/org.timesheet/timesheets
+
+A timesheet management application is gradually created in this series and each tutorial builds on top of the previous one. 
+All main aspects of a web application are taken care of, including both server side and client side functionality.
+
+https://vrtoonjava.wordpress.com/2012/06/17/shall-we-do-some-spring-together/
+http://www.javacodegeeks.com/2012/09/introduction-to-spring-tutorial-series.html
+
+Spring – Designing the domain model and the service layer
+http://www.javacodegeeks.com/2012/09/spring-designing-domain-model-and.html
+https://vrtoonjava.wordpress.com/2012/06/17/part-1-designing-the-domain-model-and-the-service-layer/
+http://www.martinfowler.com/bliki/AnemicDomainModel.html
+
+
+Spring Integration – developing application from the scratch (part 1 / 2)
+https://vrtoonjava.wordpress.com/2013/03/03/spring-integration-developing-application-from-the-scratch-part-1-2/
+https://github.com/vrto/spring-integration-invoices
+
+https://vrtoonjava.wordpress.com/2013/03/03/spring-integration-developing-application-from-the-scratch-part-2-2/
+
+
+
+
+http://stackoverflow.com/questions/19559068/jpa-hibernate-create-database-schema-and-import-data-on-first-run-update-schem
+JPA/Hibernate: create database schema and import data on first run, update schema on subsequent runs
+
+
+Hibernate Facts: Integration testing strategies
+Making use of hibernate.hbm2ddl.auto="update"
+http://vladmihalcea.com/2013/12/04/hibernate-facts-integration-testing-strategies/
+https://github.com/vladmihalcea/vladmihalcea.wordpress.com/tree/master/hibernate-facts
+
+Custom schema generation with Hibernate annotations
+http://www.javaworld.com/article/2077886/data-storage/custom-schema-generation-with-hibernate-annotations.html
+
+JPA Entity and persistence with Hibernate(hbm2ddl.auto)
+https://www.examsmyantra.com/article/104/javaee/jpa-entity-and-persistence-with-hibernatehbm2ddlauto
+In this part we are going to describe working of JPA Entity and persistence with Hibernate(hbm2ddl.auto), 
+how to automate the process of table creation using jpa and hibernate in javaee7. 
+This tutorial also demonstrate the configuration of the persistence unit for the datasource created on server 
+to be used directly in the application.
+
+
+JAVAEE-3 JPA Entity creation(JPA API)
+https://www.youtube.com/watch?v=5bXtAim0O2I
+

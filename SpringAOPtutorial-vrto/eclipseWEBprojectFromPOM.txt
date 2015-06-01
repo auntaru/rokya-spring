@@ -1,0 +1,8 @@
+
+# generate Eclipse WEB project from POM : ( wtp - Web Tools Project ) 
+
+  mvn eclipse:eclipse -Dwtpversion=2.0
+
+# http://www.mkyong.com/maven/how-do-use-maven-to-create-a-dynamic-web-project-in-eclipse/
+# How To Convert Maven Based Web Application To Support Eclipse IDE :
+
