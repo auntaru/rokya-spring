@@ -13,6 +13,7 @@ Atentie si la :
    org.timesheet.web.helpers.EntityGenerator
 
 Run on Server Tomcat 7 (8)
+http://localhost:8080/org.timesheet/welcome
 http://localhost:8080/org.timesheet/timesheets
 
 A timesheet management application is gradually created in this series and each tutorial builds on top of the previous one. 
