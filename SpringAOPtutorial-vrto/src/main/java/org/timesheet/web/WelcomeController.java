@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct;
 import java.util.Date;
 
 @Controller
-@RequestMapping("/welcome")
+@RequestMapping({ "/", "/welcome" })
 public class WelcomeController {
 
     @Autowired
