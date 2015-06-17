@@ -1,3 +1,10 @@
+2015-06.17 : SpringAOPtutorial-VRTO + screenshots
+
+https://vrtoonjava.wordpress.com/2012/06/17/shall-we-do-some-spring-together/
+http://www.javacodegeeks.com/2012/09/introduction-to-spring-tutorial-series.html
+
+
+
 2015-06.01 : SpringAOPtutorial-VRTO Michal Vrtiak
 
 Michal Vrtiak
@@ -38,8 +45,6 @@ http://localhost:8080/org.timesheet/welcome
 A timesheet management application is gradually created in this series and each tutorial builds on top of the previous one. 
 All main aspects of a web application are taken care of, including both server side and client side functionality.
 
-https://vrtoonjava.wordpress.com/2012/06/17/shall-we-do-some-spring-together/
-http://www.javacodegeeks.com/2012/09/introduction-to-spring-tutorial-series.html
 
 Spring – Designing the domain model and the service layer
 http://www.javacodegeeks.com/2012/09/spring-designing-domain-model-and.html
