@@ -1,0 +1,43 @@
+
+2015-06.18 : Learning Spring Application Development 2015 Packt.pdf 
+             Chapter 6 - Spring Security
+
+CREATE DATABASE ehrpayroll_db
+
+CREATE TABLE EMPLOYEE_INFO(
+ID serial NOT NULL Primary key,
+FIRST_NAME varchar(30) not null,
+LAST_NAME varchar(30) not null,
+JOB_TITLE varchar(100) not null,
+DEPARTMENT varchar(100) not null,
+SALARY INTEGER
+);
+
+INSERT INTO EMPLOYEE_INFO
+(FIRST_NAME, LAST_NAME, JOB_TITLE, DEPARTMENT, SALARY)
+VALUES
+('RAVI', 'SONI', 'AUTHOR', 'TECHNOLOGY', 5000);
+
+<properties>
+<spring.version>4.1.3.RELEASE</spring.version>
+<security.version>4.0.0.CI-SNAPSHOT</security.version>
+<hibernate.version>4.2.11.Final</hibernate.version>
+<org.aspectj-version>1.7.4</org.aspectj-version>
+</properties>
+<!-- postgresql Connector Java dependency (JDBC driver for postgresql) -->
+<dependency>
+<groupId>postgresql</groupId>
+<artifactId>postgresql</artifactId>
+<version>9.0-801.jdbc4</version>
+</dependency>
+
+
+WildFly 8.2.0 on Ubuntu 14.04 - as a service !
+https://gesker.wordpress.com/2015/02/17/quick-install-wildfly-8-2-0-on-ubuntu-14-04/
+http://www.itbuzzpress.com/wildfly-8-administration/getting-started-with-wildfly-8.html
+
+
+JAVA EE 7 WITH ANGULAR JS – PART 1
+http://www.radcortez.com/java-ee-7-with-angular-js-part-1/
+https://programmaticponderings.wordpress.com/2013/10/21/spring-integration-with-eclipse-using-maven/
+
