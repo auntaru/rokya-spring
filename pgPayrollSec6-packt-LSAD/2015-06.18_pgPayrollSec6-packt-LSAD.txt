@@ -1,5 +1,5 @@
 
-2015-06.18 : Learning Spring Application Development 2015 Packt.pdf 
+2015-06.19 : Learning Spring Application Development - Packt 2015  
              Chapter 6 - Spring Security
 
 CREATE DATABASE ehrpayroll_db
@@ -40,4 +40,6 @@ http://www.itbuzzpress.com/wildfly-8-administration/getting-started-with-wildfly
 JAVA EE 7 WITH ANGULAR JS – PART 1
 http://www.radcortez.com/java-ee-7-with-angular-js-part-1/
 https://programmaticponderings.wordpress.com/2013/10/21/spring-integration-with-eclipse-using-maven/
+http://www.programcreek.com/2014/02/spring-mvc-helloworld-using-maven-in-eclipse/
+
 
