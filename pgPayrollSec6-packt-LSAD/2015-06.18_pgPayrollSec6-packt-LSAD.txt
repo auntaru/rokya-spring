@@ -1,5 +1,5 @@
 
-2015-07.20 : Learning Spring Application Development - Packt 2015  
+2015-07.20 21h55 : Learning Spring Application Development - Packt 2015  
              Chapter 6 - Spring Security
 
 CREATE DATABASE ehrpayroll_db
@@ -32,9 +32,15 @@ VALUES
 </dependency>
 
 ====================================================
+= = = BUILD TROUBLESHOOTING = = =  
+PENTRU : SPRING 3.2.8 + SPRING SECURITY 3.1.4 ->    
+Eclipse Menu -> Project - > Properties :
+   Java Build Path -> Libraries -> JavaSE-1.7
+   Java Compiler -> Enable Project specific settings -> JavaSE-1.7
+   Project Facets -> Java 1.7
 <<
 ERROR     : 
-  - pom.xml = "spring 3.2.8" + "SEVERE: Error configuring application listener of class org.springframework.web.context.ContextLoaderListener"
+  -"SEVERE: Error configuring application listener of class org.springframework.web.context.ContextLoaderListener"
   - http://stackoverflow.com/questions/6210757/java-lang-classnotfoundexception-org-springframework-web-context-contextloaderl
 SOLUTION  : 
  I had a similar problem when running a spring web application in an Eclipse managed tomcat. 
