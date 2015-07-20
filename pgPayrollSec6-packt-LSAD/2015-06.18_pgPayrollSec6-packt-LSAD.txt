@@ -2,6 +2,18 @@
 2015-07.20 21h55 : Learning Spring Application Development - Packt 2015  
              Chapter 6 - Spring Security
 
+   [ 2015-07.21 : ->  Java Spring ToDoNext : postgresPayRollSecurity + VRTO-TimeSheet-HibernateOneToMany
+                DELL     : VRTO-TimeSheet    + HibernateOneToMany
+				KLONA    : postgresPayrollSecurity + Learning Spring App Dev PACKT 2015 .PDF
+
+				Dupa ce inteleg OneToMany + SpringContextPostgres , 
+    				pot sa incep sa afisez comenzi din PG-PAN-MAIN ! 
+               			( ultimele 10 comenzi introduse ) 
+                        	   user = java / pass=linux 
+                            	      Daca se poate folosi sablon HTML din ASKi !?! 
+
+	<- : 2015-07.21 ]
+	
 CREATE DATABASE ehrpayroll_db
 
 CREATE TABLE EMPLOYEE_INFO(
