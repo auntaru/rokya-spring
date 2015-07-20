@@ -1,5 +1,5 @@
 
-2015-06.19 : Learning Spring Application Development - Packt 2015  
+2015-07.20 : Learning Spring Application Development - Packt 2015  
              Chapter 6 - Spring Security
 
 CREATE DATABASE ehrpayroll_db
@@ -31,6 +31,32 @@ VALUES
 <version>9.0-801.jdbc4</version>
 </dependency>
 
+====================================================
+<<
+ERROR     : 
+  - pom.xml = "spring 3.2.8" + "SEVERE: Error configuring application listener of class org.springframework.web.context.ContextLoaderListener"
+  - http://stackoverflow.com/questions/6210757/java-lang-classnotfoundexception-org-springframework-web-context-contextloaderl
+SOLUTION  : 
+ I had a similar problem when running a spring web application in an Eclipse managed tomcat. 
+ I solved this problem by adding maven dependencies in the project's web deployment assembly.
+ Open the project's properties (e.g., right-click on the project's name in the project explorer and select "Properties").
+ Select "Deployment Assembly".
+ Click the "Add..." button on the right margin.
+ Select "Java Build Path Entries" from the menu of Directive Type and click "Next".
+ Select "Maven Dependencies" from the Java Build Path Entries menu and click "Finish".
+ You should see "Maven Dependencies" added to the Web Deployment Assembly definition.  
+SUGESTION :
+ Same thing happens to me from time to time when using Eclipse WDT. 
+ Its specialy frustrating when this happens to a unmodified and previously working project. 
+ This is what I do to fix it in this last scenario:
+ Stop Tomcat (if it's running)
+ Open the "Servers" view: Window > Show view > Other > Server > Servers
+ Right Click on Tomcat Server > Clean Tomcat Work Directory.
+ Right Click on Tomcat Server > Clean
+ Restart the server
+ This usually fixes the issue you mention.
+>>
+====================================================
 
 WildFly 8.2.0 on Ubuntu 14.04 - as a service !
 https://gesker.wordpress.com/2015/02/17/quick-install-wildfly-8-2-0-on-ubuntu-14-04/
