@@ -1,0 +1,16 @@
+
+
+2015-07.28 : HibernateConfigurationTest.java = OK ! 
+org.jlsoft.orders.connection.model.HibernateConfigurationTest
+
+Hibernate - ERROR & SOLUTION :   
+org.hibernate.AnnotationException: Collection has neither generic type or OneToMany.targetEntity()
+http://www.mkyong.com/hibernate/org-hibernate-annotationexception-collection-has-neither-generic-type-or-onetomany-targetentity/
+
+
+How to create a Web Application Project with Maven
+http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
+
+How to generate Hibernate mapping files & annotation with Hibernate Tools
+http://www.mkyong.com/hibernate/how-to-generate-code-with-hibernate-tools/
+
