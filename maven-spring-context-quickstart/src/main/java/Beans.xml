@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="vehicle1" class="com.blogpost.maven.maven_spring.Vehicle">
+		<property name="make" value="Mercedes-Benz" />
+		<property name="model" value="ML550" />
+		<property name="year" value="2010" />
+		<property name="color" value="Silver" />
+		<property name="type" value="SUV" />
+	</bean>
+
+	<bean id="vehicle2" class="com.blogpost.maven.maven_spring.Vehicle">
+		<property name="make" value="Jaguar" />
+		<property name="model" value="F-Type" />
+		<property name="year" value="2013" />
+		<property name="color" value="Red" />
+		<property name="type" value="Convertible" />
+	</bean>
+
+	<bean id="vehicle3" class="com.blogpost.maven.maven_spring.Vehicle">
+		<property name="make" value="Suzuki" />
+		<property name="model" value="SVF 650" />
+		<property name="year" value="2012" />
+		<property name="color" value="Black" />
+		<property name="type" value="Motorcycle" />
+	</bean>
+
+</beans>

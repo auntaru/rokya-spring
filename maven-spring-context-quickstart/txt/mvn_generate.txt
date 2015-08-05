@@ -1,0 +1,46 @@
+
+# mvn compile
+# mvn package
+
+# mvn tomcat:run
+# http://localhost:8080/store/
+
+# To generate Eclipse WEB project from POM : 
+# mvn eclipse:eclipse -Dwtpversion=2.0
+
+
+# http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-1-setting-the-scene.html
+# http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-2-the-server-side-code.html
+# http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-3-the-client-side-code.html
+
+
+# http://www.mkyong.com/maven/how-do-use-maven-to-create-a-dynamic-web-project-in-eclipse/
+#  How To Convert Maven Based Web Application To Support Eclipse IDE :
+#   mvn eclipse:eclipse -Dwtpversion=2.0
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~
+
+
+# http://books.sonatype.com/mvnex-book/reference/web-sect-adding-simple-servlet.html
+# 5.5. Adding a Simple Servlet
+
+
+# mkdir -p src/main/java/org/sonatype/mavenbook/web
+# web.xml file can be found in src/main/webapp/WEB-INF
+
+
+# mvn clean install
+# mvn jetty:run
+# http://localhost:8080/simple-webapp/simple
+# => "SimpleServlet Executed" 
+
+# curl http://localhost:8080/simple-webapp/simple
+# => "SimpleServlet Executed"
+
+# lynx http://localhost:8080/simple-webapp/simple
+# => "SimpleServlet Executed"
+
+# If you have a simple java project which is made up of only one module, using eclipse is very simple. 
+# To generate the eclipse project files from your POM you execute the following command:
+# mvn eclipse:eclipse

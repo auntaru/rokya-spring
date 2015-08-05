@@ -1,0 +1,41 @@
+====================================================
+
+2015-08.05 Maven-Spring-context-quickstart
+
+Spring Integration with Eclipse Using Maven
+
+Gary A. Stafford
+Lead Developer
+Paychex, Inc.
+Rochester, New York Area
+
+https://programmaticponderings.wordpress.com/2013/10/21/spring-integration-with-eclipse-using-maven/
+
+
+====================================================
+
+2015-07.25 22h55 - HibernateHelloWorldAnnotationViralpatel
+   http://viralpatel.net/blogs/hibernate-hello-world-example-annotation/
+
+Execute the Main.java class and see output =>
+******* READ *******
+Total Employees: 200
+******* WRITE *******
+201 Jack Bauer
+******* UPDATE *******
+Name Before Update:Paula
+Name Aftere Update:James
+******* DELETE *******
+Object:null
+
+
+
+   Beginning Hibernate, 3rd Edition.pdf
+   Just Hibernate - 2014-06.27: Second Release
+
+   How to create a Web Application Project with Maven
+      http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
+
+   How to generate Hibernate mapping files & annotation with Hibernate Tools
+      http://www.mkyong.com/hibernate/how-to-generate-code-with-hibernate-tools/
+
