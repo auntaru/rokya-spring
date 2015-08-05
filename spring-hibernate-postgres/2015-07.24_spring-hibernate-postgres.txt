@@ -1,6 +1,20 @@
 
+====================================================
 
-2015-08.05 : VehicleTest extends AbstractJUnit4SpringContextTests
+2015-08.05 23:21 : VehicleTest.java
+			package com.blogpost.maven.maven_spring;
+			           
+2015-08.05 : maven-spring-context-quickstart
+             http://programmaticponderings.wordpress.com/2013/10/21/spring-integration-with-eclipse-using-maven/
+
+Spring Integration with Eclipse Using Maven
+
+Gary A. Stafford
+Lead Developer
+Paychex, Inc.
+Rochester, New York Area
+
+====================================================
 
 2015-07.28 : HibernateConfigurationTest.java = OK ! 
 org.jlsoft.orders.connection.model.HibernateConfigurationTest
