@@ -1,5 +1,7 @@
 
 
+2015-08.05 : VehicleTest extends AbstractJUnit4SpringContextTests
+
 2015-07.28 : HibernateConfigurationTest.java = OK ! 
 org.jlsoft.orders.connection.model.HibernateConfigurationTest
 
