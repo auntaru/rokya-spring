@@ -10,7 +10,7 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            classpath:persistence-beans.xml
+            classpath:main-persistence-beans.xml
             classpath:Beans.xml
         </param-value>
     </context-param>

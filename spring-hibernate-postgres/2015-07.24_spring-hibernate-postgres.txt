@@ -1,4 +1,21 @@
 
+2015-08.06 21:24 : HibernateConfigurationTest -> testFindOrderByID()
+
+    @Test
+    public void testFindOrderByID() {
+    	BigDecimal orderValue = new BigDecimal(874);
+    	String iD = new String("0100896075");
+    	Session session = sessionFactory.openSession();
+    	ComenziVExt theOrder = (ComenziVExt) session.get(ComenziVExt.class, iD);
+    	session.close();
+    	assertNotNull (theOrder);
+    	assertEquals(orderValue, theOrder.getValoare().setScale(0));
+    }
+
+//	select * from comenzi_v_ext where data_c='2015-08-04'
+//	com_id = "0100896075" + data_c="2015-08-04" + valoare=874
+
+
 ====================================================
 
 2015-08.05 23:21 : VehicleTest.java
