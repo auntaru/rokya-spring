@@ -1,5 +1,5 @@
 
-2015-08.07 22:58 : mvc-dispatcher-servlet.xml 
+2015-08.07 23:49 : mvc-dispatcher-servlet.xml 
 
  *   http://localhost:8080/spring-hibernate-postgres/hello.htm
  *   ||=> Hello World from HelloController !
@@ -64,3 +64,10 @@ http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
 How to generate Hibernate mapping files & annotation with Hibernate Tools
 http://www.mkyong.com/hibernate/how-to-generate-code-with-hibernate-tools/
 
+
+Spring MVC HelloWorld Using Maven in Eclipse
+http://www.programcreek.com/2014/02/spring-mvc-helloworld-using-maven-in-eclipse/
+Step 1: Create a Maven Project
+Step 2: Configure Spring
+Step 3: Create Spring Controller and View
+Step 4: Run on Server
