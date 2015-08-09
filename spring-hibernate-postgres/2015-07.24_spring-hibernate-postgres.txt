@@ -1,4 +1,21 @@
 
+2015-08.09 23:59 : select max(data_c) from comenzi_v_ext  
+                   select * from comenzi_v_ext where data_c=(select max(data_c) from comenzi_v_ext)
+
+2015-08.09 : SpringMVC3 Hibernate CRUD Sample Application
+   http://www.sivalabs.in/2011/04/springmvc3-hibernate-crud-sample.html
+      
+2015-08.08 : Spring MVC + JQuery = KO !?
+Ajax with Spring MVC 3 using Annotations and JQuery
+http://www.raistudies.com/spring/spring-mvc/ajax-spring-mvc-3-annonations-jquery/
+SpringMVCHibernate - github/jtelmon/ajax-jQuery-SpringMVC3
+
+http://localhost:8080/spring-hibernate-postgres/index2.jsp
+Aug 09, 2015 4:18:37 PM org.springframework.web.servlet.DispatcherServlet noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/spring-hibernate-postgres/js/jquery.js] 
+in DispatcherServlet with name 'mvc-dispatcher'
+
+
 2015-08.07 23:49 : mvc-dispatcher-servlet.xml 
 
  *   http://localhost:8080/spring-hibernate-postgres/hello.htm
