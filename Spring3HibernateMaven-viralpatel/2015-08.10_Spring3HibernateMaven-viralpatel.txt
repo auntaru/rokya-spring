@@ -1,0 +1,81 @@
+
+2015-08.10 21:47 - Contact Manager - viralpatel
+       http://localhost:8080/Spring3HibernateMaven-viralpatel/index
+
+http://viralpatel.net/blogs/spring3-mvc-hibernate-maven-tutorial-eclipse-example/
+Tutorial:Create Spring 3 MVC Hibernate 3 Example using Maven in Eclipse
+
+====================================================
+
+2015-08.07 23:49 : mvc-dispatcher-servlet.xml 
+
+ *   http://localhost:8080/spring-hibernate-postgres/hello.htm
+ *   ||=> Hello World from HelloController !
+
+ *    http://localhost:8080/spring-hibernate-postgres/hello?name=Alex
+ *    ||=> Hello World
+ *    ||=> Welcome to Spring MVC! Alex
+
+http://localhost:8080/spring-hibernate-postgres/index1.jsp
+http://localhost:8080/spring-hibernate-postgres/index.jsp
+
+ToDo NexT : in index2.jsp sa afisez data si ora la care s-a luat ultima comanda !
+            pe sablon ContactManager afisez comenzile din ultima zi cu posibilitatea
+            ca oricare dintre ele sa poata fi vizualizata ; 
+            Daca se poate folosi sablon HTML din ASKi !!! 
+            Spring Security : user = java / pass=linux 
+             
+
+            
+====================================================
+2015-08.06 21:24 : HibernateConfigurationTest -> testFindOrderByID()
+    @Test
+    public void testFindOrderByID() {
+    	BigDecimal orderValue = new BigDecimal(874);
+    	String iD = new String("0100896075");
+    	Session session = sessionFactory.openSession();
+    	ComenziVExt theOrder = (ComenziVExt) session.get(ComenziVExt.class, iD);
+    	session.close();
+    	assertNotNull (theOrder);
+    	assertEquals(orderValue, theOrder.getValoare().setScale(0));
+    }
+//	select * from comenzi_v_ext where data_c='2015-08-04'
+//	com_id = "0100896075" + data_c="2015-08-04" + valoare=874
+====================================================
+
+2015-08.05 23:21 : VehicleTest.java
+			package com.blogpost.maven.maven_spring;
+			           
+2015-08.05 : maven-spring-context-quickstart
+             http://programmaticponderings.wordpress.com/2013/10/21/spring-integration-with-eclipse-using-maven/
+
+Spring Integration with Eclipse Using Maven
+
+Gary A. Stafford
+Lead Developer
+Paychex, Inc.
+Rochester, New York Area
+
+====================================================
+
+2015-07.28 : HibernateConfigurationTest.java = OK ! 
+org.jlsoft.orders.connection.model.HibernateConfigurationTest
+
+Hibernate - ERROR & SOLUTION :   
+org.hibernate.AnnotationException: Collection has neither generic type or OneToMany.targetEntity()
+http://www.mkyong.com/hibernate/org-hibernate-annotationexception-collection-has-neither-generic-type-or-onetomany-targetentity/
+
+
+How to create a Web Application Project with Maven
+http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
+
+How to generate Hibernate mapping files & annotation with Hibernate Tools
+http://www.mkyong.com/hibernate/how-to-generate-code-with-hibernate-tools/
+
+
+Spring MVC HelloWorld Using Maven in Eclipse
+http://www.programcreek.com/2014/02/spring-mvc-helloworld-using-maven-in-eclipse/
+Step 1: Create a Maven Project
+Step 2: Configure Spring
+Step 3: Create Spring Controller and View
+Step 4: Run on Server
