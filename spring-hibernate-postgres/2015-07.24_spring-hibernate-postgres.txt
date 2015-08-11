@@ -1,4 +1,16 @@
 
+2015-08.11 23:55 = KO : No Hibernate Session bound to thread
+
+SEVERE: Servlet.service() for servlet mvc-dispatcher threw exception
+org.hibernate.HibernateException: No Hibernate Session bound to thread, and configuration does not allow creation of non-transactional one here
+	at org.springframework.orm.hibernate3.SpringSessionContext.currentSession(SpringSessionContext.java:63)
+	at org.hibernate.impl.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:687)
+	at org.jlsoft.orders.connection.dao.OrderDAOImpl.listOrders(OrderDAOImpl.java:20)
+	at org.jlsoft.orders.connection.service.OrderServiceImpl.listOrders(OrderServiceImpl.java:22)
+	at org.jlsoft.orders.connection.controller.OrderController.listOrders(OrderController.java:22)
+
+====================================================
+
 2015-08.09 23:59 : select max(data_c) from comenzi_v_ext  
                    select * from comenzi_v_ext where data_c=(select max(data_c) from comenzi_v_ext)
 
@@ -15,6 +27,7 @@ Aug 09, 2015 4:18:37 PM org.springframework.web.servlet.DispatcherServlet noHand
 WARNING: No mapping found for HTTP request with URI [/spring-hibernate-postgres/js/jquery.js] 
 in DispatcherServlet with name 'mvc-dispatcher'
 
+====================================================
 
 2015-08.07 23:49 : mvc-dispatcher-servlet.xml 
 

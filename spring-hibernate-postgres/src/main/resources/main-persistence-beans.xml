@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context-3.1.xsd
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx-3.1.xsd" >
 
-    <!-- we can use annotations -->
-    <context:annotation-config/>
-
-    <!-- package to look for annotated classes -->
-    <context:component-scan base-package="org.jlsoft.orders.connection.model"/>
 
     <!-- we will manage transactions with annotations -->
-    <tx:annotation-driven/>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <!-- data source for our database -->
     <bean id="dataSource"
@@ -34,16 +26,13 @@
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
+    <!-- class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" -->
+    <!-- class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"  -->
     <!-- configure hibernate session factory -->
     <bean id="sessionFactory"
-          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+         class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" >
         <property name="dataSource" ref="dataSource"/>
-        <property name="annotatedClasses">
-            <list>
-                <value>org.jlsoft.orders.connection.model.ComenziCvExt</value>
-                <value>org.jlsoft.orders.connection.model.ComenziVExt</value>
-            </list>
-        </property>
+        <property name="packagesToScan" value="org.jlsoft.orders.connection"/>
         <property name="hibernateProperties">
             <props>
                 <prop key="dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
@@ -52,6 +41,16 @@
             </props>
         </property>
     </bean>
+        <!--
+		<property name="packagesToScan" value="org.jlsoft.orders.connection"/>        
+        -->
+        <!-- 
+        <property name="annotatedClasses">
+            <list>
+                <value>org.jlsoft.orders.connection.model.ComenziCvExt</value>
+                <value>org.jlsoft.orders.connection.model.ComenziVExt</value>
+            </list>
+        -->
     
     <bean id="jdbcTemplate"
             class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">

@@ -11,12 +11,15 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>
             classpath:Beans.xml
-            classpath:persistence-beans.xml
+            classpath:main-persistence-beans.xml
             /WEB-INF/mvc-dispatcher-servlet.xml
         </param-value>
     </context-param>
 
-<!-- classpath:main-persistence-beans.xml -->
+<!-- 
+	classpath:persistence-beans.xml
+    classpath:main-persistence-beans.xml
+-->
 
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

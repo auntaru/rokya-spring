@@ -7,9 +7,25 @@
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- we can use annotations  
+       <context:annotation-config/>
+    -->
+    
+    <!-- package to look for annotated classes -->
 	<context:component-scan base-package="com.keylesson.controller" />
 	<context:component-scan base-package="com.programcreek.helloworld.controller" />
 	<context:component-scan base-package="com.raistudies" />
+	
+ <!--
+	   <context:component-scan base-package="org.jlsoft.orders.connection.controller" />
+	   Aug 11, 2015 9:39:29 PM org.apache.catalina.core.StandardContext listenerStart
+	   SEVERE: Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+       org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.jlsoft.orders.connection.service.OrderService org.jlsoft.orders.connection.controller.OrderController.orderService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [org.jlsoft.orders.connection.service.OrderService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	   at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	-->	   
+	 
+	<context:component-scan base-package="org.jlsoft.orders.connection" />
+
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
