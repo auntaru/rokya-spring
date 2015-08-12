@@ -7,19 +7,9 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx-3.1.xsd" >
 
-
+    
     <!-- we will manage transactions with annotations -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
-
-    <!-- data source for our database -->
-    <bean id="dataSource"
-          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName"
-                  value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://localhost:5432/pangram_main_2008"/>
-        <property name="username" value="postgres"/>
-        <property name="password" value="telinit"/>
-    </bean>
 
     <bean id="transactionManager"
           class="org.springframework.orm.hibernate3.HibernateTransactionManager">
@@ -32,7 +22,7 @@
     <bean id="sessionFactory"
          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" >
         <property name="dataSource" ref="dataSource"/>
-        <property name="packagesToScan" value="org.jlsoft.orders.connection"/>
+        <property name="packagesToScan" value="org.jlsoft.orders.connection.model"/>
         <property name="hibernateProperties">
             <props>
                 <prop key="dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
@@ -51,6 +41,17 @@
                 <value>org.jlsoft.orders.connection.model.ComenziVExt</value>
             </list>
         -->
+
+    <!-- data source for our database -->
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"
+                  value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/pangram_main_2008"/>
+        <property name="username" value="postgres"/>
+        <property name="password" value="telinit"/>
+    </bean>
+
     
     <bean id="jdbcTemplate"
             class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">

@@ -1,4 +1,10 @@
 
+2015-08.12 23:03 createQuery("from ComenziVExt where dataC= :dateOfLastOrder)
+   FIRST SPRiNG DEBUG ! Project -> Debug As -> Debug on Server ... 
+    
+
+====================================================
+
 2015-08.11 23:55 = KO : No Hibernate Session bound to thread
 
 SEVERE: Servlet.service() for servlet mvc-dispatcher threw exception
@@ -8,6 +14,9 @@ org.hibernate.HibernateException: No Hibernate Session bound to thread, and conf
 	at org.jlsoft.orders.connection.dao.OrderDAOImpl.listOrders(OrderDAOImpl.java:20)
 	at org.jlsoft.orders.connection.service.OrderServiceImpl.listOrders(OrderServiceImpl.java:22)
 	at org.jlsoft.orders.connection.controller.OrderController.listOrders(OrderController.java:22)
+
+Solutia : 
+   Am mutat configurarile Spring MVC si Hibernate intr-un singur fisier : "persistence-dispatcher-servlet.xml" 
 
 ====================================================
 

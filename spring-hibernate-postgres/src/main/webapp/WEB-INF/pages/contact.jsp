@@ -3,7 +3,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-	<title>Spring 3 MVC Series - Contact Manager</title>
+	<title>Spring 3 MVC Hibernate</title>
 	<style type="text/css">
 		body {
 			font-family: sans-serif;
@@ -36,9 +36,9 @@
 	<th>Valoare</th>
 	<th>Order iD;</th>
 </tr>
-<c:forEach items="${orderstList}" var="order">
+<c:forEach items="${ordersList}" var="order">
 	<tr>
-		<td>${order.nrdoc}, ${order.gestiuneID} </td>
+		<td>${order.nrdoc}, ${order.gestiuneId} </td>
 		<td>${order.nrlcId}</td>
 		<td>${order.valoare}</td>
 		<td>${order.comId}</td>
