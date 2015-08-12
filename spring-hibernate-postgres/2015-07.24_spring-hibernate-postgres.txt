@@ -1,7 +1,7 @@
 
 2015-08.12 23:03 createQuery("from ComenziVExt where dataC= :dateOfLastOrder)
    FIRST SPRiNG DEBUG ! Project -> Debug As -> Debug on Server ... 
-    
+   org.jlsoft.orders.connection.dao.OrderDAOImpl.listOrders() 
 
 ====================================================
 
