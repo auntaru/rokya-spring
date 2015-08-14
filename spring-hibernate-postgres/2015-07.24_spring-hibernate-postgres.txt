@@ -1,4 +1,41 @@
 
+2015-08.13 23..20 : comenzi_v_ext terti vterti - detalii  
+   In tabela comenzi_v_ext se introduce despre client doar tert_id , ceea ce presupune doar aflarea denumirii PLT-ului .  
+
+ terti.cms=2 inseamna tert gresit-neutilizabil-inactiv-sters  ? 
+   ~ a se vedea cazul cu REWE / REWEE (tert_id='010029125') ; 
+              ( select * from terti where cms=2 : multi au denumirea terminata cu "gresit") 
+              
+Cand afisez o comanda plecand de la comenzi_v_ext, 
+ca sa apara mai usor denumirea clientului (PLT=00) cat si denumirea punctului de lucru (in caz ca PLT>00), 
+parca ar fi fost mai interesant ca in (comenzi_v_ext) comanda trimisa din tableta sa ajunga si CUI-ul pe langa tert_id , 
+si astfel s-ar fi lucrat doar cu tabela "terti" fara sa se apeleze la "vterti"  ... 
+
+
+"TABLE comenzi_v_ext CONSTRAINT tert_id FOREIGN KEY (tert_id) REFERENCES terti (tert_id)" 
+In Java , recomandarea e sa se faca obiecte dupa tabele , nu dupa vederi ; 
+Asadar , o prima idee ar fi SQL de genul : 
+
+   1.  select t1.cui from terti t1 where tert_id='010029125'
+   2.  select denumire ,tert_id, cui,plt, localitate, judet from terti where plt='00' 
+            and cui= ( select t1.cui from terti t1 where tert_id='010029125' ) 
+
+   ~ primul SELECT afla CUI-u` aferent unui tert_id dat , 
+      iar in cel de-al 2-lea SELECT pe baza de CUI si conditia PLT=00 se afla denumirea aferenta sediului (PLT=00)  . 
+
+select * from comenzi_v_ext where data_c='2015-08-12' order by valoare desc
+
+ToDo Next : 
+1. Pentru mapare OneToOne : Employee -> Address ( ComenziVExt -> Denumire-Client+Agent ) 
+Hibernate Query Language (HQL) Example Tutorial
+http://www.journaldev.com/2954/hibernate-query-language-hql-example-tutorial
+
+2.
+Spring ORM example with JPA, Hibernate, Transactions
+http://www.journaldev.com/7655/spring-orm-example-with-jpa-hibernate-transactions
+
+====================================================
+
 2015-08.12 23:03 createQuery("from ComenziVExt where dataC= :dateOfLastOrder)
    FIRST SPRiNG DEBUG ! Project -> Debug As -> Debug on Server ... 
    org.jlsoft.orders.connection.dao.OrderDAOImpl.listOrders() 

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.check_nullability">false</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.password">telinit</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/SoftySales</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <property name="hibernate.validator.autoregister_listeners">false</property>
+        <mapping class="Wine" />
+        <mapping class="Zona" />
+        <mapping class="GroupUser" />
+        <mapping class="ClientiEurobit" />
+        <mapping class="ProduseEurobit1" />
+        <mapping class="Product" />
+        <mapping class="ProduseEurobit" />
+        <mapping class="ComenziCvExt" />
+        <mapping class="Rute" />
+        <mapping class="Vterti" />
+        <mapping class="UserIdent" />
+        <mapping class="Jud" />
+        <mapping class="Userpass" />
+        <mapping class="Siruta" />
+        <mapping class="Terti" />
+        <mapping class="Utilizator" />
+        <mapping class="Client" />
+        <mapping class="Softyorders2" />
+        <mapping class="ComenziVExt" />
+        <mapping class="ClientiRute" />
+        <mapping class="Persoana" />
+    </session-factory>
+</hibernate-configuration>
