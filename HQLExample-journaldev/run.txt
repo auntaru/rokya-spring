@@ -1,0 +1,23 @@
+Hibernate: select employee0_.emp_id as emp_id1_1_, employee0_.emp_name as emp_name2_1_, employee0_.emp_salary as emp_sala3_1_ from Employee employee0_
+Hibernate: select address0_.emp_id as emp_id1_0_0_, address0_.address_line1 as address_2_0_0_, address0_.city as city3_0_0_, address0_.zipcode as zipcode4_0_0_, employee1_.emp_id as emp_id1_1_1_, employee1_.emp_name as emp_name2_1_1_, employee1_.emp_salary as emp_sala3_1_1_ from Address address0_ left outer join Employee employee1_ on address0_.emp_id=employee1_.emp_id where address0_.emp_id=?
+Hibernate: select address0_.emp_id as emp_id1_0_0_, address0_.address_line1 as address_2_0_0_, address0_.city as city3_0_0_, address0_.zipcode as zipcode4_0_0_, employee1_.emp_id as emp_id1_1_1_, employee1_.emp_name as emp_name2_1_1_, employee1_.emp_salary as emp_sala3_1_1_ from Address address0_ left outer join Employee employee1_ on address0_.emp_id=employee1_.emp_id where address0_.emp_id=?
+Hibernate: select address0_.emp_id as emp_id1_0_0_, address0_.address_line1 as address_2_0_0_, address0_.city as city3_0_0_, address0_.zipcode as zipcode4_0_0_, employee1_.emp_id as emp_id1_1_1_, employee1_.emp_name as emp_name2_1_1_, employee1_.emp_salary as emp_sala3_1_1_ from Address address0_ left outer join Employee employee1_ on address0_.emp_id=employee1_.emp_id where address0_.emp_id=?
+Hibernate: select address0_.emp_id as emp_id1_0_0_, address0_.address_line1 as address_2_0_0_, address0_.city as city3_0_0_, address0_.zipcode as zipcode4_0_0_, employee1_.emp_id as emp_id1_1_1_, employee1_.emp_name as emp_name2_1_1_, employee1_.emp_salary as emp_sala3_1_1_ from Address address0_ left outer join Employee employee1_ on address0_.emp_id=employee1_.emp_id where address0_.emp_id=?
+List of Employees::1,San Jose
+List of Employees::2,Santa Clara
+List of Employees::3,Bangalore
+List of Employees::4,New Delhi
+Hibernate: select employee0_.emp_id as emp_id1_1_, employee0_.emp_name as emp_name2_1_, employee0_.emp_salary as emp_sala3_1_ from Employee employee0_ where employee0_.emp_id=?
+Employee Name=Lisa, City=Bangalore
+Hibernate: update Employee set emp_name=? where emp_id=?
+Employee Update Status=1
+Hibernate: delete from Address where emp_id=?
+Address Delete Status=1
+Hibernate: delete from Employee where emp_id=?
+Employee Delete Status=1
+Hibernate: select sum(employee0_.emp_salary) as col_0_0_ from Employee employee0_
+Sum of all Salaries= 600.0
+Hibernate: select employee0_.emp_name as col_0_0_, address1_.city as col_1_0_ from Employee employee0_ inner join Address address1_ on employee0_.emp_id=address1_.emp_id
+[Pankaj Kumar, San Jose]
+[David, Santa Clara]
+[Lisa, Bangalore]

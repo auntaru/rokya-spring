@@ -1,0 +1,149 @@
+
+2015-08.13 23..20 : comenzi_v_ext terti vterti - detalii  
+   In tabela comenzi_v_ext se introduce despre client doar tert_id , ceea ce presupune doar aflarea denumirii PLT-ului .  
+
+ terti.cms=2 inseamna tert gresit-neutilizabil-inactiv-sters  ? 
+   ~ a se vedea cazul cu REWE / REWEE (tert_id='010029125') ; 
+              ( select * from terti where cms=2 : multi au denumirea terminata cu "gresit") 
+              
+Cand afisez o comanda plecand de la comenzi_v_ext, 
+ca sa apara mai usor denumirea clientului (PLT=00) cat si denumirea punctului de lucru (in caz ca PLT>00), 
+parca ar fi fost mai interesant ca in (comenzi_v_ext) comanda trimisa din tableta sa ajunga si CUI-ul pe langa tert_id , 
+si astfel s-ar fi lucrat doar cu tabela "terti" fara sa se apeleze la "vterti"  ... 
+
+
+"TABLE comenzi_v_ext CONSTRAINT tert_id FOREIGN KEY (tert_id) REFERENCES terti (tert_id)" 
+In Java , recomandarea e sa se faca obiecte dupa tabele , nu dupa vederi ; 
+Asadar , o prima idee ar fi SQL de genul : 
+
+   1.  select t1.cui from terti t1 where tert_id='010029125'
+   2.  select denumire ,tert_id, cui,plt, localitate, judet from terti where plt='00' 
+            and cui= ( select t1.cui from terti t1 where tert_id='010029125' ) 
+
+   ~ primul SELECT afla CUI-u` aferent unui tert_id dat , 
+      iar in cel de-al 2-lea SELECT pe baza de CUI si conditia PLT=00 se afla denumirea aferenta sediului (PLT=00)  . 
+
+select * from comenzi_v_ext where data_c='2015-08-12' order by valoare desc
+
+ToDo Next : 
+1. Pentru mapare OneToOne : Employee -> Address ( ComenziVExt -> Denumire-Client+Agent ) 
+Hibernate Query Language (HQL) Example Tutorial
+http://www.journaldev.com/2954/hibernate-query-language-hql-example-tutorial
+
+2.
+Spring ORM example with JPA, Hibernate, Transactions
+http://www.journaldev.com/7655/spring-orm-example-with-jpa-hibernate-transactions
+
+====================================================
+
+2015-08.12 23:03 createQuery("from ComenziVExt where dataC= :dateOfLastOrder)
+   FIRST SPRiNG DEBUG ! Project -> Debug As -> Debug on Server ... 
+   org.jlsoft.orders.connection.dao.OrderDAOImpl.listOrders() 
+
+====================================================
+
+2015-08.11 23:55 = KO : No Hibernate Session bound to thread
+
+SEVERE: Servlet.service() for servlet mvc-dispatcher threw exception
+org.hibernate.HibernateException: No Hibernate Session bound to thread, and configuration does not allow creation of non-transactional one here
+	at org.springframework.orm.hibernate3.SpringSessionContext.currentSession(SpringSessionContext.java:63)
+	at org.hibernate.impl.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:687)
+	at org.jlsoft.orders.connection.dao.OrderDAOImpl.listOrders(OrderDAOImpl.java:20)
+	at org.jlsoft.orders.connection.service.OrderServiceImpl.listOrders(OrderServiceImpl.java:22)
+	at org.jlsoft.orders.connection.controller.OrderController.listOrders(OrderController.java:22)
+
+Solutia : 
+   Am mutat configurarile Spring MVC si Hibernate intr-un singur fisier : "persistence-dispatcher-servlet.xml" 
+
+====================================================
+
+2015-08.09 23:59 : select max(data_c) from comenzi_v_ext  
+                   select * from comenzi_v_ext where data_c=(select max(data_c) from comenzi_v_ext)
+
+2015-08.09 : SpringMVC3 Hibernate CRUD Sample Application
+   http://www.sivalabs.in/2011/04/springmvc3-hibernate-crud-sample.html
+      
+2015-08.08 : Spring MVC + JQuery = KO !?
+Ajax with Spring MVC 3 using Annotations and JQuery
+http://www.raistudies.com/spring/spring-mvc/ajax-spring-mvc-3-annonations-jquery/
+SpringMVCHibernate - github/jtelmon/ajax-jQuery-SpringMVC3
+
+http://localhost:8080/spring-hibernate-postgres/index2.jsp
+Aug 09, 2015 4:18:37 PM org.springframework.web.servlet.DispatcherServlet noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/spring-hibernate-postgres/js/jquery.js] 
+in DispatcherServlet with name 'mvc-dispatcher'
+
+====================================================
+
+2015-08.07 23:49 : mvc-dispatcher-servlet.xml 
+
+ *   http://localhost:8080/spring-hibernate-postgres/hello.htm
+ *   ||=> Hello World from HelloController !
+
+ *    http://localhost:8080/spring-hibernate-postgres/hello?name=Alex
+ *    ||=> Hello World
+ *    ||=> Welcome to Spring MVC! Alex
+
+http://localhost:8080/spring-hibernate-postgres/index1.jsp
+http://localhost:8080/spring-hibernate-postgres/index.jsp
+
+ToDo NexT : in index2.jsp sa afisez data si ora la care s-a luat ultima comanda !
+            pe sablon ContactManager afisez comenzile din ultima zi cu posibilitatea
+            ca oricare dintre ele sa poata fi vizualizata ; 
+            Daca se poate folosi sablon HTML din ASKi !!! 
+            Spring Security : user = java / pass=linux 
+             
+http://viralpatel.net/blogs/spring3-mvc-hibernate-maven-tutorial-eclipse-example/
+            
+====================================================
+2015-08.06 21:24 : HibernateConfigurationTest -> testFindOrderByID()
+    @Test
+    public void testFindOrderByID() {
+    	BigDecimal orderValue = new BigDecimal(874);
+    	String iD = new String("0100896075");
+    	Session session = sessionFactory.openSession();
+    	ComenziVExt theOrder = (ComenziVExt) session.get(ComenziVExt.class, iD);
+    	session.close();
+    	assertNotNull (theOrder);
+    	assertEquals(orderValue, theOrder.getValoare().setScale(0));
+    }
+//	select * from comenzi_v_ext where data_c='2015-08-04'
+//	com_id = "0100896075" + data_c="2015-08-04" + valoare=874
+====================================================
+
+2015-08.05 23:21 : VehicleTest.java
+			package com.blogpost.maven.maven_spring;
+			           
+2015-08.05 : maven-spring-context-quickstart
+             http://programmaticponderings.wordpress.com/2013/10/21/spring-integration-with-eclipse-using-maven/
+
+Spring Integration with Eclipse Using Maven
+
+Gary A. Stafford
+Lead Developer
+Paychex, Inc.
+Rochester, New York Area
+
+====================================================
+
+2015-07.28 : HibernateConfigurationTest.java = OK ! 
+org.jlsoft.orders.connection.model.HibernateConfigurationTest
+
+Hibernate - ERROR & SOLUTION :   
+org.hibernate.AnnotationException: Collection has neither generic type or OneToMany.targetEntity()
+http://www.mkyong.com/hibernate/org-hibernate-annotationexception-collection-has-neither-generic-type-or-onetomany-targetentity/
+
+
+How to create a Web Application Project with Maven
+http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
+
+How to generate Hibernate mapping files & annotation with Hibernate Tools
+http://www.mkyong.com/hibernate/how-to-generate-code-with-hibernate-tools/
+
+
+Spring MVC HelloWorld Using Maven in Eclipse
+http://www.programcreek.com/2014/02/spring-mvc-helloworld-using-maven-in-eclipse/
+Step 1: Create a Maven Project
+Step 2: Configure Spring
+Step 3: Create Spring Controller and View
+Step 4: Run on Server
