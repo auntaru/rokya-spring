@@ -1,17 +1,13 @@
-// default package
-// Generated Aug 17, 2015 9:12:26 PM by Hibernate Tools 3.6.0
 package org.jlsoft.orders.connection.model;
+
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -22,14 +18,14 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "comenzi_v_ext", schema = "public")
-public class ComenziVExt implements java.io.Serializable {
+public class ComenziVExt1 implements java.io.Serializable {
 
 	private String comId;
-	private NumereLucru numereLucru;
-	private Terti terti;
 	private String nrdoc;
 	private Date dataC;
 	private String gestiuneId;
+	private String nrlcId;
+	private String tertId;
 	private Date dataL;
 	private Character facturat;
 	private String userId;
@@ -47,28 +43,32 @@ public class ComenziVExt implements java.io.Serializable {
 	private Integer nrop;
 	private String idExt;
 	private String msgId;
-	private Set <ComenziCvExt> comenziCvExts = new HashSet <ComenziCvExt> (0);
+	// private Set comenziCvExts = new HashSet(0);
+	// Caused by: org.hibernate.AnnotationException: Collection has neither generic type or OneToMany.targetEntity() defined: org.jlsoft.orders.connection.model.ComenziVExt.comenziCvExts
+	// http://www.mkyong.com/hibernate/org-hibernate-annotationexception-collection-has-neither-generic-type-or-onetomany-targetentity/
+	private Set <ComenziCvExt1> comenziCvExts = new HashSet(0);
 
-	public ComenziVExt() {
+	
+	public ComenziVExt1() {
 	}
 
-	public ComenziVExt(String comId) {
+	public ComenziVExt1(String comId) {
 		this.comId = comId;
 	}
 
-	public ComenziVExt(String comId, NumereLucru numereLucru, Terti terti,
-			String nrdoc, Date dataC, String gestiuneId, Date dataL,
+	public ComenziVExt1(String comId, String nrdoc, Date dataC,
+			String gestiuneId, String nrlcId, String tertId, Date dataL,
 			Character facturat, String userId, Date operare, Boolean verstor,
 			Integer nivacc, Character tiparit, Integer zscadenta,
 			String nrfact, Date dataF, BigDecimal valoare,
 			BigDecimal valDiscExpl, BigDecimal prDiscExpl, Date creare,
-			Integer nrop, String idExt, String msgId, Set <ComenziCvExt> comenziCvExts) {
+			Integer nrop, String idExt, String msgId, Set <ComenziCvExt1> comenziCvExts) {
 		this.comId = comId;
-		this.numereLucru = numereLucru;
-		this.terti = terti;
 		this.nrdoc = nrdoc;
 		this.dataC = dataC;
 		this.gestiuneId = gestiuneId;
+		this.nrlcId = nrlcId;
+		this.tertId = tertId;
 		this.dataL = dataL;
 		this.facturat = facturat;
 		this.userId = userId;
@@ -88,7 +88,44 @@ public class ComenziVExt implements java.io.Serializable {
 		this.msgId = msgId;
 		this.comenziCvExts = comenziCvExts;
 	}
-
+	
+/*
+	public ComenziVExt(String comId, String nrdoc, Date dataC,
+			String gestiuneId, String nrlcId, String tertId, Date dataL,
+			Character facturat, String userId, Date operare, Boolean verstor,
+			Integer nivacc, Character tiparit, Integer zscadenta,
+			String nrfact, Date dataF, BigDecimal valoare,
+			BigDecimal valDiscExpl, BigDecimal prDiscExpl, Date creare,
+			Integer nrop, String idExt, String msgId, Set comenziCvExts) {
+		this.comId = comId;
+		this.nrdoc = nrdoc;
+		this.dataC = dataC;
+		this.gestiuneId = gestiuneId;
+		this.nrlcId = nrlcId;
+		this.tertId = tertId;
+		this.dataL = dataL;
+		this.facturat = facturat;
+		this.userId = userId;
+		this.operare = operare;
+		this.verstor = verstor;
+		this.nivacc = nivacc;
+		this.tiparit = tiparit;
+		this.zscadenta = zscadenta;
+		this.nrfact = nrfact;
+		this.dataF = dataF;
+		this.valoare = valoare;
+		this.valDiscExpl = valDiscExpl;
+		this.prDiscExpl = prDiscExpl;
+		this.creare = creare;
+		this.nrop = nrop;
+		this.idExt = idExt;
+		this.msgId = msgId;
+		this.comenziCvExts = comenziCvExts;
+	}
+*/
+	
+	
+	
 	@Id
 	@Column(name = "com_id", unique = true, nullable = false, length = 10)
 	public String getComId() {
@@ -97,26 +134,6 @@ public class ComenziVExt implements java.io.Serializable {
 
 	public void setComId(String comId) {
 		this.comId = comId;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "nrlc_id")
-	public NumereLucru getNumereLucru() {
-		return this.numereLucru;
-	}
-
-	public void setNumereLucru(NumereLucru numereLucru) {
-		this.numereLucru = numereLucru;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "tert_id")
-	public Terti getTerti() {
-		return this.terti;
-	}
-
-	public void setTerti(Terti terti) {
-		this.terti = terti;
 	}
 
 	@Column(name = "nrdoc", length = 16)
@@ -145,6 +162,24 @@ public class ComenziVExt implements java.io.Serializable {
 
 	public void setGestiuneId(String gestiuneId) {
 		this.gestiuneId = gestiuneId;
+	}
+
+	@Column(name = "nrlc_id", length = 7)
+	public String getNrlcId() {
+		return this.nrlcId;
+	}
+
+	public void setNrlcId(String nrlcId) {
+		this.nrlcId = nrlcId;
+	}
+
+	@Column(name = "tert_id", length = 9)
+	public String getTertId() {
+		return this.tertId;
+	}
+
+	public void setTertId(String tertId) {
+		this.tertId = tertId;
 	}
 
 	@Temporal(TemporalType.DATE)
@@ -305,84 +340,22 @@ public class ComenziVExt implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "comenziVExt")
-	public Set <ComenziCvExt> getComenziCvExts() {
+	public Set <ComenziCvExt1> getComenziCvExts() {
 		return this.comenziCvExts;
 	}
 
-	public void setComenziCvExts(Set <ComenziCvExt> comenziCvExts) {
+	public void setComenziCvExts(Set <ComenziCvExt1> comenziCvExts) {
 		this.comenziCvExts = comenziCvExts;
 	}
-
-	@Override
-	public String toString(){
-		return this.getNumereLucru().getDenumire();
-		
+/*
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "comenziVExt")
+	public Set getComenziCvExts() {
+		return this.comenziCvExts;
 	}
+
+	public void setComenziCvExts(Set comenziCvExts) {
+		this.comenziCvExts = comenziCvExts;
+	}
+*/	
 	
 }
-
-/*
-
--- Table: comenzi_v_ext
-
--- DROP TABLE comenzi_v_ext;
-
-CREATE TABLE comenzi_v_ext
-(
-  com_id character(10) NOT NULL DEFAULT fpliid('comenzi_v_ext'::text, 8),
-  nrdoc character(16),
-  data_c date,
-  gestiune_id character(7),
-  nrlc_id character(7),
-  tert_id character(9),
-  data_l date,
-  facturat character(1),
-  user_id character(5),
-  operare timestamp without time zone DEFAULT ('now'::text)::timestamp(6) without time zone,
-  verstor numeric(1,0),
-  nivacc integer,
-  tiparit character(1) DEFAULT 'n'::bpchar,
-  zscadenta integer,
-  nrfact character(16),
-  data_f date,
-  valoare numeric(14,2),
-  val_disc_expl numeric(14,2),
-  pr_disc_expl numeric(6,2),
-  creare timestamp without time zone DEFAULT ('now'::text)::timestamp(6) without time zone,
-  nrop integer DEFAULT 0,
-  id_ext character(10) DEFAULT ''::bpchar,
-  msg_id character(4) DEFAULT ''::bpchar,
-  CONSTRAINT comenzi_v_ext_com_id_pky PRIMARY KEY (com_id),
-  CONSTRAINT nrlc_id FOREIGN KEY (nrlc_id)
-      REFERENCES numere_lucru (nrlc_id) MATCH FULL
-      ON UPDATE NO ACTION ON DELETE NO ACTION,
-  CONSTRAINT tert_id FOREIGN KEY (tert_id)
-      REFERENCES terti (tert_id) MATCH FULL
-      ON UPDATE NO ACTION ON DELETE NO ACTION
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE comenzi_v_ext OWNER TO postgres;
-
--- Index: comenzi_v_ext_data_c_idx
-
--- DROP INDEX comenzi_v_ext_data_c_idx;
-
-CREATE INDEX comenzi_v_ext_data_c_idx
-  ON comenzi_v_ext
-  USING btree
-  (data_c);
-
--- Index: "comenzi_v_ext_data_c_idx  "
-
--- DROP INDEX "comenzi_v_ext_data_c_idx  ";
-
-CREATE INDEX "comenzi_v_ext_data_c_idx  "
-  ON comenzi_v_ext
-  USING btree
-  (data_c);
-
-
-
-*/

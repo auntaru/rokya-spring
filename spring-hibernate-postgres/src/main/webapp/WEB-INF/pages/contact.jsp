@@ -32,14 +32,14 @@
 <table class="data">
 <tr>
 	<th>Nr.doc/gestiune iD</th>
-	<th>Agent iD</th>
+	<th>Agent Name</th>
 	<th>Valoare</th>
 	<th>Order iD;</th>
 </tr>
 <c:forEach items="${ordersList}" var="order">
 	<tr>
 		<td>${order.nrdoc}, ${order.gestiuneId} </td>
-		<td>${order.nrlcId}</td>
+		<td> ... </td>
 		<td>${order.valoare}</td>
 		<td>${order.comId}</td>
 	</tr>
@@ -50,3 +50,9 @@
 
 </body>
 </html>
+
+
+<!--
+        <th>Agent iD</th>   
+		<td>${order.nrlcId}</td>
+--> 

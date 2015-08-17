@@ -1,0 +1,75 @@
+
+2015-08.17 : spring-hibernate-one-to-many-CreditCards-krams915
+
+Spring MVC 3 and Hibernate Tutorials Series
+Spring - Hibernate: One-To-Many Association
+http://krams915.blogspot.ro/2011/03/spring-hibernate-one-to-many.html
+http://localhost:8080/spring-hibernate-one-to-many-CreditCards-krams915/krams/main/record/list
+
+app.jdbc.url=jdbc:mysql://localhost/CreditCardsKRAMS915OneToMany
+
+
+  in proiectul "spring-hibernate-postgres" - "ROKYA-SPRING" , 
+m-am impotmolit la listarea in JSP a ultimelor comenzi ;
+Mai detaliat , in loc de "iD agent", vreau sa apara "DENUMIRE AGENT" ! 
+Se pare ca va trebui creeat un obiect special pentru transfer de date intre controller si JSP ... 
+
+
+To create the database, follow these steps.
+1. Open phpmyadmin (or any tool you prefer with)
+2. Create a new database named CreditCardsKRAMS915OneToMany
+3. Run the application to automatically create the database schema.
+
+To populate the database with sample data, import the mydatabase.sql SQL script which is located under the WEB-INF folder of the application:
+
+Access the main application
+To access the main application, use the following URL:
+http://localhost:8080/spring-hibernate-one-to-many-CreditCards-krams915/krams/main/record/list
+
+
+
+
+====================================================
+
+
+2015-08.15 : HQL-example-journaldev + viralpatel + websystique 
+
+ * http://www.journaldev.com/2954/hibernate-query-language-hql-example-tutorial
+ * Hibernate Query Language (HQL) Example Tutorial
+ * 
+ * 
+ * http://websystique.com/hibernate/hibernate-one-to-one-unidirectional-with-foreign-key-associations-annotation-example/
+ * Hibernate One-To-One Unidirectional with Foreign Key Associations (Annotation)
+ * 
+ * http://websystique.com/hibernate/hibernate-one-to-one-bidirectional-with-shared-primary-key-annotation-example/
+ * Hibernate One-To-One Bidirectional with Shared Primary Key (Annotation)
+ * 
+ * 
+ * http://viralpatel.net/blogs/hibernate-many-to-many-annotation-mapping-tutorial/
+ * Hibernate Many To Many Annotation Mapping Tutorial
+ * 
+ * http://viralpatel.net/blogs/hibernate-one-to-many-annotation-tutorial/
+ * Hibernate One To Many Annotation tutorial
+ * 
+ * http://websystique.com/hibernate/hibernate-many-to-one-unidirectional-annotation-example/
+ * Hibernate Many-To-One Unidirectional (Annotation)
+ * 
+ * 
+ * https://docs.jboss.org/hibernate/orm/3.6/reference/en-US/html/collections.html
+ * Hibernate Reference Documentation ; Chapter 7. Collection mapping
+ * 
+ * 
+ * http://what-when-how.com/hibernate/advanced-entity-association-mappings-hibernate/
+ * Advanced entity association mappings (Hibernate)
+ * 
+ * 
+ * SQL , FOREIGN KEY Constraint = A FOREIGN KEY in one table points to a PRIMARY KEY in another table. 
+ * http://www.w3schools.com/sql/sql_foreignkey.asp
+ * 
+ * A foreign key is a field (or collection of fields) in one table that uniquely identifies a row of another table
+ * https://en.wikipedia.org/wiki/Foreign_key
+ 
+ http://www.codejava.net/frameworks/hibernate/hibernate-one-to-many-association-on-join-table-annotations-example
+ http://www.mkyong.com/hibernate/how-to-generate-code-with-hibernate-tools/
+ 
+ 

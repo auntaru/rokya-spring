@@ -1,11 +1,10 @@
 // default package
 // Generated Aug 17, 2015 9:12:26 PM by Hibernate Tools 3.6.0
-package org.jlsoft.orders.connection.model;
+
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -47,7 +46,7 @@ public class ComenziVExt implements java.io.Serializable {
 	private Integer nrop;
 	private String idExt;
 	private String msgId;
-	private Set <ComenziCvExt> comenziCvExts = new HashSet <ComenziCvExt> (0);
+	private Set comenziCvExts = new HashSet(0);
 
 	public ComenziVExt() {
 	}
@@ -62,7 +61,7 @@ public class ComenziVExt implements java.io.Serializable {
 			Integer nivacc, Character tiparit, Integer zscadenta,
 			String nrfact, Date dataF, BigDecimal valoare,
 			BigDecimal valDiscExpl, BigDecimal prDiscExpl, Date creare,
-			Integer nrop, String idExt, String msgId, Set <ComenziCvExt> comenziCvExts) {
+			Integer nrop, String idExt, String msgId, Set comenziCvExts) {
 		this.comId = comId;
 		this.numereLucru = numereLucru;
 		this.terti = terti;
@@ -305,84 +304,12 @@ public class ComenziVExt implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "comenziVExt")
-	public Set <ComenziCvExt> getComenziCvExts() {
+	public Set getComenziCvExts() {
 		return this.comenziCvExts;
 	}
 
-	public void setComenziCvExts(Set <ComenziCvExt> comenziCvExts) {
+	public void setComenziCvExts(Set comenziCvExts) {
 		this.comenziCvExts = comenziCvExts;
 	}
 
-	@Override
-	public String toString(){
-		return this.getNumereLucru().getDenumire();
-		
-	}
-	
 }
-
-/*
-
--- Table: comenzi_v_ext
-
--- DROP TABLE comenzi_v_ext;
-
-CREATE TABLE comenzi_v_ext
-(
-  com_id character(10) NOT NULL DEFAULT fpliid('comenzi_v_ext'::text, 8),
-  nrdoc character(16),
-  data_c date,
-  gestiune_id character(7),
-  nrlc_id character(7),
-  tert_id character(9),
-  data_l date,
-  facturat character(1),
-  user_id character(5),
-  operare timestamp without time zone DEFAULT ('now'::text)::timestamp(6) without time zone,
-  verstor numeric(1,0),
-  nivacc integer,
-  tiparit character(1) DEFAULT 'n'::bpchar,
-  zscadenta integer,
-  nrfact character(16),
-  data_f date,
-  valoare numeric(14,2),
-  val_disc_expl numeric(14,2),
-  pr_disc_expl numeric(6,2),
-  creare timestamp without time zone DEFAULT ('now'::text)::timestamp(6) without time zone,
-  nrop integer DEFAULT 0,
-  id_ext character(10) DEFAULT ''::bpchar,
-  msg_id character(4) DEFAULT ''::bpchar,
-  CONSTRAINT comenzi_v_ext_com_id_pky PRIMARY KEY (com_id),
-  CONSTRAINT nrlc_id FOREIGN KEY (nrlc_id)
-      REFERENCES numere_lucru (nrlc_id) MATCH FULL
-      ON UPDATE NO ACTION ON DELETE NO ACTION,
-  CONSTRAINT tert_id FOREIGN KEY (tert_id)
-      REFERENCES terti (tert_id) MATCH FULL
-      ON UPDATE NO ACTION ON DELETE NO ACTION
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE comenzi_v_ext OWNER TO postgres;
-
--- Index: comenzi_v_ext_data_c_idx
-
--- DROP INDEX comenzi_v_ext_data_c_idx;
-
-CREATE INDEX comenzi_v_ext_data_c_idx
-  ON comenzi_v_ext
-  USING btree
-  (data_c);
-
--- Index: "comenzi_v_ext_data_c_idx  "
-
--- DROP INDEX "comenzi_v_ext_data_c_idx  ";
-
-CREATE INDEX "comenzi_v_ext_data_c_idx  "
-  ON comenzi_v_ext
-  USING btree
-  (data_c);
-
-
-
-*/

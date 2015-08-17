@@ -1,5 +1,4 @@
 package org.jlsoft.orders.connection.model;
-// Generated Aug 17, 2015 9:12:26 PM by Hibernate Tools 3.6.0
 
 import java.math.BigDecimal;
 import javax.persistence.AttributeOverride;
@@ -17,10 +16,10 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "comenzi_cv_ext", schema = "public")
-public class ComenziCvExt implements java.io.Serializable {
+public class ComenziCvExt1 implements java.io.Serializable {
 
-	private ComenziCvExtId id;
-	private ComenziVExt comenziVExt;
+	private ComenziCvExtId1 id;
+	private ComenziVExt1 comenziVExt;
 	private String stocId;
 	private String contGest;
 	private BigDecimal cantitate;
@@ -32,19 +31,15 @@ public class ComenziCvExt implements java.io.Serializable {
 	private BigDecimal discCom;
 	private BigDecimal pretGross;
 
-	public ComenziCvExt() {
+	public ComenziCvExt1() {
 	}
 
-	public ComenziCvExt(ComenziCvExtId id, ComenziVExt comenziVExt,
-			BigDecimal discContr, BigDecimal discCom, BigDecimal pretGross) {
+	public ComenziCvExt1(ComenziCvExtId1 id, ComenziVExt1 comenziVExt) {
 		this.id = id;
 		this.comenziVExt = comenziVExt;
-		this.discContr = discContr;
-		this.discCom = discCom;
-		this.pretGross = pretGross;
 	}
 
-	public ComenziCvExt(ComenziCvExtId id, ComenziVExt comenziVExt,
+	public ComenziCvExt1(ComenziCvExtId1 id, ComenziVExt1 comenziVExt,
 			String stocId, String contGest, BigDecimal cantitate,
 			BigDecimal cantitater, BigDecimal livrat, BigDecimal pretVanzare,
 			BigDecimal prDiscIncl, BigDecimal discContr, BigDecimal discCom,
@@ -67,21 +62,21 @@ public class ComenziCvExt implements java.io.Serializable {
 	@AttributeOverrides({
 			@AttributeOverride(name = "comId", column = @Column(name = "com_id", nullable = false, length = 10)),
 			@AttributeOverride(name = "nrlinie", column = @Column(name = "nrlinie", nullable = false, length = 3)) })
-	public ComenziCvExtId getId() {
+	public ComenziCvExtId1 getId() {
 		return this.id;
 	}
 
-	public void setId(ComenziCvExtId id) {
+	public void setId(ComenziCvExtId1 id) {
 		this.id = id;
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "com_id", nullable = false, insertable = false, updatable = false)
-	public ComenziVExt getComenziVExt() {
+	public ComenziVExt1 getComenziVExt() {
 		return this.comenziVExt;
 	}
 
-	public void setComenziVExt(ComenziVExt comenziVExt) {
+	public void setComenziVExt(ComenziVExt1 comenziVExt) {
 		this.comenziVExt = comenziVExt;
 	}
 
@@ -148,7 +143,7 @@ public class ComenziCvExt implements java.io.Serializable {
 		this.prDiscIncl = prDiscIncl;
 	}
 
-	@Column(name = "disc_contr", nullable = false, precision = 6)
+	@Column(name = "disc_contr", precision = 6)
 	public BigDecimal getDiscContr() {
 		return this.discContr;
 	}
@@ -157,7 +152,7 @@ public class ComenziCvExt implements java.io.Serializable {
 		this.discContr = discContr;
 	}
 
-	@Column(name = "disc_com", nullable = false, precision = 6)
+	@Column(name = "disc_com", precision = 6)
 	public BigDecimal getDiscCom() {
 		return this.discCom;
 	}
@@ -166,7 +161,7 @@ public class ComenziCvExt implements java.io.Serializable {
 		this.discCom = discCom;
 	}
 
-	@Column(name = "pret_gross", nullable = false, precision = 11)
+	@Column(name = "pret_gross", precision = 11)
 	public BigDecimal getPretGross() {
 		return this.pretGross;
 	}
@@ -176,38 +171,3 @@ public class ComenziCvExt implements java.io.Serializable {
 	}
 
 }
-
-
-/*
-
-
--- Table: comenzi_cv_ext
-
--- DROP TABLE comenzi_cv_ext;
-
-CREATE TABLE comenzi_cv_ext
-(
-  com_id character(10) NOT NULL,
-  nrlinie character(3) NOT NULL,
-  stoc_id character(10),
-  cont_gest character(25),
-  cantitate numeric(10,3),
-  cantitater numeric(10,3),
-  livrat numeric(10,3),
-  pret_vanzare numeric(14,2),
-  pr_disc_incl numeric(6,2),
-  disc_contr numeric(6,2) NOT NULL DEFAULT 0,
-  disc_com numeric(6,2) NOT NULL DEFAULT 0,
-  pret_gross numeric(11,2) NOT NULL DEFAULT 0,
-  CONSTRAINT comenzi_cv_ext_pkey PRIMARY KEY (com_id, nrlinie),
-  CONSTRAINT com_id FOREIGN KEY (com_id)
-      REFERENCES comenzi_v_ext (com_id) MATCH FULL
-      ON UPDATE NO ACTION ON DELETE CASCADE
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE comenzi_cv_ext OWNER TO postgres;
-
-
-*/

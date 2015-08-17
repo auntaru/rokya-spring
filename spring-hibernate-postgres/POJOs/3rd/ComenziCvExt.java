@@ -1,4 +1,4 @@
-package org.jlsoft.orders.connection.model;
+// default package
 // Generated Aug 17, 2015 9:12:26 PM by Hibernate Tools 3.6.0
 
 import java.math.BigDecimal;
@@ -176,38 +176,3 @@ public class ComenziCvExt implements java.io.Serializable {
 	}
 
 }
-
-
-/*
-
-
--- Table: comenzi_cv_ext
-
--- DROP TABLE comenzi_cv_ext;
-
-CREATE TABLE comenzi_cv_ext
-(
-  com_id character(10) NOT NULL,
-  nrlinie character(3) NOT NULL,
-  stoc_id character(10),
-  cont_gest character(25),
-  cantitate numeric(10,3),
-  cantitater numeric(10,3),
-  livrat numeric(10,3),
-  pret_vanzare numeric(14,2),
-  pr_disc_incl numeric(6,2),
-  disc_contr numeric(6,2) NOT NULL DEFAULT 0,
-  disc_com numeric(6,2) NOT NULL DEFAULT 0,
-  pret_gross numeric(11,2) NOT NULL DEFAULT 0,
-  CONSTRAINT comenzi_cv_ext_pkey PRIMARY KEY (com_id, nrlinie),
-  CONSTRAINT com_id FOREIGN KEY (com_id)
-      REFERENCES comenzi_v_ext (com_id) MATCH FULL
-      ON UPDATE NO ACTION ON DELETE CASCADE
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE comenzi_cv_ext OWNER TO postgres;
-
-
-*/
