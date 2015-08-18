@@ -35,7 +35,7 @@ public class NumereLucru implements java.io.Serializable {
 	private Date operare;
 	private Integer nivacc;
 	private String idExt;
-	private Set <ComenziVExt> comenziVExts = new HashSet(0);
+	private Set <ComenziVExt> comenziVExts = new HashSet <ComenziVExt> (0);
 
 	public NumereLucru() {
 	}

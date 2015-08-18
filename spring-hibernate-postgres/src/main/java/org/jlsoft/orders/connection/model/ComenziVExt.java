@@ -99,7 +99,10 @@ public class ComenziVExt implements java.io.Serializable {
 		this.comId = comId;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	// Lazy fetching decides whether to load child objects while loading the Parent Object. 
+	// Lazy = true (means not to load child) ; By default the lazy loading of the child objects is true.
+	// @ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "nrlc_id")
 	public NumereLucru getNumereLucru() {
 		return this.numereLucru;
@@ -109,7 +112,8 @@ public class ComenziVExt implements java.io.Serializable {
 		this.numereLucru = numereLucru;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	// @ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "tert_id")
 	public Terti getTerti() {
 		return this.terti;

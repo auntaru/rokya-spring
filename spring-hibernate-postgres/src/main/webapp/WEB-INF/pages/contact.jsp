@@ -38,8 +38,8 @@
 </tr>
 <c:forEach items="${ordersList}" var="order">
 	<tr>
-		<td>${order.nrdoc}, ${order.gestiuneId} </td>
-		<td> ... </td>
+		<td>${order.nrdoc}, ${order.terti.denumire} </td>
+		<td> ${order.numereLucru.denumire}... </td>
 		<td>${order.valoare}</td>
 		<td>${order.comId}</td>
 	</tr>
