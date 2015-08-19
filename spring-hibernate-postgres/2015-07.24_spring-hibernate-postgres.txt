@@ -1,4 +1,25 @@
 
+2015-08.19 22..34 : KO - TERTi-self-join 
+
+http://kruders.com/hibernate/hibernate-self-join-one-to-many-using-annotation/
+http://viralpatel.net/blogs/hibernate-self-join-annotations-one-to-many-mapping/
+http://kruders.com/hibernate/hibernate-self-join-many-to-many-mapping/
+http://viralpatel.net/blogs/hibernate-self-join-annotation-mapping-many-to-many-example/
+
+NU merge self-join in TERTI dupa CUI deoarece in pangram_main_2008 
+   - terti.cui nu este primary-key ... ci tert_id !  
+
+ASA ar fi trebuit sa arate tabela terti pentru self-join : 
+CREATE TABLE terti
+(
+  	cui character(14), NOT NULL DEFAULT fpliid('terti'::text, 7),
+  	denumire character(90)
+	CONSTRAINT terti_cui_pky PRIMARY KEY (cui),
+	CONSTRAINT cui FOREIGN KEY (cui) REFERENCES terti (cui) MATCH FULL
+}  
+ 
+	 
+
 2015-08.18 23..59 : ComenziVExt @ManyToOne(fetch = FetchType.EAGER) 
 
 Am afisat in OrdersViewer : AgentName ! inlocuind "FetchType.LAZY" cu "FetchType.EAGER" ... 

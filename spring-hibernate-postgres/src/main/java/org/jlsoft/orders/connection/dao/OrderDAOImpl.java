@@ -44,7 +44,7 @@ public class OrderDAOImpl implements OrderDAO {
 		
 			// return sessionFactory.getCurrentSession().createQuery("from ComenziVExt where comId='0100896075'").list();
 			
-			Query query = getCurrentSession().createQuery("from ComenziVExt where dataC= :dateOfLastOrder order by nrdoc desc");
+			Query query = getCurrentSession().createQuery("from ComenziVExt where dataC= :dateOfLastOrder order by valoare desc");
 			query.setParameter("dateOfLastOrder", dateOfLastOrder);
 			// crit.addOrder(Order.asc("salary"));
 			

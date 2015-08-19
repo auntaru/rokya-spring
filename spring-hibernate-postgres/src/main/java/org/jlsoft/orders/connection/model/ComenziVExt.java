@@ -1,4 +1,3 @@
-// default package
 // Generated Aug 17, 2015 9:12:26 PM by Hibernate Tools 3.6.0
 package org.jlsoft.orders.connection.model;
 import java.math.BigDecimal;
