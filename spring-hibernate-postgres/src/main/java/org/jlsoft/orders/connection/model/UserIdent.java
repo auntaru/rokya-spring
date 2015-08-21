@@ -31,7 +31,7 @@ public class UserIdent implements java.io.Serializable {
 	private String cnp;
 	private Date operare;
 	private String ci;
-	private Set <Terti> tertis = new HashSet(0);
+	// private Set <Terti> tertis = new HashSet(0);
 
 	public UserIdent() {
 	}
@@ -52,7 +52,7 @@ public class UserIdent implements java.io.Serializable {
 		this.cnp = cnp;
 		this.operare = operare;
 		this.ci = ci;
-		this.tertis = tertis;
+		// this.tertis = tertis;
 	}
 
 	@Id
@@ -138,7 +138,7 @@ public class UserIdent implements java.io.Serializable {
 	public void setCi(String ci) {
 		this.ci = ci;
 	}
-
+/*
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "userIdent")
 	public Set <Terti> getTertis() {
 		return this.tertis;
@@ -147,5 +147,5 @@ public class UserIdent implements java.io.Serializable {
 	public void setTertis(Set <Terti> tertis) {
 		this.tertis = tertis;
 	}
-
+*/
 }

@@ -1,4 +1,32 @@
 
+2015-08.21 23..59 : DATA TRANSFER OBJECT , FORGET SELF-JOIN_TERTI
+
+2015-08.21 21..47 : Hibernate logging - SLF4j + Log4j
+
+   ToDo Next : DATA TRANSFER OBJECT , FORGET SELF-JOIN_TERTI !
+               http://krams915.blogspot.ro/2011/03/spring-hibernate-many-to-one.html
+			         spring-hibernate-one-to-many-CreditCards-krams915
+			   	
+   ToDo Next : Hibernate @Filter and @FilterJoinTable Annotation Example
+               http://www.concretepage.com/hibernate/hibernate-filter-and-filterjointable-annotation-example
+ 
+
+~ Avand in vedere ca sunt probleme cu hibernate in self-join Terti , LOG detaliat : 
+  http://www.mkyong.com/hibernate/how-to-display-hibernate-sql-parameter-values-log4j/
+  http://www.mkyong.com/hibernate/how-to-configure-log4j-in-hibernate-project/
+  http://www.mkyong.com/hibernate/how-to-display-hibernate-sql-parameter-values-solution/
+  http://stackoverflow.com/questions/2536829/hibernate-show-real-sql
+     -- log4j.logger.org.hibernate.SQL=DEBUG -- 
+
+how to perform union clause query with hibernate criteria api
+http://iswwwup.com/t/7d0b24a7e22e/how-to-perform-union-clause-query-with-hibernate-criteria-api.html
+
+http://w3facility.org/question/hibernate-union-alternatives/
+
+http://viralpatel.net/blogs/hibernate-self-join-annotations-one-to-many-mapping/
+
+
+
 2015-08.21 21..47 : Found shared references to a collection - Terti.cuisipuncte
 org.hibernate.HibernateException: Found shared references to a collection: org.jlsoft.orders.connection.model.Terti.cuisipuncte
 https://forum.hibernate.org/viewtopic.php?t=958439&highlight=&

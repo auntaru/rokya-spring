@@ -35,7 +35,7 @@ public class Siruta implements java.io.Serializable {
 	private String fs2;
 	private String fs3;
 	private Integer fsl;
-	private Set <Terti> tertis = new HashSet(0);
+	// private Set <Terti> tertis = new HashSet(0);
 
 	public Siruta() {
 	}
@@ -63,7 +63,7 @@ public class Siruta implements java.io.Serializable {
 		this.fs2 = fs2;
 		this.fs3 = fs3;
 		this.fsl = fsl;
-		this.tertis = tertis;
+		// this.tertis = tertis;
 	}
 
 	@Id
@@ -202,7 +202,7 @@ public class Siruta implements java.io.Serializable {
 	public void setFsl(Integer fsl) {
 		this.fsl = fsl;
 	}
-
+/*
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "siruta")
 	public Set <Terti> getTertis() {
 		return this.tertis;
@@ -211,5 +211,5 @@ public class Siruta implements java.io.Serializable {
 	public void setTertis(Set <Terti> tertis) {
 		this.tertis = tertis;
 	}
-
+*/
 }

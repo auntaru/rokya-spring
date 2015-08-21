@@ -53,9 +53,9 @@ public class OrderDAOImpl implements OrderDAO {
 		// http://stackoverflow.com/questions/9598890/hibernate-exception-found-two-representations-of-the-same-collection   
 		//    
 		// 
-		getCurrentSession().clear();
+		// getCurrentSession().clear();
 		return sessionFactory.getCurrentSession().createQuery("from ComenziVExt where comId='0100896774'").list();
-		// return sessionFactory.getCurrentSession().get(ComenziVExt.class, new String("0100896774"));
+		// return ???!!! sessionFactory.getCurrentSession().get(ComenziVExt.class, new String("0100896774"));
 
 /*			
 			Query query = getCurrentSession().createQuery("from ComenziVExt where dataC= :dateOfLastOrder order by valoare desc");
