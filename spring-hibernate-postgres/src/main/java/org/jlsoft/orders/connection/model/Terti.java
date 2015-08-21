@@ -1,4 +1,3 @@
-// default package
 // Generated Aug 17, 2015 9:12:26 PM by Hibernate Tools 3.6.0
 package org.jlsoft.orders.connection.model;
 import java.math.BigDecimal;
@@ -6,6 +5,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -24,6 +24,10 @@ import javax.persistence.TemporalType;
 @Table(name = "terti", schema = "public")
 public class Terti implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String tertId;
 	private UserIdent userIdent;
 	private Siruta siruta;
@@ -78,7 +82,7 @@ public class Terti implements java.io.Serializable {
 	private String mobil2;
 	private String adrliv;
 	private String codbare;
-	private Set <ComenziVExt> comenziVExts = new HashSet(0);
+	private Set <ComenziVExt> comenziVExts = new HashSet <ComenziVExt>(0);
 
 	public Terti() {
 	}
@@ -186,6 +190,47 @@ public class Terti implements java.io.Serializable {
 
 	public void setSiruta(Siruta siruta) {
 		this.siruta = siruta;
+	}
+
+/*	
+ * 
+ *  http://viralpatel.net/blogs/hibernate-self-join-annotations-one-to-many-mapping/
+ *  
+	private Terti tertcui;
+	@ManyToOne(cascade={CascadeType.ALL})
+	@JoinColumn(name="cui", insertable = false, updatable = false)
+	public Terti getTertcui() {
+		return this.tertcui;
+	}
+	public void setTertcui(Terti tertcui) {
+		this.tertcui = tertcui;
+	}
+
+http://vladmihalcea.com/2015/03/05/a-beginners-guide-to-jpa-and-hibernate-cascade-types/
+http://www.mkyong.com/hibernate/hibernate-cascade-example-save-update-delete-and-delete-orphan/
+
+*/
+	
+	// http://stackoverflow.com/questions/15389749/hibernate-found-two-representations-of-same-collection
+	// 
+	// @JoinColumn(name = "cui", referencedColumnName = "cui", insertable = false, updatable = false)
+	// @JoinColumn(name = "cui", insertable = false, updatable = false)
+	// @OneToMany(fetch = FetchType.EAGER, cascade={CascadeType.ALL})
+	// @OneToMany(fetch = FetchType.EAGER, cascade = { CascadeType.PERSIST,CascadeType.MERGE })
+	// @OneToMany(fetch = FetchType.EAGER)
+	// @OneToMany(fetch = FetchType.LAZY)
+	// @OneToMany(mappedBy="tertcui" , fetch = FetchType.EAGER)
+	// @JoinColumn(name = "cui", referencedColumnName = "cui", insertable = false, updatable = false)
+	
+	private Set <Terti> cuisipuncte = new HashSet <Terti> (0);
+	@OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name = "cui", referencedColumnName = "cui", insertable = false, updatable = false)
+
+	public Set <Terti> getCuisipuncte() {
+		return this.cuisipuncte;
+	}
+	public void setCuisipuncte(Set <Terti> cuisipuncte) {
+		this.cuisipuncte = cuisipuncte;
 	}
 
 	@Column(name = "cui", length = 14)

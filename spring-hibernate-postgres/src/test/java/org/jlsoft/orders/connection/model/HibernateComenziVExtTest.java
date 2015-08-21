@@ -10,13 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 
-import java.util.Set;
-
 import java.util.*;
 
 
 @ContextConfiguration(locations = "/main-persistence-beans.xml")
-public class HibernateTertiTest extends AbstractJUnit4SpringContextTests {
+public class HibernateComenziVExtTest extends AbstractJUnit4SpringContextTests {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -34,15 +32,41 @@ public class HibernateTertiTest extends AbstractJUnit4SpringContextTests {
 	}
 
     @Test
-    public void tertiTest() {
+    public void orderTest() {
     	
-    	String iD = new String("010030333");
+    	String iD = new String("0100896774");
         String pL = new String("DEPOZIT CEFIN                                                                             ");
-        Set<Terti> tertiSet;
-        Terti tertiIterator;
-        int i=1;
+        Terti oneTert;
+        //Terti tertiIterator;
+        //int i=1;
         
     	Session session = sessionFactory.openSession();
+  
+    	ComenziVExt oneOrder = (ComenziVExt) session.get(ComenziVExt.class, iD);
+    	assertNotNull (oneOrder);
+    	oneTert = oneOrder.getTerti();
+    	assertNotNull (oneTert);
+    	// -- tert_id = '010033531' = "PROFI ROM FOOD SRL                                                                        "  
+    	// 330 puncte lucru per CUi ! 
+    	
+    	
+    	Set <Terti> cuiPuncte;
+    	cuiPuncte = oneTert.getCuisipuncte(); 
+    	assertNotNull (cuiPuncte);
+    	assertEquals(330,cuiPuncte.size());
+    	
+      	session.close();
+
+      	// select * from Comenzi_V_Ext where com_id='0100896075' => OK !
+		// 0100896774 => "Found shared references to a collection: org.jlsoft.orders.connection.model.Terti.cuisipuncte"
+		// return sessionFactory.getCurrentSession().createQuery("from ComenziVExt where comId='0100896774'").list();
+      	
+      	
+      	
+    }
+}
+
+/*    	
     	
     	Terti oneTert = (Terti) session.get(Terti.class, iD);
     	assertNotNull (oneTert);
@@ -63,11 +87,4 @@ public class HibernateTertiTest extends AbstractJUnit4SpringContextTests {
     		}
     	}
     	assertEquals(i, 36);
-    	
-    	session.close();
-    }
-}
-/*
-   select denumire ,tert_id, cui,plt, localitate, judet from terti where cui= ( select t1.cui from terti t1 where tert_id='010030333' )
-   "CARREFOUR ROMANIA SA                                                                      "
 */

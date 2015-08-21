@@ -39,16 +39,31 @@ public class OrderDAOImpl implements OrderDAO {
 //			    .setProjection(Projections.max("age"));
 //			Integer maxAge = (Integer)criteria.uniqueResult();
 	
-			Criteria criteria = getCurrentSession().createCriteria(ComenziVExt.class).setProjection(Projections.max("dataC")); 
-			Date dateOfLastOrder = (Date)criteria.uniqueResult();
-		
-			// return sessionFactory.getCurrentSession().createQuery("from ComenziVExt where comId='0100896075'").list();
+			// Criteria criteria = getCurrentSession().createCriteria(ComenziVExt.class).setProjection(Projections.max("dataC")); 
+			// Date dateOfLastOrder = (Date)criteria.uniqueResult();
 			
+			// select * from Comenzi_V_Ext where com_id='0100896075' => OK ! 
+			// 0100896774 => "Found shared references to a collection: org.jlsoft.orders.connection.model.Terti.cuisipuncte"
+
+		// http://stackoverflow.com/questions/8984837/org-hibernate-objectnotfoundexception-no-row-with-the-given-identifier-exists
+		//    Set log level to TRACE to see all steps and look for generated SQL when retrieving the objects.
+		//    http://docs.jboss.org/hibernate/core/3.3/reference/en/html/session-configuration.html#configuration-logging
+		//    http://stackoverflow.com/questions/436276/configuring-hibernate-logging-using-log4j-xml-config-file
+		//    
+		// http://stackoverflow.com/questions/9598890/hibernate-exception-found-two-representations-of-the-same-collection   
+		//    
+		// 
+		getCurrentSession().clear();
+		return sessionFactory.getCurrentSession().createQuery("from ComenziVExt where comId='0100896774'").list();
+		// return sessionFactory.getCurrentSession().get(ComenziVExt.class, new String("0100896774"));
+
+/*			
 			Query query = getCurrentSession().createQuery("from ComenziVExt where dataC= :dateOfLastOrder order by valoare desc");
 			query.setParameter("dateOfLastOrder", dateOfLastOrder);
 			// crit.addOrder(Order.asc("salary"));
 			
 			return query.list();
+*/
 
 /*			
 			How to work with Projection in Hibernate Criteria Query (HCQ)

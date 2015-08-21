@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -111,6 +112,7 @@ public class ComenziVExt implements java.io.Serializable {
 		this.numereLucru = numereLucru;
 	}
 
+	
 	// @ManyToOne(fetch = FetchType.LAZY)
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "tert_id")
@@ -122,6 +124,24 @@ public class ComenziVExt implements java.io.Serializable {
 		this.terti = terti;
 	}
 
+/*	
+	// nu pot sa relationez cu VTERTI ... deoarece VTERTI are index-compus din toate campurile ! 
+	// http://stackoverflow.com/questions/27215607/annotationexception-a-foreign-key-refering-has-the-wrong-number-of-column-shou
+	// A Foreign key refering has the wrong number of column. should be ... 
+    private Vterti vtert;
+	
+	// @ManyToOne(fetch = FetchType.EAGER , cascade={CascadeType.ALL})
+	@ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="tert_id", insertable = false, updatable = false)
+	public Vterti getVterti() {
+		return this.vtert;
+	}
+
+	public void setVterti(Vterti vtert) {
+		this.vtert = vtert;
+	}
+*/
+	
 	@Column(name = "nrdoc", length = 16)
 	public String getNrdoc() {
 		return this.nrdoc;
@@ -315,13 +335,7 @@ public class ComenziVExt implements java.io.Serializable {
 	public void setComenziCvExts(Set <ComenziCvExt> comenziCvExts) {
 		this.comenziCvExts = comenziCvExts;
 	}
-
-	@Override
-	public String toString(){
-		return this.getNumereLucru().getDenumire();
 		
-	}
-	
 }
 
 /*

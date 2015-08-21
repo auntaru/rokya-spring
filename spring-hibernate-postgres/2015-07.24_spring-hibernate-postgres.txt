@@ -1,4 +1,34 @@
 
+2015-08.21 21..47 : Found shared references to a collection - Terti.cuisipuncte
+org.hibernate.HibernateException: Found shared references to a collection: org.jlsoft.orders.connection.model.Terti.cuisipuncte
+https://forum.hibernate.org/viewtopic.php?t=958439&highlight=&
+<<
+It is fine to pass a persistent collection around to lots of places, sharing the use of a single instance. 
+If you're doing that, continue doing it and all will be well. The problem occurs when you don't do that: 
+when you have two distinct and separate references to a single collection. 
+The most common way of getting into that situation is when you create a transient collection in transient object, 
+then persist it and load it. The loaded collection is now the "real" collection, and the original collection should be immediately discarded. 
+If you re-save that original object or collection you'll get the "shared reference" exception. 
+
+There is no way to allow two different java collections refer to a single persistent collection. 
+There is no way for hibernate to synchronize something like that: what if you remove one item from one collection, 
+and add a different item to the other collection, then save both.. what happens? If you want two references to the same collection, 
+that's fine, the only problem is when you have two different java collections referring to the same set of DB rows. 
+
+	If the collection is truly read-only, then either map it as mutable="false", or at least detach it from the session. 
+	The easiest way to detach the collection is to Hibernate.initialize it, then session.evict or session.clear.
+>>
+
+2015-08.20 23..59 forEach items
+
+		<c:forEach items="${order.terti.cuisipuncte.toArray()}" var="plt">
+		The function toArray must be used with a prefix when a default namespace is not specified
+
+<c:if  test="${plt.denumire}=='00'}">
+</c:if>
+
+
+
 2015-08.19 22..34 : KO - TERTi-self-join 
 
 http://kruders.com/hibernate/hibernate-self-join-one-to-many-using-annotation/

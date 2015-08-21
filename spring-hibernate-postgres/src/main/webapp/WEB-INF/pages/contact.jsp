@@ -38,8 +38,17 @@
 </tr>
 <c:forEach items="${ordersList}" var="order">
 	<tr>
-		<td>${order.nrdoc}, ${order.terti.denumire} </td>
-		<td> ${order.numereLucru.denumire}... </td>
+		<td>${order.nrdoc}, 
+		${order.terti.denumire}
+
+<%--
+		<c:forEach items="${order.terti.cuisipuncte}" var="plt">
+				${plt.denumire}
+		</c:forEach>		
+--%>  
+
+		</td>
+		<td> ${order.numereLucru.denumire}</td>
 		<td>${order.valoare}</td>
 		<td>${order.comId}</td>
 	</tr>
@@ -53,6 +62,5 @@
 
 
 <!--
-        <th>Agent iD</th>   
-		<td>${order.nrlcId}</td>
+
 --> 
