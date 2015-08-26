@@ -1,4 +1,6 @@
 
+2015-08.26 : CreditCards-krams915 + ContactManager-viralpatel
+
 2015-08.17 : spring-hibernate-one-to-many-CreditCards-krams915
 
 Spring MVC 3 and Hibernate Tutorials Series
@@ -26,6 +28,10 @@ Access the main application
 To access the main application, use the following URL:
 http://localhost:8080/spring-hibernate-one-to-many-CreditCards-krams915/krams/main/record/list
 
+
+
+http://viralpatel.net/blogs/spring3-mvc-hibernate-maven-tutorial-eclipse-example/
+Tutorial:Create Spring 3 MVC Hibernate 3 Example using Maven in Eclipse
 
 
 
@@ -72,4 +78,14 @@ http://localhost:8080/spring-hibernate-one-to-many-CreditCards-krams915/krams/ma
  http://www.codejava.net/frameworks/hibernate/hibernate-one-to-many-association-on-join-table-annotations-example
  http://www.mkyong.com/hibernate/how-to-generate-code-with-hibernate-tools/
  
+ 
+ ====================================================
+
+2015-08.10 21:47 - Contact Manager - viralpatel
+       http://localhost:8080/Spring3HibernateMaven-viralpatel/index
+
+http://viralpatel.net/blogs/spring3-mvc-hibernate-maven-tutorial-eclipse-example/
+Tutorial:Create Spring 3 MVC Hibernate 3 Example using Maven in Eclipse
+
+====================================================
  
