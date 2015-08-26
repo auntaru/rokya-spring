@@ -1,7 +1,11 @@
 
-2015-08.26 : CreditCards-krams915 + ContactManager-viralpatel
-
-2015-08.17 : spring-hibernate-one-to-many-CreditCards-krams915
+2015-08.26 : CreditCards-krams915 + ContactManager-viralpatel (refresh)
+	http://krams915.blogspot.ro/2011/03/spring-hibernate-one-to-many.html
+	http://krams915.blogspot.ro/2011/03/spring-hibernate-many-to-one.html
+	http://viralpatel.net/blogs/spring3-mvc-hibernate-maven-tutorial-eclipse-example/
+	
+	
+2015-08.17 : spring-hibernate-one-to-many-CreditCards-krams915 [DTO]
 
 Spring MVC 3 and Hibernate Tutorials Series
 Spring - Hibernate: One-To-Many Association

@@ -221,7 +221,8 @@ http://www.mkyong.com/hibernate/hibernate-cascade-example-save-update-delete-and
 	// @OneToMany(fetch = FetchType.LAZY)
 	// @OneToMany(mappedBy="tertcui" , fetch = FetchType.EAGER)
 	// @JoinColumn(name = "cui", referencedColumnName = "cui", insertable = false, updatable = false)
-	
+
+/*	
 	private Set <Terti> cuisipuncte = new HashSet <Terti> (0);
 	@OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "cui", referencedColumnName = "cui", insertable = false, updatable = false)
@@ -232,7 +233,7 @@ http://www.mkyong.com/hibernate/hibernate-cascade-example-save-update-delete-and
 	public void setCuisipuncte(Set <Terti> cuisipuncte) {
 		this.cuisipuncte = cuisipuncte;
 	}
-
+*/
 	@Column(name = "cui", length = 14)
 	public String getCui() {
 		return this.cui;

@@ -1,4 +1,9 @@
 
+2015-08.26 : OrderDTO dto = new OrderDTO();
+
+2015-08.25 : CreditCards-krams915 + ContactManager-viralpatel
+
+
 2015-08.21 23..59 : DATA TRANSFER OBJECT , FORGET SELF-JOIN_TERTI
 
 2015-08.21 21..47 : Hibernate logging - SLF4j + Log4j
