@@ -31,7 +31,7 @@ public class OrderController {
 	    	 OrderDTO dto = new OrderDTO();
 	    	 
 	    	 dto.setAgentName(order.getNumereLucru().getDenumire());
-	    	 dto.setClientName(order.getTerti().getDenumire());
+	    	 dto.setClientName(orderService.getClientHqNameByCui( order.getTerti().getCui()) + " " + order.getTerti().getDenumire() );
 	    	 dto.setOrderNumber(order.getNrdoc());
 	    	 dto.setOrderValue(order.getValoare());
 	    	 dto.setComId(order.getComId());

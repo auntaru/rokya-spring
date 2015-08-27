@@ -30,7 +30,10 @@ public class HibernateComenziVExtTest extends AbstractJUnit4SpringContextTests {
 		// Spring IOC container instantiated and prepared sessionFactory
 		assertNotNull (sessionFactory); 
 	}
+}
 
+/*
+	
     @Test
     public void orderTest() {
     	
@@ -64,10 +67,7 @@ public class HibernateComenziVExtTest extends AbstractJUnit4SpringContextTests {
       	
       	
     }
-}
 
-/*    	
-    	
     	Terti oneTert = (Terti) session.get(Terti.class, iD);
     	assertNotNull (oneTert);
     	assertEquals(pL, oneTert.getDenumire());

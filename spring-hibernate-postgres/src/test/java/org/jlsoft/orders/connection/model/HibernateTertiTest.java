@@ -32,8 +32,9 @@ public class HibernateTertiTest extends AbstractJUnit4SpringContextTests {
 		// Spring IOC container instantiated and prepared sessionFactory
 		assertNotNull (sessionFactory); 
 	}
-
-    @Test
+}	
+/*
+    // @Test
     public void tertiTest() {
     	
     	String iD = new String("010030333");
@@ -66,8 +67,8 @@ public class HibernateTertiTest extends AbstractJUnit4SpringContextTests {
     	
     	session.close();
     }
-}
-/*
+
+
    select denumire ,tert_id, cui,plt, localitate, judet from terti where cui= ( select t1.cui from terti t1 where tert_id='010030333' )
    "CARREFOUR ROMANIA SA                                                                      "
 */

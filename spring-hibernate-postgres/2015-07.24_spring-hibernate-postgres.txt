@@ -1,3 +1,41 @@
+2015-08.27 : OrderController - orderService.getClientHqNameByCui() 
+
+Am reusit sa afisez numele complet pentru TERT + PL in lista comenzilor din ultima zi !  
+
+OrderDAOImpl.java : 
+
+	public String getClientHqNameByCui(String cui) {
+		String theHqName = new String(" ");
+		// CMS =2  : tert incorect sau inactiv ?  
+		Query query = getCurrentSession().createQuery("from Terti where cui= :cui and plt='00' and cms<>2");
+		query.setParameter("cui", cui);
+		// List<Terti> list = query.list();
+		try {
+			Terti oneTert = (Terti) query.uniqueResult();
+			theHqName = oneTert.getDenumire(); 
+		} 
+		catch (NoResultException e) {
+			 return null;
+		}	
+		catch(NonUniqueResultException e) {
+	        throw new RuntimeException("Two Terti found with same cui ");
+	    }
+		
+		return theHqName;
+	}
+
+
+
+Why you should never use getSingleResult() in JPA
+http://sysout.be/2011/03/09/why-you-should-never-use-getsingleresult-in-jpa/
+
+List results = query.getResultList();
+Entity foundEntity = null;
+if(!results.isEmpty()){
+    // ignores multiple results
+    foundEntity = results.get(0);
+}
+
 
 2015-08.26 : OrderDTO dto = new OrderDTO();
 

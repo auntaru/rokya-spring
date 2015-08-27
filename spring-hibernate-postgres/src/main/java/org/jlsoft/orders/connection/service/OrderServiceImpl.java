@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import org.jlsoft.orders.connection.model.ComenziVExt;
 import org.jlsoft.orders.connection.dao.OrderDAO;
 
@@ -23,4 +22,11 @@ public class OrderServiceImpl implements OrderService {
 		
 	}
 
+	@Transactional
+	public String getClientHqNameByCui(String cui){
+		
+		return orderDAO.getClientHqNameByCui(cui);
+		
+	}
+	
 }

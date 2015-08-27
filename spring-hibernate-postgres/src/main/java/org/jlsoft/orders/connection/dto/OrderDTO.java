@@ -10,6 +10,14 @@ public class OrderDTO {
 	private String 		agentName;
 	private BigDecimal 	orderValue;
 	private String 		comId;
+	private String      clientMainName;
+	
+	public String getClientMainName() {
+		return clientMainName;
+	}
+	public void setClientMainName(String clientMainName) {
+		this.clientMainName = clientMainName;
+	}
 	
 	public OrderDTO(String orderNumber, String clientName, String agentName,
 			BigDecimal orderValue, String comId) {

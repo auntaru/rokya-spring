@@ -8,5 +8,6 @@ public interface OrderService {
 
 
 	public List<ComenziVExt> listOrders();
+	public String getClientHqNameByCui(String cui);
 
 }

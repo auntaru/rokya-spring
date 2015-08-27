@@ -38,16 +38,7 @@
 </tr>
 <c:forEach items="${ordersList}" var="order">
 	<tr>
-		<td>${order.orderNumber}, 
-		${order.clientName}
-
-<%--
-		<c:forEach items="${order.terti.cuisipuncte}" var="plt">
-				${plt.denumire}
-		</c:forEach>		
---%>  
-
-		</td>
+		<td>${order.orderNumber}, ${order.clientName} </td>
 		<td> ${order.agentName}</td>
 		<td>${order.orderValue}</td>
 		<td>${order.comId}</td>
