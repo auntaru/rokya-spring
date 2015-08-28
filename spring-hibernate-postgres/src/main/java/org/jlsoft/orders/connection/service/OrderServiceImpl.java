@@ -1,5 +1,6 @@
 package org.jlsoft.orders.connection.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,12 @@ public class OrderServiceImpl implements OrderService {
 		
 		return orderDAO.getClientHqNameByCui(cui);
 		
+	}
+
+	@Transactional
+	public Date getDateOfLastOrder() {
+		// TODO Auto-generated method stub
+		return orderDAO.getDateOfLastOrder();
 	}
 	
 }

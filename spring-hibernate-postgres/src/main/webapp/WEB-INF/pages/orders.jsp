@@ -24,16 +24,15 @@
 </head>
 <body>
 
-<h2>Orders Viewer</h2>
-
+<h2>ORDERS VIEWER</h2>
 	
-<h3>Orders</h3>
+<h3>Latest Orders : ${dateOfLastOrder}</h3>
 <c:if  test="${!empty ordersList}">
 <table class="data">
 <tr>
-	<th>Nr.doc/gestiune iD</th>
+	<th>ORDER NUMBER / CLIENT NAME : HEADQUARTER - BRANCH</th>
 	<th>Agent Name</th>
-	<th>Valoare</th>
+	<th>Value</th>
 	<th>Order iD;</th>
 </tr>
 <c:forEach items="${ordersList}" var="order">

@@ -53,6 +53,13 @@ public class OrderDAOImpl implements OrderDAO  {
 		return theHqName;
 	}
 
+	public Date getDateOfLastOrder(){
+		Criteria criteria = getCurrentSession().createCriteria(ComenziVExt.class).setProjection(Projections.max("dataC")); 
+		Date dateOfLastOrder = (Date)criteria.uniqueResult();
+		return dateOfLastOrder;
+	}
+	
+	
 	public List<ComenziVExt> listOrders() {
 		
 
@@ -65,6 +72,7 @@ public class OrderDAOImpl implements OrderDAO  {
 //			    .setProjection(Projections.max("age"));
 //			Integer maxAge = (Integer)criteria.uniqueResult();
 	
+			// getDateOfLastOrder() => 
 			Criteria criteria = getCurrentSession().createCriteria(ComenziVExt.class).setProjection(Projections.max("dataC")); 
 			Date dateOfLastOrder = (Date)criteria.uniqueResult();
 			
@@ -119,7 +127,4 @@ public class OrderDAOImpl implements OrderDAO  {
 		// List result = query.list();
 		
 	}
-
-
-
 }

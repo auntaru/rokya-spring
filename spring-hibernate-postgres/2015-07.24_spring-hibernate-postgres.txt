@@ -1,3 +1,16 @@
+
+2015-08.28 : dateOfLastOrder = orderService.getDateOfLastOrder()  
+ ToDo Next : SUMA pe total valoric comenzi !
+
+FTW
+test.jl-soft.ro
+orders.jl-soft.ro/java-postgres
+linux.jl-soft.ro/java
+eurobit.pangram.ro/orders
+
+
+ROKYA - KYW   ROKYW - RoQ SALES ! ( JALIN ? jalix )  
+
 2015-08.27 : OrderController - orderService.getClientHqNameByCui() 
 
 Am reusit sa afisez numele complet pentru TERT + PL in lista comenzilor din ultima zi !  
