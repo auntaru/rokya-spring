@@ -1,4 +1,10 @@
 
+2015-09.01 : OrderDAOImpl.getCountOfOrdersOnLastDay(Date dateOfLastOrder)
+
+         valueOfLastOrders = orderService.getSumOfOrdersValuesOnLastDay(dateOfLastOrder);
+		 String countOfLastOrders = orderService.getCountOfOrdersOnLastDay(dateOfLastOrder) ;
+
+
 2015-08.28 : dateOfLastOrder = orderService.getDateOfLastOrder()  
  ToDo Next : SUMA pe total valoric comenzi !
 

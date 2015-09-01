@@ -1,5 +1,6 @@
 package org.jlsoft.orders.connection.controller;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -19,11 +20,12 @@ public class OrderController {
 	@Autowired
 	private OrderService orderService;
 
-	@RequestMapping("/index")
+	@RequestMapping("/orders")
 	public String listOrders(Map<String, Object> map) {
-		// map.put("contact", new Contact());
-		
 		 Date dateOfLastOrder = orderService.getDateOfLastOrder();
+		 String valueOfLastOrders = new String(" ");
+		 valueOfLastOrders = orderService.getSumOfOrdersValuesOnLastDay(dateOfLastOrder);
+		 String countOfLastOrders = orderService.getCountOfOrdersOnLastDay(dateOfLastOrder) ; 
 	     List<ComenziVExt> orders = orderService.listOrders();
 	     List<OrderDTO> ordersDTO = new ArrayList<OrderDTO>();
 	     for (ComenziVExt order: orders) {
@@ -38,8 +40,8 @@ public class OrderController {
 	     }
 		 map.put("ordersList", ordersDTO);
 		 map.put("dateOfLastOrder", dateOfLastOrder);
-		
-		//return "contact";
+		 map.put("valueOfLastOrders", valueOfLastOrders);
+		 map.put("countOfLastOrders", countOfLastOrders);
 		return "orders";
 	}
 }

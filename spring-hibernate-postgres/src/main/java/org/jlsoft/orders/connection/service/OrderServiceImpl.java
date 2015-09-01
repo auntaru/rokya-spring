@@ -35,5 +35,16 @@ public class OrderServiceImpl implements OrderService {
 		// TODO Auto-generated method stub
 		return orderDAO.getDateOfLastOrder();
 	}
+
+	@Transactional
+	public String getSumOfOrdersValuesOnLastDay(Date dateOfLastOrder){
+		return orderDAO.getSumOfOrdersValuesOnLastDay(dateOfLastOrder);
+	}
+
+	@Transactional
+	public String getCountOfOrdersOnLastDay(Date dateOfLastOrder)
+	{
+		return orderDAO.getCountOfOrdersOnLastDay(dateOfLastOrder);
+	}
 	
 }

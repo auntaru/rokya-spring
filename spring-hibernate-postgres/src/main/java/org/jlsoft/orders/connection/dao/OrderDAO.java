@@ -10,5 +10,7 @@ public interface OrderDAO {
 	public List<ComenziVExt> listOrders();
 	public String getClientHqNameByCui(String cui);
 	public Date getDateOfLastOrder();
+	public String getSumOfOrdersValuesOnLastDay(Date dateOfLastOrder);
+	public String getCountOfOrdersOnLastDay(Date dateOfLastOrder);
 
 }

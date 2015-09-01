@@ -1,5 +1,9 @@
 package org.jlsoft.orders.connection.dao;
 
+import java.math.BigDecimal;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Date;
 
@@ -9,11 +13,11 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
 import org.jlsoft.orders.connection.model.ComenziVExt;
 import org.jlsoft.orders.connection.model.Terti;
 import org.hibernate.SessionFactory;
 import org.hibernate.NonUniqueResultException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -58,6 +62,61 @@ public class OrderDAOImpl implements OrderDAO  {
 		Date dateOfLastOrder = (Date)criteria.uniqueResult();
 		return dateOfLastOrder;
 	}
+	
+	// public Object[] getSumOfVasluesAndNrOfOrdersByDay(Date theDayOfLastOrder){
+	// public Object[] getSumOfOrdersAndValuesByDay(){
+	public String getSumOfOrdersValuesOnLastDay(Date dateOfLastOrder ){
+		
+/*		
+		// Criteria criteria2 = getCurrentSession().createCriteria(ComenziVExt.class).setProjection(Projections.sum("valoare")); 
+		// criteria2.setProjection(Projections.rowCount());
+		// criteria2.add(Restrictions.like("dataC", dateOfLastOrder));
+		Date lastDay = new Date();
+		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		    try {
+		    	lastDay = formatter.parse("2015-08-28");
+		    } catch (ParseException e) {
+		        e.printStackTrace();
+		    }
+        criteria2.add(Restrictions.like("CAST(data_c as TEXT)",lastDay ));
+        // select sum(valoare) from comenzi_v_ext where  CAST(data_c as TEXT) like '2015-08-28'
+        // http://www.question-defense.com/2010/02/08/no-operator-matches-the-given-name-and-argument-types-you-might-need-to-add-explicit-type-casts
+        Object oneObject = criteria2.uniqueResult();
+        return (String) oneObject;
+*/
+		
+		// criteria2.setMaxResults(1);
+		// List<Object[]> oneObject = criteria2.list();
+		// Object[] oneObject = (Object[]) criteria2.uniqueResult();
+		
+		// bethecoder.com/applications/tutorials/hibernate/hibernate-query-language/min-max-aggregate-functions.html
+
+		// List<Object[]> list = criteria.list();  
+		// for(Object[] arr : list){
+        //    System.out.println(Arrays.toString(arr));
+        // }
+		
+		// String hql = "select sum(valoare) from ComenziVExt where CAST(dataC as TEXT) like '2015-08-28'";
+		// String hql = "select sum(valoare) from ComenziVExt where dataC = '2015-08-28'";
+		String hql = "select sum(valoare) from ComenziVExt where dataC = :dlo";
+		Query query = getCurrentSession().createQuery(hql);
+		query.setParameter("dlo", dateOfLastOrder);
+		List listResult = query.list();
+		BigDecimal number = (BigDecimal) listResult.get(0);
+		return number.toString();
+	}
+
+	public String getCountOfOrdersOnLastDay(Date dateOfLastOrder ){
+		// select count(*) from comenzi_v_ext where data_c = '2015-08-31' 
+		// => 71 ! 72 ? 
+		String hql = "select count(*) from ComenziVExt where dataC = :dlo";
+		Query query = getCurrentSession().createQuery(hql);
+		query.setParameter("dlo", dateOfLastOrder);
+		List listResult = query.list();
+		Long number = (Long) listResult.get(0);
+		return number.toString();
+	}
+	
 	
 	
 	public List<ComenziVExt> listOrders() {

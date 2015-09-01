@@ -3,7 +3,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-	<title>Spring 3 MVC Hibernate</title>
+	<title>Spring Hibernate Postgres</title>
 	<style type="text/css">
 		body {
 			font-family: sans-serif;
@@ -26,7 +26,7 @@
 
 <h2>ORDERS VIEWER</h2>
 	
-<h3>Latest Orders : ${dateOfLastOrder}</h3>
+<h3>Latest Orders : ${dateOfLastOrder} ; Total Value = ${valueOfLastOrders} ; Orders Number = ${countOfLastOrders}</h3>
 <c:if  test="${!empty ordersList}">
 <table class="data">
 <tr>
