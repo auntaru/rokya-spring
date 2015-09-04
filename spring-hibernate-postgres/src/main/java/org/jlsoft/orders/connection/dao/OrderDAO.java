@@ -12,5 +12,6 @@ public interface OrderDAO {
 	public Date getDateOfLastOrder();
 	public String getSumOfOrdersValuesOnLastDay(Date dateOfLastOrder);
 	public String getCountOfOrdersOnLastDay(Date dateOfLastOrder);
+	public List<Object[]> listCountDaySum();
 
 }

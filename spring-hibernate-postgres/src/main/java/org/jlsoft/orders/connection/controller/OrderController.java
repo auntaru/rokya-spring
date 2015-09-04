@@ -44,4 +44,15 @@ public class OrderController {
 		 map.put("countOfLastOrders", countOfLastOrders);
 		return "orders";
 	}
+	
+	// RequestMapping("/count-day-sum")
+	@RequestMapping("/days")
+	public String countDaySum(Map<String, Object> map) {
+		 // Date dateOfLastOrder = orderService.getDateOfLastOrder();
+	     List<Object[]> objectList = orderService.listCountDaySum();
+		 map.put("objectList", objectList);
+		 //return "count-day-sum";
+		 return "days";
+	}
+
 }

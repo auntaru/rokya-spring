@@ -1,3 +1,9 @@
+2015-09.04 : List<Object[]> OrderDAOImpl.listCountDaySum()
+			 String hql = "select count(*) , dataC , sum(valoare) from ComenziVExt where extract(year from dataC)=2015 group by dataC order by dataC";
+			 Query query = getCurrentSession().createQuery(hql);
+			 return query.list();
+		// select count(*) , data_c , sum(valoare) from comenzi_v_ext where extract( month from data_c)=8 and extract( year from data_c)=2015 
+		// group by data_c order by data_c desc				
 
 2015-09.01 : OrderDAOImpl.getCountOfOrdersOnLastDay(Date dateOfLastOrder)
 

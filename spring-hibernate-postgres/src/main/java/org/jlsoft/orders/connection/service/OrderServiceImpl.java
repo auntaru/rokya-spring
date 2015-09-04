@@ -46,5 +46,10 @@ public class OrderServiceImpl implements OrderService {
 	{
 		return orderDAO.getCountOfOrdersOnLastDay(dateOfLastOrder);
 	}
+
+	@Transactional
+	public List<Object[]> listCountDaySum(){
+		return orderDAO.listCountDaySum();
+	};
 	
 }

@@ -117,7 +117,14 @@ public class OrderDAOImpl implements OrderDAO  {
 		return number.toString();
 	}
 	
-	
+	//public List<Object[]> listCountDaySum(Date dateOfLastOrder){
+	public List<Object[]> listCountDaySum(){
+		//select count(*) , data_c , sum(valoare) from comenzi_v_ext where extract( month from data_c)=8 and extract( year from data_c)=2015 group by data_c order by data_c desc
+		// String hql = "select count(*) , dataC , sum(valoare) from ComenziVExt where extract(month from dataC) in (7,8,9) and extract(year from dataC)=2015 group by dataC order by dataC";
+		String hql = "select count(*) , dataC , sum(valoare) from ComenziVExt where extract(year from dataC)=2015 group by dataC order by dataC";
+		Query query = getCurrentSession().createQuery(hql);
+		return query.list();
+	}
 	
 	public List<ComenziVExt> listOrders() {
 		
