@@ -1,9 +1,34 @@
+
+2015-09.07 : List<Object[]> OrderDAOImpl.listCountMonthSum()
+
+   webapp/WEB-INF/pages/months.jsp
+
+   select count(*) , max(extract( month from data_c)) as luna ,
+                  	sum(valoare) from comenzi_v_ext
+					where extract( year from data_c) = 2015 
+					group by extract( month from data_c)
+					order by luna
+   
+
+
 2015-09.04 : List<Object[]> OrderDAOImpl.listCountDaySum()
 			 String hql = "select count(*) , dataC , sum(valoare) from ComenziVExt where extract(year from dataC)=2015 group by dataC order by dataC";
 			 Query query = getCurrentSession().createQuery(hql);
 			 return query.list();
 		// select count(*) , data_c , sum(valoare) from comenzi_v_ext where extract( month from data_c)=8 and extract( year from data_c)=2015 
 		// group by data_c order by data_c desc				
+
+     // www.codejava.net/frameworks/hibernate/hibernate-query-language-hql-example
+     // Using GROUP BY clause in HQL is similar to SQL. The following query summarizes price of all products grouped by each category:
+     // select sum(p.price), p.category.name from Product p group by category
+String hql = "select sum(p.price), p.category.name from Product p group by category";
+Query query = session.createQuery(hql);
+List<Object[]> listResult = query.list();
+for (Object[] aRow : listResult) {
+    Double sum = (Double) aRow[0];
+    String category = (String) aRow[1];
+    System.out.println(category + " - " + sum);
+}
 
 2015-09.01 : OrderDAOImpl.getCountOfOrdersOnLastDay(Date dateOfLastOrder)
 

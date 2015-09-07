@@ -55,4 +55,13 @@ public class OrderController {
 		 return "days";
 	}
 
+	@RequestMapping("/months")
+	public String countMonthSum(Map<String, Object> map) {
+		 // Date dateOfLastOrder = orderService.getDateOfLastOrder();
+	     List<Object[]> objectList = orderService.listCountMonthSum();
+		 map.put("objectList", objectList);
+		 return "months";
+	}
+
+	
 }

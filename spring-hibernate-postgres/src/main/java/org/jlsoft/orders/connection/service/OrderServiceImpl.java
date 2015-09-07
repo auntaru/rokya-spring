@@ -52,4 +52,9 @@ public class OrderServiceImpl implements OrderService {
 		return orderDAO.listCountDaySum();
 	};
 	
+	
+	@Transactional
+	public List<Object[]> listCountMonthSum(){
+		return orderDAO.listCountMonthSum();
+	};
 }

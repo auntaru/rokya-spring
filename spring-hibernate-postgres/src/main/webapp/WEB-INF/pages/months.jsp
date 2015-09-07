@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Day Orders Value</title>
+<title>Month Orders Sum</title>
 </head>
 <body style="color: green;">
-	The following are the daily orders :<br>
+	The following are the monthly orders :<br>
 	<ul>
 	<c:forEach items="${objectList}" var="object">
-		<li>Day : <c:out value="${object[1]}" />; Orders : <c:out value="${object[0]}" />; Value : <c:out value="${object[2]}"/>
+		<li>Month : <c:out value="${object[1]}" />; Orders : <c:out value="${object[0]}" />; Sum : <c:out value="${object[2]}"/>
 	</c:forEach>
 	</ul>
 </body>
