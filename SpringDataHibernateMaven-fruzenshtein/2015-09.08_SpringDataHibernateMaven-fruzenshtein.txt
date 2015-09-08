@@ -1,0 +1,20 @@
+
+2015-09.08 : SpringDataHibernateMaven-fruzenshtein
+
+http://fruzenshtein.com/spring-jpa-data-hibernate-mysql/
+
+ ! tomcat 7 ; java 1.7 !
+
+
+CREATE TABLE `shops` (
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `name` varchar(60) NOT NULL,
+  `employees_number` int(6) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+ 
+
+http://fruzenshtein.com/spring-mvc-hibernate-maven-crud/
+ 
+ 
