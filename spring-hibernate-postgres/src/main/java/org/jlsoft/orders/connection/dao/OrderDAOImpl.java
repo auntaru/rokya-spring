@@ -36,7 +36,7 @@ public class OrderDAOImpl implements OrderDAO  {
 		return sessionFactory.getCurrentSession();
 	}
 
-	@Override
+	// @Override
 	public String getClientHqNameByCui(String cui) {
 		String theHqName = new String(" ");
 		// CMS =2  : tert incorect sau inactiv ?  
@@ -125,6 +125,16 @@ public class OrderDAOImpl implements OrderDAO  {
 		Query query = getCurrentSession().createQuery(hql);
 		return query.list();
 	}
+
+	public List<Object[]> listCountDaySumByMonth(Integer theMonth){
+		//select count(*) , data_c , sum(valoare) from comenzi_v_ext where extract( month from data_c)=8 and extract( year from data_c)=2015 group by data_c order by data_c desc
+		// String hql = "select count(*) , dataC , sum(valoare) from ComenziVExt where extract(month from dataC) in (7,8,9) and extract(year from dataC)=2015 group by dataC order by dataC";
+		String hql = "select count(*) , dataC , sum(valoare) from ComenziVExt where extract(month from dataC)=:theMonth and extract(year from dataC)=2015 group by dataC order by dataC";
+		Query query = getCurrentSession().createQuery(hql);
+		query.setParameter("theMonth", theMonth);
+		return query.list();
+	}
+
 	
 	public List<Object[]> listCountMonthSum(){
 		/*

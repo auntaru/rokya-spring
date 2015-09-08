@@ -11,7 +11,9 @@ import org.jlsoft.orders.connection.model.ComenziVExt;
 import org.jlsoft.orders.connection.dto.OrderDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @Controller
@@ -46,6 +48,7 @@ public class OrderController {
 	}
 	
 	// RequestMapping("/count-day-sum")
+	// @RequestMapping(value="/edit/{id}", method=RequestMethod.GET)
 	@RequestMapping("/days")
 	public String countDaySum(Map<String, Object> map) {
 		 // Date dateOfLastOrder = orderService.getDateOfLastOrder();
@@ -55,6 +58,14 @@ public class OrderController {
 		 return "days";
 	}
 
+	@RequestMapping(value="/days/{id}" , method=RequestMethod.GET)
+	public String countDaySumByMonth(@PathVariable Integer id , Map<String, Object> map ) {
+	     List<Object[]> objectList = orderService.listCountDaySumByMonth(id);
+		 map.put("objectList", objectList);
+		 return "days";
+	}
+
+	
 	@RequestMapping("/months")
 	public String countMonthSum(Map<String, Object> map) {
 		 // Date dateOfLastOrder = orderService.getDateOfLastOrder();

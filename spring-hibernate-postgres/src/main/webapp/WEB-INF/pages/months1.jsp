@@ -11,11 +11,7 @@
 	The following are the monthly orders :<br>
 	<ul>
 	<c:forEach items="${objectList}" var="object">
-		<li>
-		    <a href="${pageContext.request.contextPath}/days/${object[1]}">  
-		    Month  : <c:out value="${object[1]}"/>;  
-		    Orders : <c:out value="${object[0]}" />; 
-		    Sum    : <c:out value="${object[2]}"/> </a>
+		<li>Month : <c:out value="${object[1]}" />; Orders : <c:out value="${object[0]}" />; Sum : <c:out value="${object[2]}"/>
 	</c:forEach>
 	</ul>
 </body>
