@@ -1,0 +1,84 @@
+
+2015-09.10 PrimeFaces-Hibernat+eSpring-journaldev.com
+
+http://www.journaldev.com/4096/primefaces-spring-hibernate-integration-example-tutorial
+
+http://localhost:8080/PrimeFaces-HibSprInt-journaldev/index.xhtml
+
+"springframework-4.0.3.RELEASE" |:=-> "Tomcat 8" ... 
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.6.10.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.0.3.RELEASE</version>
+		</dependency>
+
+PrimeFaces Cookbook 2013.pdf 
+Chapter 5 ; Data Iteration Components @ pag.108 : "Sorting and filtering data in dataTable"
+Install WildFly or Apache TomEE if you don't have it installed ; 
+		https://github.com/ova2/primefaces-cookbook
+		http://localhost:8080/primefaces-cookbook/views/chapter5/dataTableSortFilter.jsf
+		http://localhost:8080/primefaces-cookbook/views/chapter5/dataTableSelectRow.jsf
+git clone git://github.com/ova2/primefaces-cookbook.git
+mvn install
+
+The WAR file is located in the  target  folder below project root. 
+The demo web application is prepared to run with PrimeFaces 5.2 and JSF 2.2.
+You can deploy the WAR file on every Servlet 3.x compatible application server such as WildFly or Apache TomEE. 
+The demo application is running under
+http://localhost:8080/pf-cookbook/
+We use Travis and Jenkins as continuous integration tools. 
+They builds the project after each commit. 
+
+	
+Full Web Application with Tomcat JSF Primefaces JPA Hibernate			
+http://uaihebert.com/full-web-application-with-tomcat-jsf-primefaces-jpa-hibernate/
+
+
+
+http://uaihebert.com/full-webapplication-jsf-ejb-jpa-jaas/
+Full WebApplication JSF EJB JPA JAAS
+I will list bellow the technologies that I will use in this post:
+JSF 2.0 Mojarra – With ManagedBeans as RequestScope and SessionScope.
+Message Internationalization – File that will have all the messages of our system; it will be easier to translate you pages.
+Default CSS file that will be imported as a library.
+EJB 3 – Our DAOs and Façades will be @Stateless.
+Generic DAO – A generic DAO that will have the CRUD actions to make our life easier.
+JPA 2 – To map our classes in the DB
+JAAS – To control the login and the user access to the pages.
+MVC – I will use this pattern with small modifications.
+Postgres as database, but I will show how to set up your app to MySQL also.
+
+
+I will not use TDD – JUnit to test our View/Model/Classes, 
+but in the following link you can see a technique to use the JUnit to test your ManagedBeans:
+JUnit with HSQLDB, JPA and Hibernate
+http://uaihebert.com/tdd-with-hsqldb-jpa-and-hibernate/
+
+
+PrimeFaces hello world example : 
+http://www.mkyong.com/jsf2/primefaces/primefaces-hello-world-example/
+
+
+Spring MVC 3 and jQuery Integration Tutorial
+http://krams915.blogspot.ro/2011/01/spring-mvc-3-and-jquery-integration.html
+Spring MVC - jQuery Integration Tutorial
+   Non-AJAX version 
+   AJAX version
+   
+   
+Spring 4 Web MVC with AngularJS   
+http://outbottle.com/spring-4-web-mvc-with-angularjs/   
+http://outbottle.com/wp-content/uploads/2015/02/Spring4JSONAddingElementToNestedList.zip
+
+Spring 3 MVC – Adding Objects to a List element on the fly at form submit – (Generic method) - 
+http://outbottle.com/spring-3-mvc-adding-objects-to-a-list-element-on-the-fly-at-form-submit-generic-method/
+http://outbottle.com/wp-content/uploads/2012/08/SpringSubmitList1.zip
+
+ 			
