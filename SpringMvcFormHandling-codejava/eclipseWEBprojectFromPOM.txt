@@ -1,0 +1,13 @@
+
+# generate Eclipse WEB project from POM : ( wtp - Web Tools Project ) 
+
+  mvn eclipse:eclipse -Dwtpversion=2.0
+
+# http://www.mkyong.com/maven/how-do-use-maven-to-create-a-dynamic-web-project-in-eclipse/
+# How To Convert Maven Based Web Application To Support Eclipse IDE :
+
+
+How to build grid control using AngularJs and Thymeleaf:Part5
+http://codingtricks.fidibuy.com/participant/join/547a636fb7601acae402da77/How-to-build-grid-control-using-AngularJs-and-Thymeleaf:Part5
+
+http://localhost:8080/SpringMvcFormExample/register

@@ -1,0 +1,40 @@
+2015-09.11_SpringMVCFormValidator-mkyong : pom.xml -> spring 3 , tomcat 6  
+http://www.mkyong.com/spring-mvc/spring-mvc-form-handling-annotation-example/
+http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVC-Form-Handling-Annotation-Example.zip
+
+http://localhost:8080/SpringMVC/customer.htm
+
+
+
+http://stackoverflow.com/questions/2037188/how-to-configure-eclipse-build-path-to-use-maven-dependencies
+If you right-click on your project, there should be an option under "maven" to "enable dependency management". That's it.
+
+http://stackoverflow.com/questions/4701532/force-maven-update
+mvn clean install -U
+-U means force update of dependencies.
+
+
+
+
+http://stackoverflow.com/questions/23813369/spring-java-error-namespace-element-annotation-config-on-jdk-1-5-and-high
+
+NFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/mvc-dispatcher-servlet.xml]
+Sep 11, 2015 12:26:38 AM org.springframework.web.context.ContextLoader initWebApplicationContext
+SEVERE: Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Unexpected exception parsing XML document from ServletContext resource [/WEB-INF/mvc-dispatcher-servlet.xml]; nested exception is java.lang.IllegalStateException: Context namespace element 'component-scan' and its parser class [org.springframework.context.annotation.ComponentScanBeanDefinitionParser] are only available on JDK 1.5 and higher
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:420)
+	
+	
+Spring MVC – Easy REST-Based JSON Services with @ResponseBody	
+http://codetutr.com/2013/04/09/spring-mvc-easy-rest-based-json-services-with-responsebody/
+
+PrimeFaces QuickStart Tutorial-Part1
+http://www.sivalabs.in/2011/02/primefaces-quickstart-tutorial-part1.html
+PrimeFaces is an open source component library for JSF 2.0 with morethan 100 rich components. \
+PrimeFaces is far better than many other JSF component libraries because of the following reasons:     
+1. Rich set of UI components (DataTable, AutoComplete, HtmlEditor, Charts etc).     
+2. No extra xml configuration is required and there is no required dependencies.     
+3. Built-in Ajax based on standard JSF 2.0 Ajax APIs.     
+4. Skinning Framework with 25+ built-in themes.     
+5. Awesome documentation with code examples. - 
+	
