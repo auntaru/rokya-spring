@@ -1,4 +1,4 @@
-2015-09.15_SpringMVCjQuery-krams AJAX--ADD-SUM
+2015-09.15_SpringMVCjQuery-krams AJAX--ADD-sum
  ~ Tomcat 6 ~ 
 http://localhost:8080/SpringMVCjQuery-krams/krams/main/ajax/add
 http://localhost:8080/SpringMVCjQuery-krams/krams/main/nonajax/add
