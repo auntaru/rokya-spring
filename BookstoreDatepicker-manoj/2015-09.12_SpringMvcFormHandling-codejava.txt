@@ -1,0 +1,96 @@
+
+2015-09.12_SpringMvcFormHandling-codejava
+http://localhost:8080/SpringMvcFormHandling-codejava/register
+http://www.codejava.net/frameworks/spring/spring-mvc-form-handling-tutorial-and-example
+
+JavaScript + Spring MVC + Maven + Hibernate CRUD Example Complete 
+http://shrestha-manoj.blogspot.ro/2014/05/spring-mvc-maven-hibernate-crud-example.html
+
+Spring MVC 3 and jQuery Integration Tutorial
+http://krams915.blogspot.ro/2011/01/spring-mvc-3-and-jquery-integration.html
+
+Ajax with Spring MVC 3 using Annotations and JQuery
+http://www.raistudies.com/spring/spring-mvc/ajax-spring-mvc-3-annonations-jquery/
+
+CRUD using Spring Data Rest and AngularJS using Spring Boot
+http://www.programming-free.com/2014/07/spring-data-rest-with-angularjs-crud.html
+
+AJAX based CRUD Operations in Java Web Applications using jTable jQuery plugin
+http://www.programming-free.com/2013/08/ajax-based-crud-operations-in-java-web.html
+
+Gridview in Java Web Applications using jQuery DataTable
+http://www.programming-free.com/2013/02/gridview-in-java-using-jquery-datatable.html
+
+jQuery jTable plugin in Java Web Applications - An Introduction
+http://www.programming-free.com/2013/07/jquery-jtable-plugin-in-java-web.html
+
+jTable : Understanding User Interface Options
+http://www.programming-free.com/2013/09/jtable-understanding-user-interface.html
+
+Setup and Load Data in jTable using Servlets and JSP
+http://www.programming-free.com/2013/07/setup-load-data-jtable-jsp-servlet.html
+
+
+ ... GWT DateTimePicker ... 
+http://examples.javacodegeeks.com/enterprise-java/gwt/datetimepicker/
+With this example we are going to demonstrate how to create a Date time Picker using the Google Web Toolkit, 
+that is an open source set of tools that allows web developers to create and maintain complex JavaScript front-end applications in Java.
+
+
+2015-09.11_SpringMVCFormValidator-mkyong : pom.xml -> spring 3 , tomcat 6  
+http://www.mkyong.com/spring-mvc/spring-mvc-form-handling-annotation-example/
+http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVC-Form-Handling-Annotation-Example.zip
+
+http://localhost:8080/SpringMVC/customer.htm
+
+
+	
+	
+Spring MVC – Easy REST-Based JSON Services with @ResponseBody	
+http://codetutr.com/2013/04/09/spring-mvc-easy-rest-based-json-services-with-responsebody/
+
+PrimeFaces QuickStart Tutorial-Part1
+http://www.sivalabs.in/2011/02/primefaces-quickstart-tutorial-part1.html
+PrimeFaces is an open source component library for JSF 2.0 with morethan 100 rich components. \
+PrimeFaces is far better than many other JSF component libraries because of the following reasons:     
+1. Rich set of UI components (DataTable, AutoComplete, HtmlEditor, Charts etc).     
+2. No extra xml configuration is required and there is no required dependencies.     
+3. Built-in Ajax based on standard JSF 2.0 Ajax APIs.     
+4. Skinning Framework with 25+ built-in themes.     
+5. Awesome documentation with code examples. - 
+	
+
+Spring MVC Tutorial: Table Booking System	
+http://blog.javaplanner.com/spring-mvc-booking-system-tutorial/
+
+
+jQuery Datepicker with Spring MVC Example
+http://knowlzz.com/technology/java/jquery-datepicker-spring-mvc-example/
+
+
+Spring MVC Jquery Sample Tutorial Series - Part 1
+http://www.keepsnowballing.com/2013/06/spring-mvc-jquery-sample-tutorial.html
+Java / Spring Technology Tutorials and Articles
+
+
+Web App Architecture - the Spring MVC - AngularJs stack
+http://blog.jhades.org/developing-a-modern-java-8-web-app-with-spring-mvc-and-angularjs/
+https://github.com/jhades/spring-mvc-angularjs-sample-app
+Spring MVC | AngularJs Sample App
+
+
+Spring MVC part III: ThymeLeaf integration
+https://doanduyhai.wordpress.com/2012/04/14/spring-mvc-part-iii-thymeleaf-integration/
+https://doanduyhai.wordpress.com/2012/04/14/spring-mvc-part-iv-thymeleaf-advanced-usage/
+https://github.com/doanduyhai/ThymeLeafDemo
+
+Thymeleaf : a very innovative and full HTML5-oriented templating engine.
+Thymeleaf, by definition, can be used as a standalone engine but when associated with Spring MVC, it gives the best of its essence.
+Once you start using Thymeleaf, it’s very hard to go back to the good old JSP. 
+JSP is good, JSP served us well during a decade but now we’re in 2012 and HTML 5 is the future so it’s time to look ahead.
+Please note that all the examples in this post can be found in a demo application on GitHub https://github.com/doanduyhai/ThymeLeafDemo
+	
+	
+jQueryUI Datepicker Plugin for all your Calendar Requirements	
+http://www.journaldev.com/5514/jqueryui-datepicker-plugin-calendar-options	
+
