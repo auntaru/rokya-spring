@@ -1,0 +1,32 @@
+2015-09.15_SpringMVCjQuery-krams AJAX--ADD-SUM
+ ~ Tomcat 6 ~ 
+http://localhost:8080/SpringMVCjQuery-krams/krams/main/ajax/add
+http://localhost:8080/SpringMVCjQuery-krams/krams/main/nonajax/add
+Spring MVC 3 and jQuery Integration Tutorial
+http://krams915.blogspot.ro/2011/01/spring-mvc-3-and-jquery-integration.html
+
+ToDo NexT : spring jackson json POST sample :|=-> 
+http://howtodoinjava.com/2015/02/20/spring-rest-hello-world-json-example/
+http://www.journaldev.com/2552/spring-restful-web-service-example-with-json-jackson-and-client-program
+http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-1-setting-the-scene.html
+http://codetutr.com/2013/04/09/spring-mvc-easy-rest-based-json-services-with-responsebody/
+
+
+2015-09.15_bookstore-ShresthaManoj : jQuery-Datepicker 
+<spring-version>4.0.3.RELEASE
+<hibernate-version>4.2.7.Final
+Run As -> Run on Server -> Tomcat 6 ! 
+http://localhost:8088/bookstore/book/listBooks
+http://localhost:8088/bookstore/book/
+ftp.pangram.ro - bookstore/book/listBooks
+
+JavaScript + Spring MVC + Maven + Hibernate CRUD Example Complete 
+http://shrestha-manoj.blogspot.ro/2014/05/spring-mvc-maven-hibernate-crud-example.html
+
+~ ~ ~ 
+
+2015-09.12_SpringMvcFormHandling-codejava
+http://localhost:8080/SpringMvcFormHandling-codejava/register
+http://www.codejava.net/frameworks/spring/spring-mvc-form-handling-tutorial-and-example
+
+
