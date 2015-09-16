@@ -1,0 +1,74 @@
+
+2015-09.16_ajax-jQuery-SpringMVC3-JSON-FormValidation-raistudies
+http://localhost:8080/AjaxWithSpring/
+
+user.js : 
+          $.ajax() method of JQuery has been used for making an Ajax call here which sends 
+            the form data name and education field values to Spring Controller.
+
+ToDoNext : 
+
+	Ajax with Spring MVC 3 using Annotations and JQuery
+	http://www.raistudies.com/spring/spring-mvc/ajax-spring-mvc-3-annonations-jquery/
+
+
+You may be little bit confused if you are not aware of JQuery. Here is the explanation of the JQuery code :
+
+var name = $(‘#name’).val();  : 
+	-  here the $ is JQuery selector that uses to select any node in HTML whose identifier is passed as argument. 
+		If the identifier is a prefix with # that means it is a id of the HTML node. 
+		Here, $(‘#name’).val() contains the value of the HTML node whose is “name’. 
+		The text box in which user will enter her/his name is with is as name. 
+		so java script variable name will contain the name of the user.
+$.ajax() :- It is the method in $ variable of JQuery to call Ajax. 
+	It has five arguments here. First of all “type” which indicated the request type of Ajax. 
+	It can be POST or GET. Then, “url” which indicates the url to be hit of Ajax submission. 
+	“data” will contain the raw data to be sent to the server. 
+	“success” will contain the function code that has to be call if the request get success and server sends an response to the browser.  
+	“error” will contain the function code that has to be call if the request get any error.
+$(‘#info’).html(response); :
+	- will set the response of the server in to the div. 
+		In this way “Hello” + name will be shown in the div whose id is “info“.
+
+	
+http://www.raistudies.com/spring/spring-mvc/ajax-form-validation-using-spring-mvc-and-jquery/
+http://www.raistudies.com/spring/spring-mvc/ajax-spring-mvc-3-annonations-jquery/
+http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-1-setting-the-scene.html
+http://shrestha-manoj.blogspot.ro/2014/05/spring-mvc-maven-hibernate-crud-example.html
+http://www.programming-free.com/2013/09/jtable-understanding-user-interface.html
+http://www.programming-free.com/2014/07/spring-data-rest-with-angularjs-crud.html
+http://www.primefaces.org/showcase/mobile/dataTable.xhtml
+
+
+2015-09.15 21_32 : SpringMVCjQuery-krams AJAX--ADD-sum
+ ~ Tomcat 6 ~ 
+http://localhost:8080/SpringMVCjQuery-krams/krams/main/ajax/add
+http://localhost:8080/SpringMVCjQuery-krams/krams/main/nonajax/add
+Spring MVC 3 and jQuery Integration Tutorial
+http://krams915.blogspot.ro/2011/01/spring-mvc-3-and-jquery-integration.html
+
+ToDo NexT : spring jackson json POST sample :|=-> 
+http://howtodoinjava.com/2015/02/20/spring-rest-hello-world-json-example/
+http://www.journaldev.com/2552/spring-restful-web-service-example-with-json-jackson-and-client-program
+http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-1-setting-the-scene.html
+http://codetutr.com/2013/04/09/spring-mvc-easy-rest-based-json-services-with-responsebody/
+
+
+2015-09.15_bookstore-ShresthaManoj : jQuery-Datepicker 
+<spring-version>4.0.3.RELEASE
+<hibernate-version>4.2.7.Final
+Run As -> Run on Server -> Tomcat 6 ! 
+http://localhost:8088/bookstore/book/listBooks
+http://localhost:8088/bookstore/book/
+ftp.pangram.ro - bookstore/book/listBooks
+
+JavaScript + Spring MVC + Maven + Hibernate CRUD Example Complete 
+http://shrestha-manoj.blogspot.ro/2014/05/spring-mvc-maven-hibernate-crud-example.html
+
+~ ~ ~ 
+
+2015-09.12_SpringMvcFormHandling-codejava
+http://localhost:8080/SpringMvcFormHandling-codejava/register
+http://www.codejava.net/frameworks/spring/spring-mvc-form-handling-tutorial-and-example
+
+
