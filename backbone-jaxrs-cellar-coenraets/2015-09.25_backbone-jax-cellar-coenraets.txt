@@ -5,7 +5,7 @@ backbone-jaxrs-cellar-coenraets.tar.gz - original project without MAVEN !
 how-to : Convert2MAVEN.png ... 
 
 Backbone.js Wine Cellar Tutorial — Part 1: Getting Started
-December 6, 2011 : Backbone.js, JQuery, REST
+December 2011 : Backbone.js, REST
 http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/
 http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-2-crud/
 http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-3-deep-linking-and-application-states/
@@ -29,4 +29,12 @@ http://www.javacodegeeks.com/2014/10/java-ee-7-with-angular-js-crud-rest-validat
 http://www.radcortez.com/java-ee-7-with-angular-js-part-1/
 http://javahonk.com/angularjs-ng-grid-spring-mvc-example/
 
+
+2015-09.25 : backbone-[JAX-RS]-cellar-coenraets
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/
+Angular.js - Wine Cellar ? PHP !
+http://coenraets.org/blog/2012/02/sample-application-with-angular-js/
+Angular.js - Wine Cellar + PHP (using the Slim framework) !  
+Sample Application with Angular.js
+February 2012 in Angular.js, Frameworks, HTML 5, JavaScript
  
