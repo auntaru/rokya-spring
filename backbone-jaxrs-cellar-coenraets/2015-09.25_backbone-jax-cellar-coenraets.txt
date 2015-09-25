@@ -1,0 +1,32 @@
+2015-09.25 : backbone-jax-cellar-coenraets
+
+PROJECT -> right-click -> Configure -> Convert to MAVEN project !
+backbone-jaxrs-cellar-coenraets.tar.gz - original project without MAVEN !
+how-to : Convert2MAVEN.png ... 
+
+Backbone.js Wine Cellar Tutorial — Part 1: Getting Started
+December 6, 2011 : Backbone.js, JQuery, REST
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-2-crud/
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-3-deep-linking-and-application-states/
+http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
+http://coenraets.org/blog/2012/01/using-backbone-js-with-a-restful-java-back-end/
+http://coenraets.org/blog/2011/12/restful-services-with-jquery-and-java-using-jax-rs-and-jersey/
+https://github.com/ccoenraets/backbone-jax-cellar
+http://localhost:8080/cellar/api/wines
+http://pangram:8088/backbone-jax-cellar
+curl -i -X GET http://localhost:8080/cellar/api/wines
+
+!!! TOMCAT 7 !!! 
+
+backbone-jax-cellar/src/cellar.properties
+jdbc.url=jdbc:mysql://192.168.61.207/directory?user=root&password=toor
+
+
+~ ~ ~
+ 
+http://www.javacodegeeks.com/2014/10/java-ee-7-with-angular-js-crud-rest-validations-part-2.html
+http://www.radcortez.com/java-ee-7-with-angular-js-part-1/
+http://javahonk.com/angularjs-ng-grid-spring-mvc-example/
+
+ 
