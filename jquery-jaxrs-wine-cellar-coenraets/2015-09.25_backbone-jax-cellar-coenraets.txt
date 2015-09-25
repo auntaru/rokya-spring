@@ -1,0 +1,138 @@
+2015-09.25 : backbone-jax-cellar-coenraets
+
+PROJECT -> right-click -> Configure -> Convert to MAVEN project !
+backbone-jaxrs-cellar-coenraets.tar.gz - original project without MAVEN !
+how-to : Convert2MAVEN.png ... 
+
+Backbone.js Wine Cellar Tutorial — Part 1: Getting Started
+December 2011 : Backbone.js, REST
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-2-crud/
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-3-deep-linking-and-application-states/
+http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
+http://coenraets.org/blog/2012/01/using-backbone-js-with-a-restful-java-back-end/
+http://coenraets.org/blog/2011/12/restful-services-with-jquery-and-java-using-jax-rs-and-jersey/
+https://github.com/ccoenraets/backbone-jax-cellar
+http://localhost:8080/cellar/api/wines
+http://pangram:8088/backbone-jax-cellar
+curl -i -X GET http://localhost:8080/cellar/api/wines
+
+!!! TOMCAT 7 !!! 
+
+backbone-jax-cellar/src/cellar.properties
+jdbc.url=jdbc:mysql://192.168.61.207/directory?user=root&password=toor
+
+
+~ ~ ~
+ 
+http://www.javacodegeeks.com/2014/10/java-ee-7-with-angular-js-crud-rest-validations-part-2.html
+http://www.radcortez.com/java-ee-7-with-angular-js-part-1/
+http://javahonk.com/angularjs-ng-grid-spring-mvc-example/
+
+
+2015-09.25 : backbone-[JAX-RS]-cellar-coenraets
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/
+Angular.js - Wine Cellar ? PHP !
+http://coenraets.org/blog/2012/02/sample-application-with-angular-js/
+Angular.js - Wine Cellar + PHP (using the Slim framework) !  
+Sample Application with Angular.js
+February 2012 in Angular.js, Frameworks, HTML 5, JavaScript
+ 
+ 
+ 
+2015-09.24_spring-data-jquery-jqgrid-krams
+Spring MVC 3.1, jqGrid, and Spring Data JPA Integration Guide (Part 5)
+http://krams915.blogspot.ro/2012/01/spring-mvc-31-jqgrid-and-spring-data_1887.html
+http://krams915.blogspot.ro/2012/01/spring-mvc-31-jqgrid-and-spring-data.html
+http://localhost:8080/spring-data-jquery-jqgrid-krams/users 
+[http://localhost:8080/spring-jqgrid-tutorial/users - old (original) start link KO ] 
+Tomcat 6 ! 
+mvn tomcat:run
+
+[ERROR] [localhost-startStop-1 12:17:25] (ContextLoader.java:initWebApplicationContext:312) Context initialization failed
+java.lang.NoClassDefFoundError: org/springframework/beans/factory/NoUniqueBeanDefinitionException
+
+[SOLUTION 1]
+The current "spring.data.jpa.version" in pom.xml is "1.1.0.RC1"
+When you change this Code to "1.1.0.RELEASE" It works fine:)
+
+[SOLUTION 2]
+Solved for me. I added this <spring.core.version> to pom.xml and rebuilt it in eclipse.
+This 3.1.0.RELEASE To this 3.2.2.RELEASE
+
+http://krams915.blogspot.fi/2012/11/spring-mvc-32-with-spring-data-rest.html
+http://www.baeldung.com/2011/12/22/the-persistence-layer-with-spring-data-jpa/
+
+
+Spring Data JPA Tutorial: Getting the Required Dependencies
+http://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-getting-the-required-dependencies/
+
+
+http://krams915.blogspot.ro/2012/01/spring-mvc-31-and-jasperreports-using_2791.html
+http://krams915.blogspot.ro/2012/12/spring-and-thymeleaf-with-javaconfig.html
+
+Why The World Needed Another AngularJS Grid
+https://dzone.com/articles/why-world-needed-another
+
+
+2015-09.24_spring-data-jquery-jqgrid-krams
+http://krams915.blogspot.ro/2012/01/spring-mvc-31-jqgrid-and-spring-data_1887.html
+http://krams915.blogspot.ro/2012/01/spring-mvc-31-jqgrid-and-spring-data.html
+https://github.com/krams915/spring-jqgrid-tutorial/tree/master/spring-jqgrid-tutorial
+git clone https://github.com/krams915/spring-jqgrid-tutorial.git
+
+
+
+2015-09.23_spring-jquery-jqgrid-krams
+http://localhost:8080/spring-jquery-jqgrid-krams/krams/main/users
+jqGrid and Spring 3 MVC Integration Tutorial - 2010
+http://krams915.blogspot.ro/2010/12/jqgrid-and-spring-3-mvc-integration.html
+Spring MVC 3.1, jqGrid, and Spring Data JPA Integration Guide (Part 1) - 2012
+http://krams915.blogspot.ro/2012/01/spring-mvc-31-jqgrid-and-spring-data_1887.html
+
+
+
+2015-09.17_ajax-POST-jQuery-Spring-raistudies
+http://www.raistudies.com/spring/spring-mvc/ajax-spring-mvc-3-annonations-jquery/
+Tomcat 8 ... 
+
+
+2015-09.16_ajax-jQuery-SpringMVC3-JSON-FormValidation-raistudies
+http://localhost:8080/AjaxWithSpring/
+
+	
+http://www.raistudies.com/spring/spring-mvc/ajax-form-validation-using-spring-mvc-and-jquery/
+http://www.raistudies.com/spring/spring-mvc/ajax-spring-mvc-3-annonations-jquery/
+http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-1-setting-the-scene.html
+http://shrestha-manoj.blogspot.ro/2014/05/spring-mvc-maven-hibernate-crud-example.html
+http://www.programming-free.com/2013/09/jtable-understanding-user-interface.html
+http://www.programming-free.com/2014/07/spring-data-rest-with-angularjs-crud.html
+http://www.primefaces.org/showcase/mobile/dataTable.xhtml
+
+
+2015-09.15 21_32 : SpringMVCjQuery-krams AJAX--ADD-sum
+ ~ Tomcat 6 ~ 
+http://localhost:8080/SpringMVCjQuery-krams/krams/main/ajax/add
+http://localhost:8080/SpringMVCjQuery-krams/krams/main/nonajax/add
+Spring MVC 3 and jQuery Integration Tutorial
+http://krams915.blogspot.ro/2011/01/spring-mvc-3-and-jquery-integration.html
+
+ToDo NexT : spring jackson json POST sample :|=-> 
+http://howtodoinjava.com/2015/02/20/spring-rest-hello-world-json-example/
+http://www.journaldev.com/2552/spring-restful-web-service-example-with-json-jackson-and-client-program
+http://www.javacodegeeks.com/2013/05/spring-mvc-ajax-and-json-part-1-setting-the-scene.html
+http://codetutr.com/2013/04/09/spring-mvc-easy-rest-based-json-services-with-responsebody/
+
+
+2015-09.15_bookstore-ShresthaManoj : jQuery-Datepicker 
+<spring-version>4.0.3.RELEASE
+<hibernate-version>4.2.7.Final
+Run As -> Run on Server -> Tomcat 6 ! 
+http://localhost:8088/bookstore/book/listBooks
+http://localhost:8088/bookstore/book/
+ftp.pangram.ro - bookstore/book/listBooks
+
+JavaScript + Spring MVC + Maven + Hibernate CRUD Example Complete 
+http://shrestha-manoj.blogspot.ro/2014/05/spring-mvc-maven-hibernate-crud-example.html
+
+ 

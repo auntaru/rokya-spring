@@ -1,0 +1,19 @@
+20015-09.26_jquery-jaxrs-wine-cellar-coenraets
+RESTful services with jQuery and Java using JAX-RS and Jersey
+December 2011 : Java, JAX-RS, JQuery, REST
+http://coenraets.org/blog/2011/12/restful-services-with-jquery-and-java-using-jax-rs-and-jersey/
+http://localhost:8080/jquery-jaxrs-wine-cellar-coenraets/
+
+
+~ ~ ~ 
+
+http://coenraets.org/blog/2012/05/single-page-crud-application-with-backbone-js-and-twitter-bootstrap/
+Single-Page CRUD Application with Backbone.js and Twitter Bootstrap
+May 2012 : Backbone.js, JQuery, Twitter Bootstrap
+http://coenraets.org/backbone-cellar/bootstrap/
+https://github.com/ccoenraets/backbone-cellar
+
+
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/
+http://coenraets.org/blog/2012/01/using-backbone-js-with-a-restful-java-back-end/
+https://github.com/ccoenraets/backbone-jax-cellar
