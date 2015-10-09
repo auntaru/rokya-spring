@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:h="http://java.sun.com/jsf/html"  
+    xmlns:f="http://java.sun.com/jsf/core">
+    
+	<h:head>
+		<title>Real-time applications - Part 1 - Java Code Geeks</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+		
+		<script>
+			var part1 = angular.module("part1", []);
+			part1.controller("RealtimeCtrl", function($scope, $http, $timeout) {
+				$scope.tasks = [];
+				
+				$scope.addTask = function() {
+					$http.post("api/task", $scope.task);
+				}
+				
+				$scope.getTasks = function() {
+					$http.get("api/task")
+						.success(function(data) {
+							$scope.tasks = data;
+						});
+				}
+				
+				$scope.activateRealtime = function() {
+					$scope.getTasks();
+					$timeout($scope.activateRealtime, 1000);
+				}
+				
+			});
+			
+		</script>
+	</h:head>
+		
+	<h:body>
+		<div ng-app="part1" ng-controller="RealtimeCtrl" class="container">
+			<h1>Real-time application <SMALL>part 1</SMALL></h1>
+			<h2>Add task</h2>
+			<h:form>
+				<label for="durationField">Duration (in seconds):</label>
+				<input type="number" id="durationField" class="form-control" ng-model="task.duration"/>
+				<button type="button" ng-click="addTask()" class="btn btn-success">Add task</button>
+				<button type="button" ng-click="getTasks()" class="btn btn-default">Refresh Tasks</button>
+				<button type="button" ng-click="activateRealtime()" class="btn btn-default">Activate Auto Refresh</button>
+				<h:commandButton actionListener="#{taskController.startTasks}" 
+						styleClass="btn btn-default"
+						value="Start Idle Tasks">
+					<f:ajax execute="@form"/>
+				</h:commandButton>
+			</h:form>
+			
+			<h2>Listing</h2>
+			<ul class="list-group">
+				<li ng-repeat="curTask in tasks" class="list-group-item {{curTask.running ? 'active' : ''}}">
+					{{curTask.name}} ({{curTask.status}})<span class="badge">{{curTask.duration}}</span>
+				</li>
+			</ul>
+		</div>
+	</h:body>    
+</html>

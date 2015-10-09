@@ -1,0 +1,47 @@
+
+2015-10.09_RealTime1-PeriodicRefresh-Angular+JSF-JCG
+ - Tomcat7 !
+ http://localhost:8080/PeriodicRefresh/index.xhtml
+ 
+ * Real-time Applications with AngularJS and Java – Part 1 
+ * http://examples.javacodegeeks.com/core-java/real-time-applications-angularjs-java-part-1/
+ * 
+ 
+ First, you want to create your module, then your controller. In the end result screenshot above, 
+ 	our controller will manage the first three buttons (Add Task, Refresh Tasks and Activate Auto Refresh). 
+ 		The last button is a JSF button managed by a backing bean.
+ I used Angular’s dependency injection to get the $scope, $http and $timeout services. 
+ 	In the Angular scope, I initially set the list of tasks to an empty array which will be replaced by the tasks array returned by the web service. 
+ 	Now, we have our three functions. 
+ 	The first one is addTask() which simply creates an Ajax POST request to the server with the task object from Angular’s scope in the request data. 
+ 	The second function above is getTasks() which creates an Ajax GET request to the server. 
+ 	The server will return an array of JSON objects corresponding to the tasks registered on the server. 
+ 	The last but not the least function is the implementation of the real-time feel, 
+ 		that is a recursive function with a pause of a second that simply retrieves the tasks using the controller’s function getTask(). 
+
+ * http://www.webcodegeeks.com/javascript/angular-js/angular-js-controller-example/ 
+ * http://coenraets.org/blog/2011/12/restful-services-with-jquery-and-java-using-jax-rs-and-jersey/
+ * http://examples.javacodegeeks.com/core-java/itext-pdfwriter-example/
+ * http://www.javacodegeeks.com/2014/09/jquery-ajax-servlets-integration-building-a-complete-application.html
+ *
+
+
+20015-09.26_jquery-jaxrs-wine-cellar-coenraets
+RESTful services with jQuery and Java using JAX-RS and Jersey
+December 2011 : Java, JAX-RS, JQuery, REST
+http://coenraets.org/blog/2011/12/restful-services-with-jquery-and-java-using-jax-rs-and-jersey/
+http://localhost:8080/jquery-jaxrs-wine-cellar-coenraets/
+
+
+~ ~ ~ 
+
+http://coenraets.org/blog/2012/05/single-page-crud-application-with-backbone-js-and-twitter-bootstrap/
+Single-Page CRUD Application with Backbone.js and Twitter Bootstrap
+May 2012 : Backbone.js, JQuery, Twitter Bootstrap
+http://coenraets.org/backbone-cellar/bootstrap/
+https://github.com/ccoenraets/backbone-cellar
+
+
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/
+http://coenraets.org/blog/2012/01/using-backbone-js-with-a-restful-java-back-end/
+https://github.com/ccoenraets/backbone-jax-cellar
