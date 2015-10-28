@@ -6,7 +6,13 @@ Spring Restful Web Service Example with JSON, Jackson and Client Program
 http://www.journaldev.com/2552/spring-restful-web-service-example-with-json-jackson-and-client-program
 
 
+WizTools.org RESTClient 2.1—Getting Started
+https://dzone.com/articles/wiztoolsorg-restclient-21-rele
+java -jar ./restclient-ui-3.5-jar-with-dependencies.jar
 
+
+Spring 3 RESTful Web Services
+http://www.javacodegeeks.com/2010/06/spring-3-restful-web-services.html
 
 ========================================================================================
 
