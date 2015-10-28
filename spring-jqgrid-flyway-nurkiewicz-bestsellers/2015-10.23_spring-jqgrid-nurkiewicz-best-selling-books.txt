@@ -1,6 +1,7 @@
-2015-10.23_springSecurity-jQueryJQgrid-flyway-nurkiewicz-bestsellers
+2015-10.28_SpringSecurity-jQuery-jqGrid-flyway-nurkiewicz-bestsellers
 TOMCAT6 
 http://localhost:8080/books/
+http://localhost:8080/books/rest/book?page=1&max=2
 
 https://en.wikipedia.org/wiki/List_of_best-selling_books
 https://github.com/nurkiewicz/books
