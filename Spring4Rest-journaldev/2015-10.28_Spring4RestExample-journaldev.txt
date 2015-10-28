@@ -1,0 +1,63 @@
+2015-10.28_Spring4RestExample-journaldev
+Spring REST XML and JSON Example
+http://www.journaldev.com/8934/spring-rest-xml-and-json-example
+
+Spring Restful Web Service Example with JSON, Jackson and Client Program
+http://www.journaldev.com/2552/spring-restful-web-service-example-with-json-jackson-and-client-program
+
+
+
+
+========================================================================================
+
+2015-10.28_SpringSecurity-jQuery-jqGrid-flyway-nurkiewicz-bestsellers
+TOMCAT6 
+http://localhost:8080/books/
+http://localhost:8080/books/rest/book?page=1&max=2
+
+https://en.wikipedia.org/wiki/List_of_best-selling_books
+https://github.com/nurkiewicz/books
+
+Poor man's CRUD: jqGrid, REST, AJAX, and Spring MVC in one house
+http://www.nurkiewicz.com/2011/07/poor-mans-crud-jqgrid-rest-ajax-and.html
+
+jqGrid, REST, AJAX and Spring MVC Integration
+http://www.javacodegeeks.com/2011/07/jqgrid-rest-ajax-spring-mvc-integration.html
+
+Spring Data JPA Tutorial Part Seven: Pagination
+http://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-part-seven-pagination/
+https://github.com/pkainulainen/spring-data-jpa-examples/tree/master/tutorial-part-seven
+
+
+java maven rebuild dependency
+Always perform a clean when doing an install, ie mvn clean install. 
+This will make sure that all modules in the project are rebuilt, packaged, 
+and installed in the local .m2 repository for inclusion by parent dependencies and projects.
+<!--  	org.springframework.version 3.2.3.RELEASE  = KO ! 
+		org.springframework.version 3.2.15.RELEASE = OK ! 
+		http://mvnrepository.com/artifact/org.springframework/spring-core      
+-->
+
+How Flyway works
+http://flywaydb.org/getstarted/how.html
+
+Standardized schema generation and data loading with JPA 2.1
+http://www.thoughts-on-java.org/standardized-schema-generation-data-loading-jpa-2-1/
+javax.persistence.schema-generation.database.action
+<persistence 	
+				xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" 
+				xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="my-persistence-unit" transaction-type="JTA">
+    <description>Forge Persistence Unit</description>
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <property name="javax.persistence.sql-load-script-source" value="META-INF/data.sql"/>
+    </properties>
+  </persistence-unit>
+</persistence>
+

@@ -1,0 +1,163 @@
+2015-10.28_SpringSecurity-jQuery-jqGrid-flyway-nurkiewicz-bestsellers
+TOMCAT6 
+http://localhost:8080/books/
+http://localhost:8080/books/rest/book?page=1&max=2
+
+https://en.wikipedia.org/wiki/List_of_best-selling_books
+https://github.com/nurkiewicz/books
+
+Poor man's CRUD: jqGrid, REST, AJAX, and Spring MVC in one house
+http://www.nurkiewicz.com/2011/07/poor-mans-crud-jqgrid-rest-ajax-and.html
+
+jqGrid, REST, AJAX and Spring MVC Integration
+http://www.javacodegeeks.com/2011/07/jqgrid-rest-ajax-spring-mvc-integration.html
+
+Spring Data JPA Tutorial Part Seven: Pagination
+http://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-part-seven-pagination/
+https://github.com/pkainulainen/spring-data-jpa-examples/tree/master/tutorial-part-seven
+
+
+java maven rebuild dependency
+Always perform a clean when doing an install, ie mvn clean install. 
+This will make sure that all modules in the project are rebuilt, packaged, 
+and installed in the local .m2 repository for inclusion by parent dependencies and projects.
+<!--  	org.springframework.version 3.2.3.RELEASE  = KO ! 
+		org.springframework.version 3.2.15.RELEASE = OK ! 
+		http://mvnrepository.com/artifact/org.springframework/spring-core      
+-->
+
+How Flyway works
+http://flywaydb.org/getstarted/how.html
+
+Standardized schema generation and data loading with JPA 2.1
+http://www.thoughts-on-java.org/standardized-schema-generation-data-loading-jpa-2-1/
+javax.persistence.schema-generation.database.action
+<persistence 	
+				xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" 
+				xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="my-persistence-unit" transaction-type="JTA">
+    <description>Forge Persistence Unit</description>
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <property name="javax.persistence.sql-load-script-source" value="META-INF/data.sql"/>
+    </properties>
+  </persistence-unit>
+</persistence>
+
+
+========================================================================================
+2015-10.20_spring-jquery-jqgrid-jasper-krams
+
+http://localhost:8080/spring-jasper-tutorial/users
+Tomcat6
+mvn tomcat:run
+
+Import the project in Eclipse
+mvn eclipse:eclipse -Dwtpversion=2.0
+
+
+http://krams915.blogspot.ro/2012/01/spring-mvc-31-and-jasperreports-using_5116.html
+Spring MVC 3.1 and JasperReports: Using iReport and AJAX (Part 1)
+http://krams915.blogspot.ro/2012/01/spring-mvc-31-and-jasperreports-using_31.html
+Spring MVC 3.1 and JasperReports: Using iReport and AJAX (Part 6)
+
+	jqGrid and Spring 3 MVC Integration Tutorial
+http://krams915.blogspot.ro/2010/12/jqgrid-and-spring-3-mvc-integration.html
+	Spring MVC 3.1, jqGrid, and Spring Data JPA Integration Guide (Part 1)
+http://krams915.blogspot.ro/2012/01/spring-mvc-31-jqgrid-and-spring-data_1887.html
+	Spring MVC 3.1, jqGrid, and Spring Data JPA Integration Guide (Part 5)
+http://krams915.blogspot.ro/2012/01/spring-mvc-31-jqgrid-and-spring-data.html
+
+Data Manipulation - jqGrid 
+http://www.trirand.com/jqgridwiki/doku.php?id=wiki:retrieving_data#json_data
+
+public class JqgridResponse<T extends Serializable> { } ... 
+
+Java Generics: extends, super and wildcards explained
+http://onewebsql.com/blog/generics-extends-super
+	Java type parameters are used as type placeholders.
+	public class List<X>  { }
+	A List<X> is a container for X objects, and X can be instantiated with any class: you can have List<Object>, List<String>, and List<Number>.
+	Introducing bounds: extends
+	You often want to restrict the set of types that can be used in instantiation. 
+	If you create a class Garage, you want it to hold only Vehicle objects.
+	The syntax you use in Java is like this:
+		public class Garage<X extends Vehicle> { }
+		Every time you instantiate the Garage, the type parameter has to be a subclass of Vehicle.
+			class Car extends Vehicle { }
+			class Motorcycle extends Vehicle { }
+			class Fruit extends Object { }
+			Thus Garage<Car> and Garage<Motorcycle> are OK but Garage<Fruit> is not OK.
+
+Generic Types, Part 2 - Java in a Nutshell, 5th Edition
+http://www.onjava.com/pub/a/onjava/excerpt/javaian5_chap04/index1.html			
+
+Generic Methods
+https://docs.oracle.com/javase/tutorial/extra/generics/methods.html
+
+Difference: <? extends Object> and <T extends Object>
+List<? extends Object> lst = new ArrayList<Object>(); // This works
+List<T extends Object> lst = new ArrayList<Object>(); // Compilation fails?
+
+
+= = = 
+ToDo Next : Receptii import iNG - jQuery AngularJS JAVA iText iReport TaskExecutor XLS PDF
+FOLOSIND EXEMPLELE CU EXPORT IN xls si pdf + TaskExecutor , 
+sa fac export la SQL-u` "Receptii import iNG" 
+    - in faza a 2-a daca s-ar putea reface in JAVA si fiserele atasate ; 
+Sa fac o interfata web JAVA (cum era la INTESA ) care sa ruleze scripturi in newTaskExecutor si apoi sa afiseze rezultatele . 
+Exentual , XLS sa poata fi descarcat de pe interfata WEB (de tip grid) , PDF-urile sa fie trimise pe mail ... 
+= = = 
+
+========================================================================================
+2015-10.09_RealTime1-PeriodicRefresh-Angular+JSF-JCG
+ - Tomcat7 !
+ http://localhost:8080/PeriodicRefresh/index.xhtml
+ 
+ * Real-time Applications with AngularJS and Java – Part 1 
+ * http://examples.javacodegeeks.com/core-java/real-time-applications-angularjs-java-part-1/
+ * 
+ 
+ First, you want to create your module, then your controller. In the end result screenshot above, 
+ 	our controller will manage the first three buttons (Add Task, Refresh Tasks and Activate Auto Refresh). 
+ 		The last button is a JSF button managed by a backing bean.
+ I used Angular’s dependency injection to get the $scope, $http and $timeout services. 
+ 	In the Angular scope, I initially set the list of tasks to an empty array which will be replaced by the tasks array returned by the web service. 
+ 	Now, we have our three functions. 
+ 	The first one is addTask() which simply creates an Ajax POST request to the server with the task object from Angular’s scope in the request data. 
+ 	The second function above is getTasks() which creates an Ajax GET request to the server. 
+ 	The server will return an array of JSON objects corresponding to the tasks registered on the server. 
+ 	The last but not the least function is the implementation of the real-time feel, 
+ 		that is a recursive function with a pause of a second that simply retrieves the tasks using the controller’s function getTask(). 
+
+ * http://www.webcodegeeks.com/javascript/angular-js/angular-js-controller-example/ 
+ * http://coenraets.org/blog/2011/12/restful-services-with-jquery-and-java-using-jax-rs-and-jersey/
+ * http://examples.javacodegeeks.com/core-java/itext-pdfwriter-example/
+ * http://www.javacodegeeks.com/2014/09/jquery-ajax-servlets-integration-building-a-complete-application.html
+ *
+
+
+20015-09.26_jquery-jaxrs-wine-cellar-coenraets
+RESTful services with jQuery and Java using JAX-RS and Jersey
+December 2011 : Java, JAX-RS, JQuery, REST
+http://coenraets.org/blog/2011/12/restful-services-with-jquery-and-java-using-jax-rs-and-jersey/
+http://localhost:8080/jquery-jaxrs-wine-cellar-coenraets/
+
+
+~ ~ ~ 
+
+http://coenraets.org/blog/2012/05/single-page-crud-application-with-backbone-js-and-twitter-bootstrap/
+Single-Page CRUD Application with Backbone.js and Twitter Bootstrap
+May 2012 : Backbone.js, JQuery, Twitter Bootstrap
+http://coenraets.org/backbone-cellar/bootstrap/
+https://github.com/ccoenraets/backbone-cellar
+
+
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/
+http://coenraets.org/blog/2012/01/using-backbone-js-with-a-restful-java-back-end/
+https://github.com/ccoenraets/backbone-jax-cellar

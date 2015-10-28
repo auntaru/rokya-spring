@@ -1,5 +1,7 @@
 package org.jlsoft.orders.connection.controller;
 
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,10 +12,13 @@ import org.jlsoft.orders.connection.service.OrderService;
 import org.jlsoft.orders.connection.model.ComenziVExt;
 import org.jlsoft.orders.connection.dto.OrderDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 
 
 @Controller
@@ -47,6 +52,25 @@ public class OrderController {
 		return "orders";
 	}
 	
+	// @RequestMapping(value = "/rest/orders" , method = GET , headers="Accept=*/*",  produces="application/json")
+	// public @ResponseBody List<ComenziVExt> listLastOrders() {
+	@RequestMapping(value = "/rest/orders" , method = GET )
+	public @ResponseBody List<ComenziVExt> listLastOrders() {
+		return orderService.listOrders();
+	}
+
+	 @RequestMapping(value = "/test" , method = GET , headers="Accept=*/*",  produces="application/json")
+	 public @ResponseBody Object testlistOrders() {
+	        return orderService.listOrders();
+	        
+	 }
+
+	 @RequestMapping(value = "/test2" , method=RequestMethod.GET , headers="Accept=application/json")
+	 public @ResponseBody List<ComenziVExt> test2Orders() {
+	        return orderService.listOrders();
+	 }
+	 
+	 
 	// RequestMapping("/count-day-sum")
 	// @RequestMapping(value="/edit/{id}", method=RequestMethod.GET)
 	@RequestMapping("/days")
