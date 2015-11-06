@@ -1,5 +1,5 @@
 2015-10.28_Spring4RestExample-journaldev
-http://localhost:8080/Spring4Rest-journaldev//rest/emp/dummy
+http://localhost:8080/Spring4Rest-journaldev/rest/emp/dummy
 
 Spring Restful Web Service Example with JSON, Jackson and Client Program
 http://www.journaldev.com/2552/spring-restful-web-service-example-with-json-jackson-and-client-program
@@ -25,6 +25,9 @@ http://websystique.com/angularjs-tutorial/
 
 Spring 4 MVC+AngularJS Example
 http://websystique.com/springmvc/spring-mvc-4-angularjs-example/
+
+Sample Mobile Application with Ionic and AngularJS
+http://coenraets.org/blog/2014/02/sample-mobile-application-with-ionic-and-angularjs/
 
 ========================================================================================
 
