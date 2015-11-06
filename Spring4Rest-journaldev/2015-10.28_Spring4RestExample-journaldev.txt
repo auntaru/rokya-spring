@@ -14,6 +14,15 @@ java -jar ./restclient-ui-3.5-jar-with-dependencies.jar
 Spring 3 RESTful Web Services
 http://www.javacodegeeks.com/2010/06/spring-3-restful-web-services.html
 
+Creating a SCRUD System Using jQuery, JSON and DataTables
+http://www.sitepoint.com/creating-a-scrud-system-using-jquery-json-and-datatables/
+
+AngularJS Tutorial - websystique.com
+http://websystique.com/angularjs-tutorial/
+
+Spring 4 MVC+AngularJS Example
+http://websystique.com/springmvc/spring-mvc-4-angularjs-example/
+
 ========================================================================================
 
 2015-10.28_SpringSecurity-jQuery-jqGrid-flyway-nurkiewicz-bestsellers
