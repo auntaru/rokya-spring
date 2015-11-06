@@ -1,9 +1,11 @@
 2015-10.28_Spring4RestExample-journaldev
-Spring REST XML and JSON Example
-http://www.journaldev.com/8934/spring-rest-xml-and-json-example
+http://localhost:8080/Spring4Rest-journaldev//rest/emp/dummy
 
 Spring Restful Web Service Example with JSON, Jackson and Client Program
 http://www.journaldev.com/2552/spring-restful-web-service-example-with-json-jackson-and-client-program
+
+Spring REST XML and JSON Example
+http://www.journaldev.com/8934/spring-rest-xml-and-json-example
 
 
 WizTools.org RESTClient 2.1—Getting Started
