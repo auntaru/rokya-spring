@@ -193,16 +193,15 @@ runtime
     </dependency>
 -->    
 
-<!-- Jackson JSON Mapper  
+<!-- Jackson JSON Mapper 
 http://www.mkyong.com/spring-mvc/spring-3-mvc-and-json-example/
--->
 
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>${jackson.version}</version>
 		</dependency>
-
+-->
 
   </dependencies>
 

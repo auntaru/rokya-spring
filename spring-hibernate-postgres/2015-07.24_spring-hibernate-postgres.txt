@@ -1,3 +1,34 @@
+2015-11.14 : ClassNotFoundException: springframework.DispatcherServlet
+
+OK - MVC : 
+http://localhost:8080/spring-hibernate-postgres/orders
+
+KO - REST 1 : 
+http://localhost:8080/spring-hibernate-postgres/rest/orders
+
+OK - REST 2 : 
+http://localhost:8080/spring-hibernate-postgres/kfc/brands/alex
+ = > {"name":"alex","staffName":["mkyong1","mkyong2"]}
+ 
+KO - REST 3 :
+http://localhost:8080/spring-hibernate-postgres/test2
+ 
+
+RunOnServer ERROR like on 2015-09.07 : 
+org.springframework.web.servlet.DispatcherServlet
+java.lang.ClassNotFoundException: org.springframework.web.servlet.DispatcherServlet
+
+
+You need to add the "Maven Dependency" in the Deployement Assembly
+
+	right click on your project and choose properties.
+	click on Deployement Assembly.
+	click add
+	click on "Java Build Path Entries"
+	select Maven Dependencies"
+	click Finish.
+	That's it ! rebuild and deploy again ... 
+
 
 2015-11.13 Rest.Orders.JSON.XML : ERROR ! KO ! 
 http://localhost:8080/spring-hibernate-postgres/rest/orders

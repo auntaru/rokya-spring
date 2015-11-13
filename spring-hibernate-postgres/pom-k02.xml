@@ -8,13 +8,10 @@
   <name>spring-hibernate-postgres Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
-<!-- <spring.version>3.1.0.RELEASE</spring.version> -->
-
   	<properties>
-  		<spring.version>3.2.9.RELEASE</spring.version>
+  		<spring.version>3.1.0.RELEASE</spring.version>
 		<hibernate.version>3.6.8.Final</hibernate.version>
 	    <jdk.version>1.8</jdk.version>
-	    <jackson.version>1.9.12</jackson.version>
 	</properties>
 
   <dependencies>
@@ -170,7 +167,7 @@ runtime
     </dependency>    
 -->
 
-<!-- JSON : jackson 1.9.13 
+<!-- JSON : jackson 1.9.13 -->
     <dependency>
         <groupId>org.codehaus.jackson</groupId>
         <artifactId>jackson-jaxrs</artifactId>
@@ -191,17 +188,7 @@ runtime
         <artifactId>jackson-core-asl</artifactId>
         <version>1.9.13</version>
     </dependency>
--->    
-
-<!-- Jackson JSON Mapper  
-http://www.mkyong.com/spring-mvc/spring-3-mvc-and-json-example/
--->
-
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>${jackson.version}</version>
-		</dependency>
+    
 
 
   </dependencies>

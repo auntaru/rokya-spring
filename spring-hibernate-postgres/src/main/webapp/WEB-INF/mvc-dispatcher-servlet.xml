@@ -35,7 +35,7 @@
 		</property>
 	</bean>
 
-    <!-- Configure to plugin JSON as request and response in method handler 
+<!-- Configure to plugin JSON as request and response in method handler 
     <beans:bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
         <beans:property name="messageConverters">
             <beans:list>
@@ -44,8 +44,8 @@
             </beans:list>
         </beans:property>
     </beans:bean>
-	-->
-	
+-->
+
 <!-- Configure bean to convert JSON to POJO and vice versa 
     <beans:bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
     </beans:bean> 
