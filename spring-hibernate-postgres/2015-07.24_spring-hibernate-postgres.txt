@@ -1,14 +1,27 @@
 
-2015-10.28 WizTools.org RESTClient jackson.json
-https://dzone.com/articles/wiztoolsorg-restclient-21-rele
-WizTools.org RESTClient 2.1—Getting Started
-java -jar ./restclient-ui-3.5-jar-with-dependencies.jar
+2015-11.13 Rest.Orders.JSON.XML : ERROR ! KO ! 
+http://localhost:8080/spring-hibernate-postgres/rest/orders
 
 ERROR !
 <<
 	The resource identified by this request is only capable of generating responses with characteristics not acceptable 
 	according to the request "accept" headers.
 >>
+
+
+---> ToDoNext ---> 
+http://websystique.com/springmvc/spring-mvc-4-angularjs-example/
+http://websystique.com/springmvc/spring-4-mvc-angularjs-routing-example-using-ngroute/
+http://blog.jhades.org/developing-a-modern-java-8-web-app-with-spring-mvc-and-angularjs/
+<--- ToDoNext <--- 
+
+
+
+2015-10.28 WizTools.org RESTClient jackson.json
+https://dzone.com/articles/wiztoolsorg-restclient-21-rele
+WizTools.org RESTClient 2.1—Getting Started
+java -jar ./restclient-ui-3.5-jar-with-dependencies.jar
+
 
 Spring 3 RESTful Web Services
 http://www.javacodegeeks.com/2010/06/spring-3-restful-web-services.html

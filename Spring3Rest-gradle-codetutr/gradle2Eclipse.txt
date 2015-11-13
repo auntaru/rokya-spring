@@ -1,0 +1,29 @@
+/opt/gradle-2.8/bin/gradle clean build cleanEclipse eclipse
+
+How to use Gradle to generate Eclipse project files : 
+/opt/gradle-2.8/bin/gradle clean build cleanEclipse eclipse
+
+http://stackoverflow.com/questions/17470831/how-to-use-gradle-to-generate-eclipse-and-intellij-project-files-for-android-pro
+https://docs.gradle.org/current/userguide/installation.html
+https://docs.gradle.org/current/userguide/tutorials
+
+Download : 
+You can download one of the Gradle distributions from the Gradle web site.
+http://gradle.org/gradle-download/
+https://services.gradle.org/distributions/gradle-2.8-bin.zip
+
+
+http://www.javacodegeeks.com/2013/04/how-to-install-gradle-2.html
+http://codetutr.com/2013/03/23/how-to-install-gradle/
+
+
+http://www.concretepage.com/build-tools/gradle/java-project-gradle-eclipse-integration-example
+http://www.vogella.com/tutorials/Gradle/article.html
+
+
+
+To run the build.gradle, 
+open the command prompt and reach to the root directory of your project. 
+And run the below command as below. 
+gradle clean build
+/opt/gradle-2.8/bin/gradle clean build
