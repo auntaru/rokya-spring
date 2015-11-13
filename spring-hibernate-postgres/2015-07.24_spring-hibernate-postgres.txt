@@ -12,6 +12,14 @@ http://localhost:8080/spring-hibernate-postgres/kfc/brands/alex
  
 KO - REST 3 :
 http://localhost:8080/spring-hibernate-postgres/test2
+
+
+---> ToDoNext ---> 
+Spring 4 MVC+AngularJS Example ! 
+http://websystique.com/springmvc/spring-mvc-4-angularjs-example/
+http://websystique.com/springmvc/spring-4-mvc-angularjs-routing-example-using-ngroute/
+http://blog.jhades.org/developing-a-modern-java-8-web-app-with-spring-mvc-and-angularjs/
+<--- ToDoNext <--- 
  
 
 RunOnServer ERROR like on 2015-09.07 : 
@@ -38,13 +46,6 @@ ERROR !
 	The resource identified by this request is only capable of generating responses with characteristics not acceptable 
 	according to the request "accept" headers.
 >>
-
-
----> ToDoNext ---> 
-http://websystique.com/springmvc/spring-mvc-4-angularjs-example/
-http://websystique.com/springmvc/spring-4-mvc-angularjs-routing-example-using-ngroute/
-http://blog.jhades.org/developing-a-modern-java-8-web-app-with-spring-mvc-and-angularjs/
-<--- ToDoNext <--- 
 
 
 
