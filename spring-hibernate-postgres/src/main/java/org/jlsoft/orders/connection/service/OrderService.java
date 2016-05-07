@@ -15,6 +15,7 @@ public interface OrderService {
 	public String getCountOfOrdersOnLastDay(Date dateOfLastOrder);
 	public List<Object[]> listCountDaySum();
 	public List<Object[]> listCountMonthSum();
+	public List<Object[]> listCountMonthSumOnLatestYear(Date dateOfLastOrder);
 	public List<Object[]> listCountDaySumByMonth(Integer theMonth);
 	
 

@@ -60,6 +60,12 @@ public class OrderServiceImpl implements OrderService {
 	@Transactional
 	public List<Object[]> listCountMonthSum(){
 		return orderDAO.listCountMonthSum();
+	}
+	
+	@Transactional	
+	public List<Object[]> listCountMonthSumOnLatestYear(Date dateOfLastOrder) {
+
+		return orderDAO.listCountMonthSumOnLatestYear(dateOfLastOrder);
 	};
 	
 }
