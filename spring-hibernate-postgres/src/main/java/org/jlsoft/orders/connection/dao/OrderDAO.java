@@ -17,5 +17,6 @@ public interface OrderDAO {
 	public List<Object[]> listCountMonthSumOnLatestYear(Date dateOfLastOrder);
 	public List<Object[]> listCountMonthSumOnYear(Integer theYear);
 	public List<Object[]> listCountDaySumByMonth(Integer theMonth);
+	public List<Object[]> listCountDaySumByMonthAndYear(Integer theMonth, Integer theYear);
 
 }

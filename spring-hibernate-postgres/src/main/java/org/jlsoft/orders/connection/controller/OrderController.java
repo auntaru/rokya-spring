@@ -89,6 +89,15 @@ public class OrderController {
 		 return "days";
 	}
 
+	// localhost:8080/spring-hibernate-postgres/days/4/2016
+	@RequestMapping(value="/days/{month}/{year}" , method=RequestMethod.GET)
+	public String countDaySumByMonth2(@PathVariable Integer month , @PathVariable Integer year ,Map<String, Object> map ) {
+	     List<Object[]> objectList = orderService.listCountDaySumByMonthAndYear(month,year);
+		 map.put("objectList", objectList);
+		 return "days";
+	}
+
+	
 	@RequestMapping("/months/{year}")
 	public String countMonthSum2(@PathVariable Integer year ,Map<String, Object> map) {
 		 // Date dateOfLastOrder = orderService.getDateOfLastOrder();
@@ -98,7 +107,7 @@ public class OrderController {
 	}
 
 	
-	@RequestMapping("/months")
+	@RequestMapping("/months2015")
 	public String countMonthSum(Map<String, Object> map) {
 		 // Date dateOfLastOrder = orderService.getDateOfLastOrder();
 	     List<Object[]> objectList = orderService.listCountMonthSum();
@@ -106,7 +115,7 @@ public class OrderController {
 		 return "months";
 	}
 
-	@RequestMapping("/months1")
+	@RequestMapping("/months")
 	public String countMonthSum1(Map<String, Object> map) {
 		 Date dateOfLastOrder = orderService.getDateOfLastOrder();
 	     List<Object[]> objectList = orderService.listCountMonthSumOnLatestYear(dateOfLastOrder);

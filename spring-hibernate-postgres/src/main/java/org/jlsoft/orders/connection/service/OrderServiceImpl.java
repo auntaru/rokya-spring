@@ -57,6 +57,13 @@ public class OrderServiceImpl implements OrderService {
 		return orderDAO.listCountDaySumByMonth(theMonth);
 	};
 	
+	// 
+	@Transactional
+	public List<Object[]> listCountDaySumByMonthAndYear(Integer theMonth, Integer theYear){
+		return orderDAO.listCountDaySumByMonthAndYear(theMonth, theYear);
+	};
+
+	
 	@Transactional
 	public List<Object[]> listCountMonthSum(){
 		return orderDAO.listCountMonthSum();

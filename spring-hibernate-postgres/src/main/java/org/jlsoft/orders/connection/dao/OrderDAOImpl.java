@@ -135,6 +135,18 @@ public class OrderDAOImpl implements OrderDAO  {
 		return query.list();
 	}
 
+
+	public List<Object[]> listCountDaySumByMonthAndYear(Integer theMonth, Integer theYear){
+		//select count(*) , data_c , sum(valoare) from comenzi_v_ext where extract( month from data_c)=8 and extract( year from data_c)=2015 group by data_c order by data_c desc
+		// String hql = "select count(*) , dataC , sum(valoare) from ComenziVExt where extract(month from dataC) in (7,8,9) and extract(year from dataC)=2015 group by dataC order by dataC";
+		String hql = "select count(*) , dataC , sum(valoare) from ComenziVExt where extract(month from dataC)=:theMonth and extract(year from dataC)=:theYear group by dataC order by dataC";
+		Query query = getCurrentSession().createQuery(hql);
+		query.setParameter("theMonth", theMonth);
+		query.setParameter("theYear", theYear);
+		return query.list();
+	}
+
+	
 	
 	public List<Object[]> listCountMonthSum(){
 		/*
