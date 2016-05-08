@@ -97,15 +97,18 @@ public class OrderController {
 		 return "days";
 	}
 
-	
+	// http://localhost:8080/spring-hibernate-postgres/months/2016
+	// monthsOfYear.jsp
 	@RequestMapping("/months/{year}")
 	public String countMonthSum2(@PathVariable Integer year ,Map<String, Object> map) {
 		 // Date dateOfLastOrder = orderService.getDateOfLastOrder();
 	     List<Object[]> objectList = orderService.listCountMonthSumOnYear(year);
 		 map.put("objectList", objectList);
-		 return "months";
+		 map.put("theYear", year);
+		 return "monthsOfYear";
 	}
-
+	// http://localhost:8080/spring-hibernate-postgres/days/4/2016
+	
 	
 	@RequestMapping("/months2015")
 	public String countMonthSum(Map<String, Object> map) {
