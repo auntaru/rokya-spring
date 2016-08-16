@@ -1,3 +1,11 @@
+2016-08.16 : Eclipse MAVEN Git on Windows7 :
+https://www.mkyong.com/maven/how-to-install-maven-in-windows/
+http://www.librebyte.net/en/git/git-behind-a-proxy-or-firewall/
+ 
+javax.servlet.ServletException cannot be resolved to a type in Eclipse 
+http://stackoverflow.com/questions/15781902/javax-servlet-servletexception-cannot-be-resolved-to-a-type-in-spring-web-app
+in Eclipse select your project → then click on project menu bar on top → goto to properties → click on Targeted Runtimes → now you must select a check box next to the server you are using to run current project → click Apply → then click OK button.
+
 
  
  2015-04.30 : DepiT DELL-MSW7
@@ -137,12 +145,12 @@ Spring Framework tutorials Extravaganza
 
 JSF 2, PrimeFaces 3, Spring 3 & Hibernate 4 Integration Project
 http://www.javacodegeeks.com/2012/04/jsf-2-primefaces-3-spring-3-hibernate-4.html
-This article shows how to integrate JSF2, PrimeFaces3, Spring3 and Hibernate4 Technologies. It provides a general project template for Java developers. Also if Spring is not used for Business and Data Access layer, JSF � PrimeFaces & Hibernate Integration Project can be offered.
+This article shows how to integrate JSF2, PrimeFaces3, Spring3 and Hibernate4 Technologies. It provides a general project template for Java developers. Also if Spring is not used for Business and Data Access layer, JSF ďż˝ PrimeFaces & Hibernate Integration Project can be offered.
 
 
 JAX-WS with Spring and Maven Tutorial
 http://www.javacodegeeks.com/2010/11/jaxws-with-spring-and-maven-tutorial.html
-Spring framework provides remoting support for web services via JAX�WS, in fact, as stated in Spring reference documentation, there are three ways of exposing Spring POJO services as a JAX�WS web services : Exposing Servlet � based web services (suitable for Java EE 5 environments), Exporting standalone web services (suitable when utilizing Sun�s JDK 1.6 build�in JAX�WS provider), Exporting web services using the JAX�WS RI�s Spring support.
+Spring framework provides remoting support for web services via JAXďż˝WS, in fact, as stated in Spring reference documentation, there are three ways of exposing Spring POJO services as a JAXďż˝WS web services : Exposing Servlet ďż˝ based web services (suitable for Java EE 5 environments), Exporting standalone web services (suitable when utilizing Sunďż˝s JDK 1.6 buildďż˝in JAXďż˝WS provider), Exporting web services using the JAXďż˝WS RIďż˝s Spring support.
 
 Ajax with Spring MVC 3 using Annotations and JQuery
 http://www.javacodegeeks.com/2012/02/ajax-with-spring-mvc-3-using.html
@@ -154,7 +162,7 @@ Development of web-applications with the help of Spring MVC implies creation of 
 
 "Introduction to Spring" Tutorial Series
 http://www.javacodegeeks.com/2012/09/introduction-to-spring-tutorial-series.html
-I am glad to present you this �Introduction to Spring� tutorial series! It is a series of articles originally written by our JCG partner Michal Vrtiak at the vrtoonjava blog. A timesheet management application is gradually created in this series and each tutorial builds on top of the previous one. All main aspects of a web application are taken care of, including both server side and client side functionality.
+I am glad to present you this ďż˝Introduction to Springďż˝ tutorial series! It is a series of articles originally written by our JCG partner Michal Vrtiak at the vrtoonjava blog. A timesheet management application is gradually created in this series and each tutorial builds on top of the previous one. All main aspects of a web application are taken care of, including both server side and client side functionality.
 
 Spring and Quartz: Multi-Job Scheduling Service
 http://www.javacodegeeks.com/2012/02/spring-and-quartz-multi-job-scheduling.html
@@ -171,11 +179,11 @@ Spring Data JPA is a project which aims both to simplify the creation of JPA bas
 
 Concurrency - Executors and Spring Integration
 http://www.javacodegeeks.com/2012/06/concurrency-executors-and-spring.html
-Thread Pool/Executors Based Implementation: A better approach than the raw thread version, is a Thread pool based one, where an appropriate thread pool size is defined based on the system where the task is running � Number of CPU�s/(1-Blocking Coefficient of Task).
+Thread Pool/Executors Based Implementation: A better approach than the raw thread version, is a Thread pool based one, where an appropriate thread pool size is defined based on the system where the task is running ďż˝ Number of CPUďż˝s/(1-Blocking Coefficient of Task).
 
 Spring Integration - Application from scratch
 http://www.javacodegeeks.com/2013/03/spring-integration-application-from-scratch-part-1.html
-In this tutorial you will learn what is Spring Integration, how to use it and what kind of problems does it help to solve. We will build a sample application from the scratch and demonstrate some of the core components of Spring Integration. If you�re new to Spring check out another tutorial on Spring written by me � Shall we do some Spring together?
+In this tutorial you will learn what is Spring Integration, how to use it and what kind of problems does it help to solve. We will build a sample application from the scratch and demonstrate some of the core components of Spring Integration. If youďż˝re new to Spring check out another tutorial on Spring written by me ďż˝ Shall we do some Spring together?
 
 
 

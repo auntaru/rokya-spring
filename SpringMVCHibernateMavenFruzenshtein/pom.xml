@@ -79,6 +79,17 @@
 			<version>1.2</version>
 		</dependency>
 
+<!-- 
+javax.servlet.ServletException cannot be resolved to a type in Eclipse 
+http://stackoverflow.com/questions/15781902/javax-servlet-servletexception-cannot-be-resolved-to-a-type-in-spring-web-app
+<dependency>  
+    <groupId>javax</groupId>    
+    <artifactId>javaee-web-api</artifactId>    
+    <version>7.0</version> 
+    <scope>provided</scope>
+</dependency>
+-->
+
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
