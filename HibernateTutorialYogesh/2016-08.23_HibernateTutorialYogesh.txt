@@ -1,0 +1,20 @@
+2016-08.23_HibernateTutorialYogesh
+https://examples.javacodegeeks.com/enterprise-java/hibernate/hibernate-tutorial-beginners-examples/
+
+create database hbtutorial;
+create table USER (
+   ID INT NOT NULL AUTO_INCREMENT,
+   FIRSTNAME VARCHAR(30) NOT NULL,
+   LASTNAME  VARCHAR(30) NOT NULL,
+   USERNAME  VARCHAR(30) NOT NULL,
+   EMAIL  VARCHAR(30) NOT NULL,
+   PRIMARY KEY (id)
+);
+
+RUN AS -> Java App :
+HibernateTutorialTest.java
+from package com.javacodegeeks.example;
+
+
+2016-08.17_SpringMVCHibernateMavenYogesh
+https://examples.javacodegeeks.com/enterprise-java/spring/mvc/spring-mvc-hibernate-tutorial/
