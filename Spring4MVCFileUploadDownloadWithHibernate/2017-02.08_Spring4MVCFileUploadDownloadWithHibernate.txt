@@ -1,3 +1,10 @@
+
+ToDoNext :    
+   http://viralpatel.net/blogs/tutorial-save-get-blob-object-spring-3-mvc-hibernate/
+   http://www.codejava.net/coding/upload-files-to-database-with-spring-mvc-and-hibernate
+   https://www.mkyong.com/hibernate/hibernate-save-image-into-database/
+   https://dzone.com/articles/how-load-or-save-image-using
+
 2017-02.08_Spring4MVCFileUploadDownloadWithHibernate
 
 Spring MVC 4 FileUpload-Download Hibernate+MySQL Example
@@ -18,14 +25,27 @@ importing maven project into eclipse:
       click on “Java Build Path Entries”
       select “Maven Dependencies”
       click Finish.
-    
-
-ToDoNext :    
-   http://viralpatel.net/blogs/tutorial-save-get-blob-object-spring-3-mvc-hibernate/
-   http://www.codejava.net/coding/upload-files-to-database-with-spring-mvc-and-hibernate
-   https://www.mkyong.com/hibernate/hibernate-save-image-into-database/
-   https://dzone.com/articles/how-load-or-save-image-using
-   
+      
+create database websystique_updown;
+create table APP_USER (
+   id BIGINT NOT NULL AUTO_INCREMENT,
+   sso_id VARCHAR(30) NOT NULL,
+   first_name VARCHAR(30) NOT NULL,
+   last_name  VARCHAR(30) NOT NULL,
+   email VARCHAR(30) NOT NULL,
+   PRIMARY KEY (id),
+   UNIQUE (sso_id)
+);  
+create table USER_DOCUMENT(
+   id BIGINT NOT NULL AUTO_INCREMENT,
+   user_id BIGINT NOT NULL,
+   name  VARCHAR(100) NOT NULL,
+   description VARCHAR(255) ,
+   type VARCHAR(100) NOT NULL,
+   content longblob NOT NULL,
+   PRIMARY KEY (id),
+   CONSTRAINT document_user FOREIGN KEY (user_id) REFERENCES APP_USER (id) ON UPDATE CASCADE ON DELETE CASCADE
+);
 
 2016-09.15_SpringSecurityHibernateAnnotationWebsystique
 
