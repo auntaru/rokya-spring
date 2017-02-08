@@ -1,0 +1,175 @@
+2017-02.08_Spring4MVCFileUploadDownloadWithHibernate
+
+Spring MVC 4 FileUpload-Download Hibernate+MySQL Example
+   http://websystique.com/springmvc/spring-mvc-4-fileupload-download-hibernate-example/
+  
+spring hibernate pictures and documents - download + upload 
+         kayak?kaimac!
+
+CONFIG: 
+   How to setup tomcat with Eclipse
+		http://websystique.com/misc/how-to-setup-tomcat-with-eclipse/
+
+importing maven project into eclipse: 
+   perform following:
+      right click on your project and choose properties.
+      click on Deployement Assembly.
+      click add
+      click on “Java Build Path Entries”
+      select “Maven Dependencies”
+      click Finish.
+    
+
+ToDoNext :    
+   http://viralpatel.net/blogs/tutorial-save-get-blob-object-spring-3-mvc-hibernate/
+   http://www.codejava.net/coding/upload-files-to-database-with-spring-mvc-and-hibernate
+   https://www.mkyong.com/hibernate/hibernate-save-image-into-database/
+   https://dzone.com/articles/how-load-or-save-image-using
+   
+
+2016-09.15_SpringSecurityHibernateAnnotationWebsystique
+
+http://websystique.com/spring-security/spring-security-4-hibernate-annotation-example/
+Spring Security 4 Hibernate Integration Annotation+XML Example
+
+
+http://localhost:8089/SpringSecurityHibernateAnnotationWebsystique/db
+Dear kenny, Welcome to DBA Page. Logout
+
+kenny = "hasRole('ADMIN') and hasRole('DBA')"
+
+
+
+/*All User's are stored in APP_USER table*/
+create table APP_USER (
+   id BIGINT NOT NULL AUTO_INCREMENT,
+   sso_id VARCHAR(30) NOT NULL,
+   password VARCHAR(100) NOT NULL,
+   first_name VARCHAR(30) NOT NULL,
+   last_name  VARCHAR(30) NOT NULL,
+   email VARCHAR(30) NOT NULL,
+   state VARCHAR(30) NOT NULL,  
+   PRIMARY KEY (id),
+   UNIQUE (sso_id)
+);
+  
+/* USER_PROFILE table contains all possible roles */
+create table USER_PROFILE(
+   id BIGINT NOT NULL AUTO_INCREMENT,
+   type VARCHAR(30) NOT NULL,
+   PRIMARY KEY (id),
+   UNIQUE (type)
+);
+  
+/* JOIN TABLE for MANY-TO-MANY relationship*/ 
+CREATE TABLE APP_USER_USER_PROFILE (
+    user_id BIGINT NOT NULL,
+    user_profile_id BIGINT NOT NULL,
+    PRIMARY KEY (user_id, user_profile_id),
+    CONSTRAINT FK_APP_USER FOREIGN KEY (user_id) REFERENCES APP_USER (id),
+    CONSTRAINT FK_USER_PROFILE FOREIGN KEY (user_profile_id) REFERENCES USER_PROFILE (id)
+);
+ 
+/* Populate USER_PROFILE Table */
+INSERT INTO USER_PROFILE(type)
+VALUES ('USER');
+ 
+INSERT INTO USER_PROFILE(type)
+VALUES ('ADMIN');
+ 
+INSERT INTO USER_PROFILE(type)
+VALUES ('DBA');
+ 
+/* Populate APP_USER Table */
+INSERT INTO APP_USER(sso_id, password, first_name, last_name, email, state)
+VALUES ('bill','abc123', 'Bill','Watcher','bill@xyz.com', 'Active');
+ 
+INSERT INTO APP_USER(sso_id, password, first_name, last_name, email, state)
+VALUES ('danny','abc124', 'Danny','Theys','danny@xyz.com', 'Active');
+ 
+INSERT INTO APP_USER(sso_id, password, first_name, last_name, email, state)
+VALUES ('sam','abc125', 'Sam','Smith','samy@xyz.com', 'Active');
+ 
+INSERT INTO APP_USER(sso_id, password, first_name, last_name, email, state)
+VALUES ('nicole','abc126', 'Nicole','warner','nicloe@xyz.com', 'Active');
+ 
+INSERT INTO APP_USER(sso_id, password, first_name, last_name, email, state)
+VALUES ('kenny','abc127', 'Kenny','Roger','kenny@xyz.com', 'Active');
+ 
+/* Populate JOIN Table */
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile  
+  where user.sso_id='bill' and profile.type='USER';
+ 
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile
+  where user.sso_id='danny' and profile.type='USER';
+ 
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile
+  where user.sso_id='sam' and profile.type='ADMIN';
+ 
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile
+  where user.sso_id='nicole' and profile.type='DBA';
+ 
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile  
+  where user.sso_id='kenny' and profile.type='ADMIN';
+ 
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile  
+  where user.sso_id='kenny' and profile.type='DBA';
+
+
+How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse
+http://crunchify.com/how-to-solve-dynamic-web-module-3-1-requires-java-1-7-or-newer-in-eclipse/
+If you have maven project try adding below code to pom.xml file.
+
+	<build>
+    	<plugins>
+        	<plugin>
+        		<groupId>org.apache.maven.plugins</groupId>
+        		<artifactId>maven-compiler-plugin</artifactId>
+        		<version>3.1</version>
+        		<configuration>
+            		<source>1.7</source>
+            		<target>1.7</target>
+        		</configuration>
+    		</plugin>
+    	</plugins>
+	</build>
+
+How to fix Cannot change version of project facet Dynamic Web Module to 3.0 Error in Eclipse
+http://crunchify.com/how-to-fix-cannot-change-version-of-project-facet-dynamic-web-module-to-3-0-error-in-eclipse/
+
+
+
+2016-08.17_SpringMVCHibernateMavenYogesh  KO ! nu merge !
+https://examples.javacodegeeks.com/enterprise-java/spring/mvc/spring-mvc-hibernate-tutorial/
+CREATE DATABASE springmvc ;
+
+http://websystique.com/springmvc/spring-4-mvc-and-hibernate4-integration-example-using-annotations/
+Spring 4 MVC+Hibernate 4+MySQL+Maven integration example using annotations
+
+CREATE TABLE EMPLOYEE(
+    id INT NOT NULL auto_increment, 
+    name VARCHAR(50) NOT NULL,
+    joining_date DATE NOT NULL,
+    salary DOUBLE NOT NULL,
+    ssn VARCHAR(30) NOT NULL UNIQUE,
+    PRIMARY KEY (id)
+);
+
+
+
+http://websystique.com/springmvc/spring-mvc-4-angularjs-example/
+Spring 4 MVC+AngularJS CRUD Example using $http service
+
+
+ ~ ~ ~ spring hibernate mysql web application example : 
+Spring MVC Hibernate MySQL Integration CRUD Example Tutorial
+http://www.journaldev.com/3531/spring-mvc-hibernate-mysql-integration-crud-example-tutorial
+    Spring 4.0.3.Release and Hibernate 4.3.5
+ 
+ 
