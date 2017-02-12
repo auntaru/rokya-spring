@@ -1,6 +1,9 @@
 
 ToDoNext :    
+   https://www.mkyong.com/java/apache-poi-reading-and-writing-excel-file-in-java/
    http://viralpatel.net/blogs/embed-tomcat-maven-project-run-tomcat-maven/
+   https://avaldes.com/spring-mvc-restful-web-service-example-with-spring-data-for-mongodb-angularjs-bootstrap-and-grid-ui/
+   
 ===
    http://viralpatel.net/blogs/tutorial-save-get-blob-object-spring-3-mvc-hibernate/
    http://www.codejava.net/coding/upload-files-to-database-with-spring-mvc-and-hibernate
@@ -13,7 +16,7 @@ ToDoNext :
 http://viralpatel.net/blogs/tutorial-save-get-blob-object-spring-3-mvc-hibernate/
 
 http://stackoverflow.com/questions/4856307/when-maven-says-resolution-will-not-be-reattempted-until-the-update-interval-of
-Maven says �resolution will not be reattempted until the update interval of MyRepo has elapsed�
+Maven says resolution will not be reattempted until the update interval of MyRepo has elapsed�
    http://stackoverflow.com/questions/4701532/force-maven-update
 mvn clean install -U
 
@@ -190,7 +193,7 @@ INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
   where user.sso_id='kenny' and profile.type='DBA';
 
 
-How to solve �Dynamic Web Module 3.1 requires Java 1.7 or newer� in Eclipse
+How to solve Dynamic Web Module 3.1 requires Java 1.7 or newer in Eclipse
 http://crunchify.com/how-to-solve-dynamic-web-module-3-1-requires-java-1-7-or-newer-in-eclipse/
 If you have maven project try adding below code to pom.xml file.
 
