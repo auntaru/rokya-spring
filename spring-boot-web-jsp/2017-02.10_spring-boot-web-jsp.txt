@@ -1,7 +1,10 @@
 
-2017-02.10_spring-boot-web-jsp
+2017-02.11_spring-boot-web-jsp
 Spring Boot Hello World Example – JSP
 https://www.mkyong.com/spring-boot/spring-boot-hello-world-example-jsp/
+
+mvn clean package
+java -jar target/spring-boot-web-jsp-1.0.war
 
 
 ToDoNext :    
