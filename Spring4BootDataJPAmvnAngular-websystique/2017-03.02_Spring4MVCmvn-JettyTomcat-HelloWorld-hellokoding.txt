@@ -1,0 +1,283 @@
+
+2017-03.02_Spring4MVCmvn-JettyTomcat-HelloWorld-hellokoding
+mergea doar cu jetty in command-line ;
+Am facut sa mearga si cu tomcat in eclipse ;
+problema e de link :
+http://localhost:8089/hello/hello ( eclipse + tomcat ) 
+http://localhost:8080/hello ( mvn jetty:run ) 
+
+
+2017-02.11_springmvc4-xml-maven-jsp-master_hellokoding
+Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP
+Oct 12, 2015. By Giau Ngo @giaunv
+
+https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/
+
+Jetty+command-line:
+http://localhost:8080/hello
+http://localhost:8080/hello?name=Alex
+
+Tomcat+Eclipse:
+( pentru ca s-a facut eclipseProject from pom.xml )
+http://localhost:8089/hello/hello
+http://localhost:8089/hello/hello?name=Alex
+
+
+
+2017-02.11_spring-boot-web-jsp
+Spring Boot Hello World Example � JSP
+https://www.mkyong.com/spring-boot/spring-boot-hello-world-example-jsp/
+
+mvn clean package
+java -jar target/spring-boot-web-jsp-1.0.war
+
+
+ToDoNext :    
+   
+   https://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/
+   https://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/
+   https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/
+   https://www.mkyong.com/java/apache-poi-reading-and-writing-excel-file-in-java/
+   http://viralpatel.net/blogs/embed-tomcat-maven-project-run-tomcat-maven/
+   https://avaldes.com/spring-mvc-restful-web-service-example-with-spring-data-for-mongodb-angularjs-bootstrap-and-grid-ui/
+   
+===
+   http://viralpatel.net/blogs/tutorial-save-get-blob-object-spring-3-mvc-hibernate/
+   http://www.codejava.net/coding/upload-files-to-database-with-spring-mvc-and-hibernate
+   https://www.mkyong.com/hibernate/hibernate-save-image-into-database/
+   https://dzone.com/articles/how-load-or-save-image-using
+===
+
+2017-02.08_DocumentManager        --- --- ---        [ mvn clean install -U ]
+2017-02.10_Spring3MVC-Hibernate3-BLOB--DocumentManager-viralpatel
+http://viralpatel.net/blogs/tutorial-save-get-blob-object-spring-3-mvc-hibernate/
+
+http://stackoverflow.com/questions/4856307/when-maven-says-resolution-will-not-be-reattempted-until-the-update-interval-of
+Maven says resolution will not be reattempted until the update interval of MyRepo has elapsed�
+   http://stackoverflow.com/questions/4701532/force-maven-update
+mvn clean install -U
+
+REATE DATABASE `viralpatel_docdb`;
+USE `viralpatel_docdb`;
+CREATE TABLE `documents` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `description` text NOT NULL,
+  `filename` varchar(200) NOT NULL,
+  `content` mediumblob NOT NULL, /* for ORACLE enter BLOB*/
+  `content_type` varchar(255) NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+);
+
+
+
+    net.viralpatel.docmanager.controller – This package will contain Spring Controller classes for Document Manager application.
+    net.viralpatel.docmanager.model – This package will contain form object for Document manager application. Document model will be a simple POJO class with different attributes such as document name, description, filename etc.
+    net.viralpatel.docmanager.dao – This is the DAO layer of Document manager application. It consists of DocumentDao class which will use Hibernate API to interact with database.
+    The src/main/resources folder will have hibernate configuration file: hibernate.cfg.xml.
+    The WEB-INF folder will have jsp/documents.jsp file to render document list and add form and jdbc.properties file containing database connection configuration. Also it contains spring-servlet.xml which will define all the Controller class and web.xml which contain spring configuration.
+
+Adding Spring MVC Support to Webapplication
+Update the web.xml file and add servlet mapping for org.springframework.web.servlet.DispatcherServlet. 
+Also note that we have mapped url / with springServlet so all the request are handled by spring.
+File: /src/webapp/WEB-INF/web.xml
+
+The spring-servlet.xml file contains different spring mappings such as transaction manager, hibernate session factory bean, data source etc.
+
+    jspViewResolver bean – This bean defined view resolver for spring mvc. For this bean we also set prefix as “/WEB-INF/jsp/” and suffix as “.jsp”. Thus spring automatically resolves the JSP from WEB-INF/jsp folder and assigned suffix .jsp to it.
+    propertyConfigurer bean – This bean is used to load database property file jdbc.properties. The database connection details are stored in this file which is used in hibernate connection settings.
+    dataSource bean – This is the java datasource used to connect to document manager database. We provide jdbc driver class, username, password etc in configuration.
+    sessionFactory bean – This is Hibernate configuration where we define different hibernate settings. hibernate.cfg.xml is set a config file which contains entity class mappings. Also note that in sessionFactory we have specified few hibernate properties such as hibernate.connection.SetBigStringTryClob and hibernate.jdbc.batch_size. These are used to configure BLOB / CLOB settings in hibernate.
+    multipartResolver bean – We use Spring MVCs CommonsMultipartResolver. This resolver will resolve multipart form data such as file uploads from the request and make available File object to spring controller. Note that we have specified property maxUploadSize with value 10000000. This is the maximum limit of filesize which can be uploaded in our example.
+    transactionManager bean – We use hibernate transaction manager to manage the transactions of our document manager application.
+
+
+2017-02.08_Spring4MVCFileUploadDownloadWithHibernate
+
+Spring MVC 4 FileUpload-Download Hibernate+MySQL Example
+   http://websystique.com/springmvc/spring-mvc-4-fileupload-download-hibernate-example/
+  
+spring hibernate pictures and documents - download + upload 
+         kayak?kaimac!
+
+CONFIG: 
+   How to setup tomcat with Eclipse
+		http://websystique.com/misc/how-to-setup-tomcat-with-eclipse/
+
+importing maven project into eclipse: 
+   perform following:
+      right click on your project and choose properties.
+      click on Deployement Assembly.
+      click add
+      click on Java Build Path Entries
+      select Maven Dependencies
+      click Finish.
+      
+create database websystique_updown;
+create table APP_USER (
+   id BIGINT NOT NULL AUTO_INCREMENT,
+   sso_id VARCHAR(30) NOT NULL,
+   first_name VARCHAR(30) NOT NULL,
+   last_name  VARCHAR(30) NOT NULL,
+   email VARCHAR(30) NOT NULL,
+   PRIMARY KEY (id),
+   UNIQUE (sso_id)
+);  
+create table USER_DOCUMENT(
+   id BIGINT NOT NULL AUTO_INCREMENT,
+   user_id BIGINT NOT NULL,
+   name  VARCHAR(100) NOT NULL,
+   description VARCHAR(255) ,
+   type VARCHAR(100) NOT NULL,
+   content longblob NOT NULL,
+   PRIMARY KEY (id),
+   CONSTRAINT document_user FOREIGN KEY (user_id) REFERENCES APP_USER (id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+2016-09.15_SpringSecurityHibernateAnnotationWebsystique
+
+http://websystique.com/spring-security/spring-security-4-hibernate-annotation-example/
+Spring Security 4 Hibernate Integration Annotation+XML Example
+
+
+http://localhost:8089/SpringSecurityHibernateAnnotationWebsystique/db
+Dear kenny, Welcome to DBA Page. Logout
+
+kenny = "hasRole('ADMIN') and hasRole('DBA')"
+
+
+
+/*All User's are stored in APP_USER table*/
+create table APP_USER (
+   id BIGINT NOT NULL AUTO_INCREMENT,
+   sso_id VARCHAR(30) NOT NULL,
+   password VARCHAR(100) NOT NULL,
+   first_name VARCHAR(30) NOT NULL,
+   last_name  VARCHAR(30) NOT NULL,
+   email VARCHAR(30) NOT NULL,
+   state VARCHAR(30) NOT NULL,  
+   PRIMARY KEY (id),
+   UNIQUE (sso_id)
+);
+  
+/* USER_PROFILE table contains all possible roles */
+create table USER_PROFILE(
+   id BIGINT NOT NULL AUTO_INCREMENT,
+   type VARCHAR(30) NOT NULL,
+   PRIMARY KEY (id),
+   UNIQUE (type)
+);
+  
+/* JOIN TABLE for MANY-TO-MANY relationship*/ 
+CREATE TABLE APP_USER_USER_PROFILE (
+    user_id BIGINT NOT NULL,
+    user_profile_id BIGINT NOT NULL,
+    PRIMARY KEY (user_id, user_profile_id),
+    CONSTRAINT FK_APP_USER FOREIGN KEY (user_id) REFERENCES APP_USER (id),
+    CONSTRAINT FK_USER_PROFILE FOREIGN KEY (user_profile_id) REFERENCES USER_PROFILE (id)
+);
+ 
+/* Populate USER_PROFILE Table */
+INSERT INTO USER_PROFILE(type)
+VALUES ('USER');
+ 
+INSERT INTO USER_PROFILE(type)
+VALUES ('ADMIN');
+ 
+INSERT INTO USER_PROFILE(type)
+VALUES ('DBA');
+ 
+/* Populate APP_USER Table */
+INSERT INTO APP_USER(sso_id, password, first_name, last_name, email, state)
+VALUES ('bill','abc123', 'Bill','Watcher','bill@xyz.com', 'Active');
+ 
+INSERT INTO APP_USER(sso_id, password, first_name, last_name, email, state)
+VALUES ('danny','abc124', 'Danny','Theys','danny@xyz.com', 'Active');
+ 
+INSERT INTO APP_USER(sso_id, password, first_name, last_name, email, state)
+VALUES ('sam','abc125', 'Sam','Smith','samy@xyz.com', 'Active');
+ 
+INSERT INTO APP_USER(sso_id, password, first_name, last_name, email, state)
+VALUES ('nicole','abc126', 'Nicole','warner','nicloe@xyz.com', 'Active');
+ 
+INSERT INTO APP_USER(sso_id, password, first_name, last_name, email, state)
+VALUES ('kenny','abc127', 'Kenny','Roger','kenny@xyz.com', 'Active');
+ 
+/* Populate JOIN Table */
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile  
+  where user.sso_id='bill' and profile.type='USER';
+ 
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile
+  where user.sso_id='danny' and profile.type='USER';
+ 
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile
+  where user.sso_id='sam' and profile.type='ADMIN';
+ 
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile
+  where user.sso_id='nicole' and profile.type='DBA';
+ 
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile  
+  where user.sso_id='kenny' and profile.type='ADMIN';
+ 
+INSERT INTO APP_USER_USER_PROFILE (user_id, user_profile_id)
+  SELECT user.id, profile.id FROM app_user user, user_profile profile  
+  where user.sso_id='kenny' and profile.type='DBA';
+
+
+How to solve Dynamic Web Module 3.1 requires Java 1.7 or newer in Eclipse
+http://crunchify.com/how-to-solve-dynamic-web-module-3-1-requires-java-1-7-or-newer-in-eclipse/
+If you have maven project try adding below code to pom.xml file.
+
+	<build>
+    	<plugins>
+        	<plugin>
+        		<groupId>org.apache.maven.plugins</groupId>
+        		<artifactId>maven-compiler-plugin</artifactId>
+        		<version>3.1</version>
+        		<configuration>
+            		<source>1.7</source>
+            		<target>1.7</target>
+        		</configuration>
+    		</plugin>
+    	</plugins>
+	</build>
+
+How to fix Cannot change version of project facet Dynamic Web Module to 3.0 Error in Eclipse
+http://crunchify.com/how-to-fix-cannot-change-version-of-project-facet-dynamic-web-module-to-3-0-error-in-eclipse/
+
+
+
+2016-08.17_SpringMVCHibernateMavenYogesh  KO ! nu merge !
+https://examples.javacodegeeks.com/enterprise-java/spring/mvc/spring-mvc-hibernate-tutorial/
+CREATE DATABASE springmvc ;
+
+http://websystique.com/springmvc/spring-4-mvc-and-hibernate4-integration-example-using-annotations/
+Spring 4 MVC+Hibernate 4+MySQL+Maven integration example using annotations
+
+CREATE TABLE EMPLOYEE(
+    id INT NOT NULL auto_increment, 
+    name VARCHAR(50) NOT NULL,
+    joining_date DATE NOT NULL,
+    salary DOUBLE NOT NULL,
+    ssn VARCHAR(30) NOT NULL UNIQUE,
+    PRIMARY KEY (id)
+);
+
+
+
+http://websystique.com/springmvc/spring-mvc-4-angularjs-example/
+Spring 4 MVC+AngularJS CRUD Example using $http service
+
+
+ ~ ~ ~ spring hibernate mysql web application example : 
+Spring MVC Hibernate MySQL Integration CRUD Example Tutorial
+http://www.journaldev.com/3531/spring-mvc-hibernate-mysql-integration-crud-example-tutorial
+    Spring 4.0.3.Release and Hibernate 4.3.5
+ 
+ 
