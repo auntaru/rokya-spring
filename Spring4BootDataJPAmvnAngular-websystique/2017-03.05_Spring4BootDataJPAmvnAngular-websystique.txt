@@ -42,3 +42,17 @@ VALUES ('Tom',40,50000);
 commit;
 
 
+2017-03.06_Spring4BootDataJPAmvnAngular-websystique
+
+ToDoNext :
+Eclipse IDE Git Integration Tutorial
+https://examples.javacodegeeks.com/desktop-java/ide/eclipse/eclipse-ide-git-integration-tutorial/
+
+Spring Framework Angularjs Integration Tutorial
+https://examples.javacodegeeks.com/enterprise-java/spring/spring-framework-angularjs-integration-tutorial/
+
+JUnit RunListener Example
+https://examples.javacodegeeks.com/core-java/junit/junit-runlistener-example/
+
+Learning Angular C.R.U.D.
+https://www.webcodegeeks.com/javascript/angular-js/learning-angular-c-r-u-d/
