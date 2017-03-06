@@ -19,6 +19,8 @@ http://localhost:8080/SpringBootCRUDApp
 
 2017-03.06_Spring4BootDataJPAmvnAngular-websystique
 
+Spring Boot + AngularJS + Spring Data + JPA CRUD App Example
+http://websystique.com/spring-boot/spring-boot-angularjs-spring-data-jpa-crud-app-example/
 CREATE DATABASE  IF NOT EXISTS `websystique_spring_angular_jpa`;
 USE `websystique_spring_angular_jpa`;
 
