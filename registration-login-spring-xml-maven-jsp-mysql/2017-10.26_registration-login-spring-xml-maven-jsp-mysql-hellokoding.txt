@@ -1,0 +1,110 @@
+2017-10.26_registration-login-spring-xml-maven-jsp-mysql-hellokoding
+
+https://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/
+
+CREATE DATABASE  IF NOT EXISTS `accounts`;
+USE `accounts`;
+--
+-- Table structure for table `role`
+--
+
+DROP TABLE IF EXISTS `role`;
+CREATE TABLE `role` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `role`
+--
+
+LOCK TABLES `role` WRITE;
+INSERT INTO `role` VALUES (1,'ROLE_USER');
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Table structure for table `user_role`
+--
+
+DROP TABLE IF EXISTS `user_role`;
+CREATE TABLE `user_role` (
+  `user_id` int(11) NOT NULL,
+  `role_id` int(11) NOT NULL,
+  PRIMARY KEY (`user_id`,`role_id`),
+  KEY `fk_user_role_roleid_idx` (`role_id`),
+  CONSTRAINT `fk_user_role_roleid` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_user_role_userid` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+2017-03.05_Spring4BootDataJPAmvnAngular-websystique
+
+Spring Boot + AngularJS + Spring Data + JPA CRUD App Example
+http://websystique.com/spring-boot/spring-boot-angularjs-spring-data-jpa-crud-app-example/
+
+Run the application
+ - Via Eclipse: 
+   Run it directly, in that case default profile will be used. 
+   In case you want a different profile to be used, 
+   create a Run configuration for you main class, specifying the profile. 
+   To do that from toolbar, select Run->Run Configurations->Arguments->VM Arguments. 
+   Add -Dspring.profiles.active=local or -Dspring.profiles.active=prod
+
+ - Via Command line:
+java -jar target/SpringBootCRUDApplicationExample-1.0.0.jar --spring.profiles.active=local
+java -jar target/SpringBootCRUDApplicationExample-1.0.0.jar --spring.profiles.active=prod
+
+http://localhost:8080/SpringBootCRUDApp
+
+2017-03.06_Spring4BootDataJPAmvnAngular-websystique
+
+Spring Boot + AngularJS + Spring Data + JPA CRUD App Example
+http://websystique.com/spring-boot/spring-boot-angularjs-spring-data-jpa-crud-app-example/
+CREATE DATABASE  IF NOT EXISTS `websystique_spring_angular_jpa`;
+USE `websystique_spring_angular_jpa`;
+
+create table APP_USER (
+   id BIGINT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(30) NOT NULL,
+   age  INTEGER NOT NULL,
+   salary REAL NOT NULL,
+   PRIMARY KEY (id)
+);
+   
+/* Populate USER Table */
+INSERT INTO APP_USER(name,age,salary)
+VALUES ('Sam',30,70000);
+   
+INSERT INTO APP_USER(name,age,salary)
+VALUES ('Tom',40,50000);
+ 
+commit;
+
+
+2017-03.06_Spring4BootDataJPAmvnAngular-websystique
+
+ToDoNext :
+Eclipse IDE Git Integration Tutorial
+https://examples.javacodegeeks.com/desktop-java/ide/eclipse/eclipse-ide-git-integration-tutorial/
+
+Spring Framework Angularjs Integration Tutorial
+https://examples.javacodegeeks.com/enterprise-java/spring/spring-framework-angularjs-integration-tutorial/
+
+JUnit RunListener Example
+https://examples.javacodegeeks.com/core-java/junit/junit-runlistener-example/
+
+Learning Angular C.R.U.D.
+https://www.webcodegeeks.com/javascript/angular-js/learning-angular-c-r-u-d/
